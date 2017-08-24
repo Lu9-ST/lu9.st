@@ -1,8 +1,2261 @@
-<html>
-<head>
-  <link rel="icon" type="image/png" href="favicon.png" />
-</head>
-  <body>
-soon™
-  </body>
+
+<!DOCTYPE html>
+<!--  Created with blockity.co and hosted on GitHub pages -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+		
+					<title>Lu9</title>
+		
+							<meta name="keywords" content="lu9, mario, game, games, remaker, maker, game maker, sonic, mariola, silvia, quadradinho, little square" />
+							<meta name="description" content="It's-a me." />
+							<link rel="icon" type="image/png" href="//storage.googleapis.com/blockity-user-media-dev/media/279/6640-lu9bg.png" />
+							<meta name="og:image" content="//storage.googleapis.com/blockity-user-media-dev/media/279/6639-mariola.png" />
+		
+		<meta name=viewport content="width=device-width, initial-scale=0.5">
+
+		<script>
+			var __page_id = 7028;
+			var maps = [];
+			var sliders = [];
+		</script>
+
+		<style type="text/css">
+
+			/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126  License: none (public domain)*/html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}body {line-height: 1;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}.page-block { min-height: 10px; -webkit-box-sizing: border-box;   -moz-box-sizing: border-box;     box-sizing: border-box; position: relative; min-width: 100%;}.page-block .video { width: 100%; height: 100%; position: absolute; bottom: 0; left: 0; overflow: hidden;}.page-block .video iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0;}.page-block .page-block-inner { margin: 0 auto;}.page-block .background-overlay { top: 0; left: 0; width: 100%; height: 100%; position: absolute;}.page-block .background-overlay.inactive { display: none;}.page-block.mobile { display: none;}.page-block.mobile .page-block-inner { width: 600px;}.page-block .page-block-inner { position: relative;}.widget-container { position: absolute;}.widget-container .widget-inner { height: 100%;}.widget-container .contents { width: 100%; height: 100%; -webkit-box-sizing: border-box;   -moz-box-sizing: border-box;     box-sizing: border-box;}.widget-container .contents i,.widget-container .contents em { font-style: italic;}.widget-container .contents b,.widget-container .contents strong { font-weight: bold;}.widget-container .contents a { text-decoration: none;}.widget-container.ui-resizable { position: absolute !important;}.widget-image .widget-contents { overflow: hidden;}.widget-image .widget-contents img.mobile { display: none;}.widget-button .button { cursor: pointer;}.widget-button .contents { text-align: center;}.widget-button a { text-decoration: none;}.widget-text .contents { font-size: 16px;}.widget-text .contents ul { list-style-type: disc; margin-left: 2em;}.widget-text .contents ol { list-style-type: decimal; margin-left: 2em;}.widget-form .input-field { width: 100%; padding-left: 0.5em; border: none; -webkit-box-sizing: border-box;   -moz-box-sizing: border-box;     box-sizing: border-box;}.widget-form .input-field:after { display: none;}.widget-form input[type="checkbox"],.widget-form input[type="radio"] { height: 17px; margin-right: 0.5em;}.widget-form .submit-button { display: block; text-align: center; cursor: pointer; border: none; width: 100%;}.widget-form label { display: block; margin-bottom: 0px !important;}.widget-form label.hidden { display: none;}.widget-form .contents.mobile { display: none;}.widget-form .radio label,.widget-form .checkbox label { display: inline-block;}.widget-form .radio input { height: 17px; width: 17px;}.widget-form .radio input:checked { border-color: rgba(34, 36, 38, 0.35);}.widget-form .radio label { cursor: pointer;}.widget-form .checkbox { display: block;}.widget-form .checkbox input { opacity: 0; position: absolute;}.widget-form .checkbox label { padding-left: 1.85714em; position: relative; cursor: pointer;}.widget-form .checkbox label::before { top: 10px; position: absolute; left: 0px; width: 17px; height: 17px; content: ''; background: #ffffff; -webkit-border-radius: 0.21428571rem;   -moz-border-radius: 0.21428571rem;     border-radius: 0.21428571rem; -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease; -moz-transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -moz-transform 0.1s ease, -moz-box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -webkit-box-shadow 0.1s ease, -moz-box-shadow 0.1s ease; border: 1px solid #d4d4d5;}.widget-form .checkbox input:checked ~ label:after { content: ''; position: absolute; font-size: 14px; border: 2px solid #000; top: 11px; left: 1px; width: 14px; height: 14px; -webkit-border-radius: 2px;   -moz-border-radius: 2px;     border-radius: 2px; text-align: center; color: rgba(0, 0, 0, 0.87); -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, box-shadow 0.1s ease; -webkit-transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease, -webkit-box-shadow 0.1s ease; -moz-transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -moz-transform 0.1s ease, -moz-box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease; transition: border 0.1s ease, opacity 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease, -webkit-transform 0.1s ease, -moz-transform 0.1s ease, -webkit-box-shadow 0.1s ease, -moz-box-shadow 0.1s ease;}.widget-form .form-type-horizontal .elements-1 .fields { width: 50%;}.widget-form .form-type-horizontal .elements-1 .fields .field-container { width: 100%;}.widget-form .form-type-horizontal .elements-1 .field-submit-button { width: 50%;}.widget-form .form-type-horizontal .elements-2 .fields { width: 66%;}.widget-form .form-type-horizontal .elements-2 .fields .field-container { width: 50%;}.widget-form .form-type-horizontal .elements-2 .field-submit-button { width: 33%;}.widget-form .form-type-horizontal .elements-3 .fields { width: 75%;}.widget-form .form-type-horizontal .elements-3 .fields .field-container { width: 33%;}.widget-form .form-type-horizontal .elements-3 .field-submit-button { width: 25%;}.widget-form .form-type-horizontal .elements-4 .fields { width: 80%;}.widget-form .form-type-horizontal .elements-4 .fields .field-container { width: 25%;}.widget-form .form-type-horizontal .elements-4 .field-submit-button { width: 20%;}.widget-form .form-type-horizontal .fields { float: left; width: 69%;}.widget-form .form-type-horizontal .fields .field-container { float: left; width: auto;}.widget-form .form-type-horizontal .fields .field-container .input-field { width: 95%; width: -webkit-calc(100% - 1em / 2 ); width: -moz-calc(100% - 1em / 2 ); width: calc(100% - 1em / 2 );}.widget-form .form-type-horizontal .field-submit-button { float: left; width: 30%;}.blockity p { margin: 0; -webkit-margin-before: 0; -webkit-margin-after: 0;}.page-dim { z-index: 100000000; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}.page-dim .overlay { top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.85;}.page-dim .message { position: absolute; width: 400px; top: 45%; left: -webkit-calc((100% - 400px) / 2); left: -moz-calc((100% - 400px) / 2); left: calc((100% - 400px) / 2); font-size: 30px; color: #fff; text-align: center;}.blockity-badge-placeholder { height: 50px;}.blockity-badge { width: 100%; height: 40px; line-height: 40px; text-align: center; font-family: sans; position: fixed; bottom: 0; background-color: #fff; opacity: 0.9; z-index: 1000000;}.blockity-badge a,.blockity-badge a:hover,.blockity-badge a:visited { color: #03b6cd;}.widget-slider .widget-inner { overflow: hidden; position: relative;}.widget-slider .contents { position: relative;}.widget-slider .slide { margin: 0; padding: 0; width: 100%; height: auto;}.widget-slider .slide.slides-loading { visibility: hidden;}.widget-slider .slide.slides-loading:first-child { visibility: visible;}.widget-slider figure { width: 100%; height: 100%; position: absolute; top: 0; left: 0;}.widget-slider .slide img { width: 100%; height: 100%;}/* Preload images */body:after { content: url(/static/images/lightbox2/close.png) url(/static/images/lightbox2/loading.gif) url(/static/images/lightbox2/prev.png) url(/static/images/lightbox2/next.png); display: none;}body.lb-disable-scrolling { overflow: hidden;}.lightboxOverlay { position: absolute; top: 0; left: 0; z-index: 9999; background-color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; display: none;}.lightbox { position: absolute; left: 0; width: 100%; z-index: 10000; text-align: center; line-height: 0; font-weight: normal;}.lightbox .lb-image { display: block; height: auto; max-width: inherit; border-radius: 3px;}.lightbox a img { border: none;}.lb-outerContainer { position: relative; background-color: white; *zoom: 1; width: 250px; height: 250px; margin: 0 auto; border-radius: 4px;}.lb-outerContainer:after { content: ""; display: table; clear: both;}.lb-container { padding: 4px;}.lb-loader { position: absolute; top: 43%; left: 0; height: 25%; width: 100%; text-align: center; line-height: 0;}.lb-cancel { display: block; width: 32px; height: 32px; margin: 0 auto; background: url(/static/images/lightbox2/loading.gif) no-repeat;}.lb-nav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10;}.lb-container > .nav { left: 0;}.lb-nav a { outline: none; background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');}.lb-prev, .lb-next { height: 100%; cursor: pointer; display: block;}.lb-nav a.lb-prev { width: 34%; left: 0; float: left; background: url(/static/images/lightbox2/prev.png) left 48% no-repeat; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 0.6s; -moz-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s;}.lb-nav a.lb-prev:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1;}.lb-nav a.lb-next { width: 64%; right: 0; float: right; background: url(/static/images/lightbox2/next.png) right 48% no-repeat; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -webkit-transition: opacity 0.6s; -moz-transition: opacity 0.6s; -o-transition: opacity 0.6s; transition: opacity 0.6s;}.lb-nav a.lb-next:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1;}.lb-dataContainer { margin: 0 auto; padding-top: 5px; *zoom: 1; width: 100%; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px;}.lb-dataContainer:after { content: ""; display: table; clear: both;}.lb-data { padding: 0 4px; color: #ccc;}.lb-data .lb-details { width: 85%; float: left; text-align: left; line-height: 1.1em;}.lb-data .lb-caption { font-size: 13px; font-weight: bold; line-height: 1em;}.lb-data .lb-number { display: block; clear: left; padding-bottom: 1em; font-size: 12px; color: #999999;}.lb-data .lb-close { display: block; float: right; width: 30px; height: 30px; background: url(/static/images/lightbox2/close.png) top right no-repeat; text-align: right; outline: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; -webkit-transition: opacity 0.2s; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; transition: opacity 0.2s;}.lb-data .lb-close:hover { cursor: pointer; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1;}
+
+		</style>
+
+		<style type="text/css">
+
+	body 
+
+
+{
+	background-color: #ffffff;
+	background-image: url("//storage.googleapis.com/blockity-user-media-dev/media/279/6640-lu9bg.png");
+}
+
+@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px ){
+	body
+	{
+		min-width: 600px;
+		width: 100%;
+		
+
+
+
+	background-color: #f44336;
+	background-image: url("//storage.googleapis.com/blockity-user-media-dev/media/279/6640-lu9bg.png");
+
+	}
+
+	.widget-image .widget-contents img.desktop
+	{
+		display: none;
+	}
+
+	.widget-image .widget-contents img.mobile
+	{
+		display: block;
+	}
+}
+
+</style>
+<style type="text/css">
+
+
+	#block-cij55cigzer{
+		height: 129px;
+			}
+	#block-cij55cigzer .page-block-inner { height: 129px; width: 1110px; }
+
+			#block-cij55cigzer {
+			top: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 1000;
+		}
+			
+	
+	
+
+	#block-jssbzf2bebi{
+		height: 406px;
+		margin-top: 129px; 	}
+	#block-jssbzf2bebi .page-block-inner { height: 406px; width: 1110px; }
+
+	
+	
+	
+
+	#block-nn6fht9lby{
+		height: 309px;
+			}
+	#block-nn6fht9lby .page-block-inner { height: 309px; width: 1110px; }
+
+	
+	
+	
+
+	#block-ouqkuezlhcp{
+		height: 719px;
+			}
+	#block-ouqkuezlhcp .page-block-inner { height: 719px; width: 1110px; }
+
+	
+	
+	
+
+	#block-xzc0zgkgskr{
+		height: 429px;
+			}
+	#block-xzc0zgkgskr .page-block-inner { height: 429px; width: 1110px; }
+
+	
+	
+	
+
+	#block-s4jcreyf5me{
+		height: 128px;
+			}
+	#block-s4jcreyf5me .page-block-inner { height: 128px; width: 1110px; }
+
+	
+	
+	
+
+@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px ){
+	
+		#block-cij55cigzer {
+			background-attachment: scroll !important;
+			height: 224px;
+			width: 600px;
+					}
+		#block-cij55cigzer .page-block-inner { height: 224px; width: 600px; }
+
+		
+			#block-cij55cigzer {
+			position: relative;
+			width: 100%;
+		}
+
+		body { margin-bottom: 0; }
+	
+	
+		#block-jssbzf2bebi {
+			background-attachment: scroll !important;
+			height: 690px;
+			width: 600px;
+					}
+		#block-jssbzf2bebi .page-block-inner { height: 690px; width: 600px; }
+
+		
+	
+	
+		#block-nn6fht9lby {
+			background-attachment: scroll !important;
+			height: 480px;
+			width: 600px;
+					}
+		#block-nn6fht9lby .page-block-inner { height: 480px; width: 600px; }
+
+		
+	
+	
+		#block-ouqkuezlhcp {
+			background-attachment: scroll !important;
+			height: 687px;
+			width: 600px;
+					}
+		#block-ouqkuezlhcp .page-block-inner { height: 687px; width: 600px; }
+
+		
+	
+	
+		#block-xzc0zgkgskr {
+			background-attachment: scroll !important;
+			height: 690px;
+			width: 600px;
+					}
+		#block-xzc0zgkgskr .page-block-inner { height: 690px; width: 600px; }
+
+		
+	
+	
+		#block-s4jcreyf5me {
+			background-attachment: scroll !important;
+			height: 690px;
+			width: 600px;
+					}
+		#block-s4jcreyf5me .page-block-inner { height: 690px; width: 600px; }
+
+		
+	
+	}
+
+</style>
+
+	<style type="text/css">
+				#block-cij55cigzer {
+	box-shadow: 0 0 20px #681d17;
+	background-color: #ffffff;
+}			</style>					
+					<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#block-cij55cigzer {
+	background-color: #ffffff;
+	box-shadow: 0 0 20px #681d17;
+}				}
+				</style>
+									
+<style type="text/css">
+	
+	
+#element-1
+{
+			height: 117px;
+		width: 174px;
+		top: 2px;
+		left: 40px;
+		z-index: 10;
+		
+}
+
+
+
+
+	
+	
+#element-2
+{
+			height: 62px;
+		width: 227px;
+		top: 30px;
+		left: 251px;
+		z-index: 11;
+		
+}
+
+
+
+
+	
+	
+#element-3
+{
+			height: 62px;
+		width: 238px;
+		top: 30px;
+		left: 540px;
+		z-index: 11;
+		
+}
+
+
+
+
+	
+	
+#element-4
+{
+			height: 62px;
+		width: 224px;
+		top: 30px;
+		left: 843px;
+		z-index: 11;
+		
+}
+
+
+
+
+	
+	
+#element-5
+{
+			height: 332px;
+		width: 1094px;
+		top: 42px;
+		left: 7px;
+		z-index: 12;
+		
+}
+
+
+
+
+	
+	
+#element-6
+{
+			height: 22px;
+		width: 160px;
+		top: 72px;
+		left: 54px;
+		z-index: 12;
+			font-size: 35px;
+		
+}
+
+
+
+
+	
+	
+#element-7
+{
+			height: 28px;
+		width: 524px;
+		top: 124px;
+		left: 54px;
+		z-index: 12;
+			font-size: 16px;
+		
+}
+
+
+
+
+	
+	
+#element-8
+{
+			height: 22px;
+		width: 160px;
+		top: 185px;
+		left: 54px;
+		z-index: 12;
+			font-size: 35px;
+		
+}
+
+
+
+
+	
+	
+#element-9
+{
+			height: 110px;
+		width: 646px;
+		top: 239px;
+		left: 54px;
+		z-index: 12;
+			font-size: 16px;
+		
+}
+
+
+
+
+	
+	
+#element-10
+{
+			height: 1435px;
+		width: 1094px;
+		top: 10px;
+		left: 6px;
+		z-index: 12;
+		
+}
+
+
+
+
+	
+	
+#element-11
+{
+			height: 50px;
+		width: 1061px;
+		top: 170px;
+		left: 22px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+	
+	
+#element-12
+{
+			height: 50px;
+		width: 1061px;
+		top: 54px;
+		left: 27px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+	
+	
+#element-13
+{
+			height: 50px;
+		width: 763px;
+		top: 256px;
+		left: 65px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 50px;
+	
+}
+
+
+
+
+	
+	
+#element-14
+{
+			height: 50px;
+		width: 1061px;
+		top: 104px;
+		left: 27px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 50px;
+	
+}
+
+
+
+
+	
+	
+#element-15
+{
+			height: 50px;
+		width: 1061px;
+		top: 19px;
+		left: 27px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+	
+	
+#element-16
+{
+			height: 192px;
+		width: 418px;
+		top: 87px;
+		left: 349px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 24px;
+	
+}
+
+
+
+
+	
+	
+#element-19
+{
+			height: 98px;
+		width: 1097px;
+		top: 11px;
+		left: 5px;
+		z-index: 12;
+		
+}
+
+
+
+
+	
+	
+#element-20
+{
+			height: 100px;
+		width: 1061px;
+		top: 24px;
+		left: 23px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 30px;
+	
+}
+
+
+
+
+	
+	
+#element-21
+{
+			height: 174px;
+		width: 136px;
+		top: 69px;
+		left: 162px;
+		z-index: 16;
+		
+}
+
+
+
+
+	
+	
+#element-22
+{
+			height: 142px;
+		width: 153px;
+		top: 186px;
+		left: 862px;
+		z-index: 16;
+		
+}
+
+
+
+
+	
+	
+#element-23
+{
+			height: 296px;
+		width: 182px;
+		top: 60px;
+		left: 807px;
+		z-index: 13;
+		
+}
+
+
+
+
+	
+	
+#element-24
+{
+			height: 246px;
+		width: 239px;
+		top: 163px;
+		left: 92px;
+		z-index: 17;
+		
+}
+
+
+
+
+	
+	
+#element-25
+{
+			height: 128px;
+		width: 632px;
+		top: 235px;
+		left: 433px;
+		z-index: 15;
+			font-size: 21px;
+				line-height: 32px;
+	
+}
+
+
+
+
+	
+	
+#element-26
+{
+			height: 264px;
+		width: 341px;
+		top: 428px;
+		left: 714px;
+		z-index: 18;
+		
+}
+
+
+
+
+	
+	
+#element-27
+{
+			height: 64px;
+		width: 632px;
+		top: 529px;
+		left: 30px;
+		z-index: 15;
+			font-size: 21px;
+				line-height: 32px;
+	
+}
+
+
+
+
+
+@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px ){
+						
+			
+#element-1
+{
+			height: 111px;
+		width: 216px;
+		top: 12px;
+		left: 200px;
+		z-index: 10;
+		
+}
+
+
+
+
+						
+			
+#element-2
+{
+			height: 62px;
+		width: 116px;
+		top: 131px;
+		left: 22px;
+		z-index: 11;
+		
+}
+
+
+
+
+						
+			
+#element-3
+{
+			height: 62px;
+		width: 238px;
+		top: 131px;
+		left: 172px;
+		z-index: 11;
+		
+}
+
+
+
+
+						
+			
+#element-4
+{
+			height: 62px;
+		width: 146px;
+		top: 131px;
+		left: 439px;
+		z-index: 11;
+		
+}
+
+
+
+
+						
+			
+#element-5
+{
+			height: 598px;
+		width: 579px;
+		top: 63px;
+		left: 6px;
+		z-index: 12;
+		
+}
+
+
+
+
+						
+			
+#element-6
+{
+			height: 22px;
+		width: 160px;
+		top: 108px;
+		left: 36px;
+		z-index: 12;
+			font-size: 35px;
+		
+}
+
+
+
+
+						
+			
+#element-7
+{
+			height: 28px;
+		width: 524px;
+		top: 186px;
+		left: 36px;
+		z-index: 12;
+			font-size: 16px;
+		
+}
+
+
+
+
+						
+			
+#element-8
+{
+			height: 22px;
+		width: 160px;
+		top: 248px;
+		left: 36px;
+		z-index: 12;
+			font-size: 35px;
+		
+}
+
+
+
+
+						
+			
+#element-9
+{
+			height: 110px;
+		width: 496px;
+		top: 283px;
+		left: 34px;
+		z-index: 12;
+			font-size: 16px;
+		
+}
+
+
+
+
+						
+			
+#element-10
+{
+			height: 1815px;
+		width: 569px;
+		top: 16px;
+		left: 11px;
+		z-index: 12;
+		
+}
+
+
+
+
+						
+			
+#element-11
+{
+			height: 50px;
+		width: 551px;
+		top: 53px;
+		left: 18px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+						
+			
+#element-12
+{
+			height: 50px;
+		width: 557px;
+		top: 510px;
+		left: 17px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+						
+			
+#element-13
+{
+			height: 100px;
+		width: 560px;
+		top: 141px;
+		left: 15px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 50px;
+	
+}
+
+
+
+
+						
+			
+#element-14
+{
+			height: 50px;
+		width: 548px;
+		top: 149px;
+		left: 18px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 50px;
+	
+}
+
+
+
+
+						
+			
+#element-15
+{
+			height: 50px;
+		width: 552px;
+		top: 29px;
+		left: 18px;
+		z-index: 15;
+			font-size: 46px;
+				line-height: 50px;
+	
+}
+
+
+
+
+						
+			
+#element-16
+{
+			height: 192px;
+		width: 418px;
+		top: 91px;
+		left: 101px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 24px;
+	
+}
+
+
+
+
+						
+			
+#element-19
+{
+			height: 88px;
+		width: 574px;
+		top: 8px;
+		left: 6px;
+		z-index: 12;
+		
+}
+
+
+
+
+						
+			
+#element-20
+{
+			height: 64px;
+		width: 567px;
+		top: 15px;
+		left: 9px;
+		z-index: 15;
+			font-size: 16px;
+				line-height: 30px;
+	
+}
+
+
+
+
+						
+			
+#element-21
+{
+			height: 186px;
+		width: 146px;
+		top: 304px;
+		left: 243px;
+		z-index: 16;
+		
+}
+
+
+
+
+						
+			
+#element-22
+{
+			height: 151px;
+		width: 164px;
+		top: 338px;
+		left: 239px;
+		z-index: 16;
+		
+}
+
+
+
+
+						
+			
+#element-23
+{
+			height: 297px;
+		width: 182px;
+		top: 322px;
+		left: 295px;
+		z-index: 13;
+		
+}
+
+
+
+
+						
+			
+#element-24
+{
+			height: 200px;
+		width: 200px;
+		top: 226px;
+		left: 55px;
+		z-index: 17;
+		
+}
+
+
+
+
+						
+			
+#element-25
+{
+			height: 128px;
+		width: 277px;
+		top: 261px;
+		left: 294px;
+		z-index: 15;
+			font-size: 21px;
+				line-height: 32px;
+	
+}
+
+
+
+
+						
+			
+#element-26
+{
+			height: 200px;
+		width: 200px;
+		top: 482px;
+		left: 370px;
+		z-index: 18;
+		
+}
+
+
+
+
+						
+			
+#element-27
+{
+			height: 131px;
+		width: 310px;
+		top: 511px;
+		left: 33px;
+		z-index: 15;
+			font-size: 21px;
+				line-height: 32px;
+	
+}
+
+
+
+
+	
+	.widget-form .contents.mobile
+	{
+		display: block;
+	}
+
+	.widget-form .contents.desktop
+	{
+		display: none;
+	}
+}
+</style>
+
+
+		
+			<style type="text/css">
+				#element-2 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-2 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+			</style>	
+			<style type="text/css">
+				#element-3 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-3 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+			</style>	
+			<style type="text/css">
+				#element-4 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-4 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+			</style>	
+			<style type="text/css">
+				#element-5 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-6 .widget-inner .contents {
+	font-size:  35px;
+	line-height:  22px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-7 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  22px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-8 .widget-inner .contents {
+	font-size:  35px;
+	line-height:  22px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-9 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  22px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-10 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-11 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-12 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-13 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  50px;
+}
+
+#element-13 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-13 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-13 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-14 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  50px;
+}
+
+#element-14 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-14 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-14 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-15 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-16 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  24px;
+	color:  #000000;
+}
+
+#element-16 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-16 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-16 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-19 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-20 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  30px;
+}
+
+#element-20 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-20 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-20 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>			
+			<style type="text/css">
+				#element-23 .widget-inner .contents {
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-23 .widget-inner .contents:hover {
+	transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+	-o-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform: rotate(360deg) scale(1) skew(0deg) translate(0px);
+}
+
+			</style>	
+			<style type="text/css">
+				#element-24 .widget-inner .contents {
+	border-top-left-radius:  8px;
+	border-top-right-radius:  8px;
+	border-bottom-left-radius:  8px;
+	border-bottom-right-radius:  8px;
+}
+
+			</style>	
+			<style type="text/css">
+				#element-25 .widget-inner .contents {
+	font-size:  21px;
+	line-height:  32px;
+}
+
+#element-25 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-25 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-25 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>		
+			<style type="text/css">
+				#element-27 .widget-inner .contents {
+	font-size:  21px;
+	line-height:  32px;
+}
+
+#element-27 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-27 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-27 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+			</style>
+																									
+						<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-2 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-2 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-3 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-3 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-4 .widget-inner .contents {
+	line-height:  60px;
+	font-size:  24px;
+	background-color:  #ffffff;
+	color:  #f44336;
+	border-top-left-radius:  12px;
+	border-top-right-radius:  12px;
+	border-bottom-left-radius:  12px;
+	border-bottom-right-radius:  12px;
+	border-style:  solid;
+	border-color:  #f44336;
+	border-width:  1px;
+	transition:  all 0.5s ease;
+	-webkit-transition:  all 0.5s ease;
+	-moz-transition:  all 0.5s ease;
+	-o-transition:  all 0.5s ease;
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px);
+}
+
+#element-4 .widget-inner .contents:hover {
+	transform:  rotate(0deg) scale(1) skew(0deg) translate(20px);
+	-webkit-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-moz-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-o-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+	-ms-transform:  rotate(0deg) scale(1) skew(0deg) translate(0px,-20px);
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-5 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-6 .widget-inner .contents {
+	font-size:  35px;
+	line-height:  22px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-7 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  22px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-8 .widget-inner .contents {
+	font-size:  35px;
+	line-height:  22px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-9 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  22px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-10 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-11 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-12 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-13 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  50px;
+}
+
+#element-13 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-13 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-13 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-14 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  50px;
+}
+
+#element-14 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-14 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-14 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-15 .widget-inner .contents {
+	font-size:  46px;
+	line-height:  50px;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-16 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  24px;
+	color:  #000000;
+}
+
+#element-16 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-16 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-16 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-19 .widget-inner .contents {
+	border-style:  solid;
+	border-width:  0px;
+	border-color:  #ffffff;
+	background-color:  #ffffff;
+	border-top-left-radius:  20px;
+	border-top-right-radius:  20px;
+	border-bottom-left-radius:  20px;
+	border-bottom-right-radius:  20px;
+	box-shadow:  0 2px 20px #681d17;
+}
+
+				}
+
+				</style>
+									<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-20 .widget-inner .contents {
+	font-size:  16px;
+	line-height:  30px;
+}
+
+#element-20 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-20 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-20 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+													<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-25 .widget-inner .contents {
+	font-size:  21px;
+	line-height:  32px;
+}
+
+#element-25 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-25 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-25 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+										<style type="text/css">
+				@media screen and (max-width: 1100px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 1280px ) and (max-device-height: 720px), screen and (max-width: 980px) and (-webkit-min-device-pixel-ratio: 1.5) and ( max-device-width: 980px )				{
+					#element-27 .widget-inner .contents {
+	font-size:  21px;
+	line-height:  32px;
+}
+
+#element-27 .widget-inner .contents a {
+	color:  #bd2222;
+}
+
+#element-27 .widget-inner .contents a:hover {
+	color:  #ea4c4c;
+}
+
+#element-27 .widget-inner .contents a:visited {
+	color:  #5e1e8a;
+}
+
+				}
+
+				</style>
+				
+	<style type="text/css">
+		
+			.widget-container .widget-inner,
+			.widget-container .widget-inner input,
+			.widget-container .widget-inner textarea
+			{
+				
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-style: normal;
+		
+			}
+
+				
+			.widget-container .widget-inner h1
+			{
+				
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-style: normal;
+		
+			}
+
+		
+		
+			.widget-container .widget-inner .button
+			{
+				
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-style: normal;
+		
+			}
+
+		
+		.blockity-badge
+		{
+			
+				font-family: 'Roboto', sans-serif;
+				font-weight: 300;
+				font-style: normal;
+		
+		}
+
+
+	</style>
+
+
+		
+				<style>
+			body{
+    -webkit-animation: scrolling 40s linear infinite;
+    -moz-animation: scrolling 40s linear infinite;
+    -o-animation: scrolling 40s linear infinite;
+    animation: scrolling 40s linear infinite;
+}
+
+@-webkit-keyframes scrolling {
+  from{
+      background-position: 0 0;
+  }
+  to{
+      background-position: 0 105%;
+  }
+}		</style>
+			</head>
+	<body>
+		
+	<div class="page-block" id="block-cij55cigzer">
+				<div class="background-overlay"></div>
+																																			
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-1" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+					<a href="/">
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/media/279/6911-lu9logo.svg"
+			style="width: 174px; height: 117px;"
+			title=""
+			alt=""
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/media/279/6911-lu9logo.svg"
+				style="width: 216px; height: 111px;"
+				title=""
+				alt=""
+				class="mobile"
+			/>
+		
+					</a>
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-2" class="widget-container widget-button">
+	<div class="widget-inner">
+			<a href="#block-nn6fht9lby">
+			<div class="contents desktop">
+			<div class="submit-button button">
+				About			</div>
+		</div>
+					</a>
+	</div>
+
+</div>
+														</pre>
+						<div id="element-3" class="widget-container widget-button">
+	<div class="widget-inner">
+			<a href="#block-ouqkuezlhcp">
+			<div class="contents desktop">
+			<div class="submit-button button">
+				Stuff			</div>
+		</div>
+					</a>
+	</div>
+
+</div>
+														</pre>
+						<div id="element-4" class="widget-container widget-button">
+	<div class="widget-inner">
+			<a href="#block-xzc0zgkgskr">
+			<div class="contents desktop">
+			<div class="submit-button button">
+				Contact			</div>
+		</div>
+					</a>
+	</div>
+
+</div>
+														</div>
+	</div>
+	<div class="page-block" id="block-jssbzf2bebi">
+				<div class="background-overlay"></div>
+																																																	
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-5" class="widget-container widget-box">
+	<div class="widget-inner">
+	<div class="contents desktop"></div>
+	</div>
+</div>
+														</pre>
+						<div id="element-6" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			<p><b>Welcome!</b></p>
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-7" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			<p>This is my website, which is mostly just links to stuff, but I hope you enjoy!</p>
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-8" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			<p><b>News</b></p>
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-9" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			
+			
+			
+			<p>Same website, new domain.</p><p>I'll use this more often ok I promise (999999 years later........)</p><p>Hosted by GitHub pages!</p><br><p><em>August 24th, 2017</em></p>
+		
+		
+		
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-23" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9937-182x296-6639-mariola.png"
+			style="width: 182px; height: 296px;"
+			title=""
+			alt="jSJDgsIOJirojgGHdjdhjskghG!!!!!!"
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9946-182x297-6639-mariola.png"
+				style="width: 182px; height: 297px;"
+				title=""
+				alt="jSJDgsIOJirojgGHdjdhjskghG!!!!!!"
+				class="mobile"
+			/>
+		
+			</div>
+</div>
+</div>
+														</div>
+	</div>
+	<div class="page-block" id="block-nn6fht9lby">
+				<div class="background-overlay"></div>
+																																			
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-10" class="widget-container widget-box">
+	<div class="widget-inner">
+	<div class="contents desktop"></div>
+	</div>
+</div>
+														</pre>
+						<div id="element-11" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			<p style="text-align: center;"><strong>About</strong></p>
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-13" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			<p style="text-align: left;">Pretty much everything you need to know (if you want to know) about me is in my <a href="http://listography.com/Lu9" data-vivaldi-spatnav-clickable="1" style="outline-width: 0px !important; user-select: text !important;"><strong>listography</strong></a> profile.</p>
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-22" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/media/279/6638-hat.svg"
+			style="width: 153px; height: 142px;"
+			title=""
+			alt=""
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/media/279/6638-hat.svg"
+				style="width: 164px; height: 151px;"
+				title=""
+				alt=""
+				class="mobile"
+			/>
+		
+			</div>
+</div>
+</div>
+														</div>
+	</div>
+	<div class="page-block" id="block-ouqkuezlhcp">
+				<div class="background-overlay"></div>
+																																																	
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-12" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			<p style="text-align: center;"><strong>Stuff</strong></p>
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-14" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			<p style="text-align: center;">Here are some stuff I made that you can check out.</p>
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-24" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+					<a
+				href="//storage.googleapis.com/blockity-user-media-dev/media/279/6641-shapeways.png"
+				data-lightbox="element-lightbox-block-ouqkuezlhcp"
+				data-title=""
+				title=""
+			>
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9942-239x246-6641-shapeways.png"
+			style="width: 239px; height: 246px;"
+			title=""
+			alt=""
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9943-200x200-6641-shapeways.png"
+				style="width: 200px; height: 200px;"
+				title=""
+				alt=""
+				class="mobile"
+			/>
+		
+					</a>
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-25" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			
+			<p style="text-align: right;"><strong><u><a href="http://shapeways.com/shops/luniney-s-3d-paradise" data-vivaldi-spatnav-clickable="1">Shapeways 3D Prints</a></u></strong></p><p style="text-align: right;">You can now get prints of these little fellas in 3D, thanks to Shapeways!</p><p style="text-align: right;">(I have one of, uh, "myself" (Lu9), it's good stuff)</p>
+		
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-26" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+					<a
+				href="//storage.googleapis.com/blockity-user-media-dev/media/279/6642-redbubble.png"
+				data-lightbox="element-lightbox-block-ouqkuezlhcp"
+				data-title=""
+				title=""
+			>
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9944-341x264-6642-redbubble.png"
+			style="width: 341px; height: 264px;"
+			title=""
+			alt=""
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/thumbnails/9945-200x200-6642-redbubble.png"
+				style="width: 200px; height: 200px;"
+				title=""
+				alt=""
+				class="mobile"
+			/>
+		
+					</a>
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-27" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			
+			<p style="text-align: left;"><strong><u><a href="http://redbubble.com/people/tehlu9prod/shop">Redbubble Prints</a></u></strong></p><p style="text-align: left;">Art prints on shirts, stickers, laptop &amp; phone cases, and more!</p>
+		
+		
+		
+		
+			</div>
+</div>
+</div>
+														</div>
+	</div>
+	<div class="page-block" id="block-xzc0zgkgskr">
+				<div class="background-overlay"></div>
+																												
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-15" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			<p style="text-align: center;"><strong>Contact</strong></p>
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-16" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			
+			
+			
+			<p style="text-align: center;">You can contact me through</p><div style="text-align: right;"><br></div><p style="text-align: left;"><strong>Discord:</strong>&nbsp;LuNiney#1647</p><p style="text-align: left;"><strong>Telegram:</strong> LuNiney2</p><p style="text-align: left;"><strong>E-mail:</strong> lucaslemmerick (at) hotmail.com</p><p style="text-align: left;"><strong>Twitter:</strong> @LuNiney</p><div style="text-align: right;"><br></div><p style="text-align: center;">More links and stuff in listography.</p>
+		
+		
+		
+		
+		
+		
+			</div>
+</div>
+</div>
+														</pre>
+						<div id="element-21" class="widget-container widget-image">
+	<div class="widget-inner">
+	<div class="widget-contents contents desktop">
+		
+		<img
+			src="//storage.googleapis.com/blockity-user-media-dev/media/279/6637-18funny.svg"
+			style="width: 136px; height: 174px;"
+			title=""
+			alt=""
+			class="desktop"		/>
+
+					<img
+				src="//storage.googleapis.com/blockity-user-media-dev/media/279/6637-18funny.svg"
+				style="width: 146px; height: 186px;"
+				title=""
+				alt=""
+				class="mobile"
+			/>
+		
+			</div>
+</div>
+</div>
+														</div>
+	</div>
+	<div class="page-block" id="block-s4jcreyf5me">
+				<div class="background-overlay"></div>
+																					
+		<div class="page-block-inner">
+												</pre>
+						<div id="element-19" class="widget-container widget-box">
+	<div class="widget-inner">
+	<div class="contents desktop"></div>
+	</div>
+</div>
+														</pre>
+						<div id="element-20" class="widget-container widget-text">
+	
+<div class="widget-inner">
+	<div class="contents">
+		
+			
+			
+			
+			
+			<p style="text-align: center;">© Lu9 - 2017</p><p style="text-align: center;">All funnies reserved</p>
+		
+		
+		
+		
+			</div>
+</div>
+</div>
+														</div>
+	</div>
+
+		<script src="//storage.googleapis.com/blockity-user-media-dev/assets/eb76a26bf6/e1b7aaa4332cf1a6a0667c52fb9d89cf.js"></script>
+
+
+																													
+									<link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+					
+		
+		
+		
+		<script src="//storage.googleapis.com/blockity-user-media-dev/assets/eb76a26bf6/81e7667d7bcf0b9760073d182b4b0c3f.js"></script>
+
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"471cb548e4","applicationID":"30896947","transactionName":"ZFFWZkoCCEBYWxAMVl0bYUBRTBZGW1QNBhZaWlBXQE0WW0k=","queueTime":0,"applicationTime":388,"atts":"SBZVEAIYG04=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
