@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donald Alves</title>
+<script type="text/javascript" src="/static/js/analytics.js?v=1504048623.0" charset="utf-8"></script>
+
+<script type="text/javascript">archive_analytics.values.service='wb';archive_analytics.values.server_name='wwwb-app13.us.archive.org';archive_analytics.values.server_ms=605;</script><link rel="stylesheet" type="text/css" href="/static/css/banner-styles.css?v=1504048623.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/iconochive.css?v=1504048623.0" />
+
+<script src="/static/js/jquery-1.11.1.min.js"></script>
+</head>
+<body style="overflow:hidden;">
+<iframe id="playback" src="http://web.archive.org/web/20141218134302if_/http://donald.com.br/" frameborder="0" style="position:absolute;top:65px;left:0;width:100%;">
+</iframe>
+<script type="text/javascript">
+var margin_top = 65;
+function fitPlayback() {
+  $('#playback').css({
+    height: (window.innerHeight - margin_top) + 'px',
+    top: margin_top
+  });
+}
+fitPlayback();
+$(window).on('resize', function() {
+  fitPlayback(); 
+});
+$('#wm-tb-close').click(function(){
+  margin_top = 0;
+  fitPlayback();
+});
+</script>
+</body>
+</html>
