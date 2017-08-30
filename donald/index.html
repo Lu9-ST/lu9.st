@@ -13,22 +13,5 @@
 <body style="overflow:hidden;">
 <iframe id="playback" src="http://web.archive.org/web/20141218134302if_/http://donald.com.br/" frameborder="0" style="height:100%;width:100%;">
 </iframe>
-<script type="text/javascript">
-var margin_top = 65;
-function fitPlayback() {
-  $('#playback').css({
-    height: (window.innerHeight - margin_top) + 'px',
-    top: margin_top
-  });
-}
-fitPlayback();
-$(window).on('resize', function() {
-  fitPlayback(); 
-});
-$('#wm-tb-close').click(function(){
-  margin_top = 0;
-  fitPlayback();
-});
-</script>
 </body>
 </html>
