@@ -1,6 +1,0 @@
-AuthName "epic"
-AuthUserFile /path/to/password/file/.htpasswd
-AuthType Basic
-require valid-user
-ErrorDocument 401 /error_pages/401.html
-AddHandler server-parsed .html
