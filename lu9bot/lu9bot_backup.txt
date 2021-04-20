@@ -1641,7 +1641,16 @@
 "https://pbs.twimg.com/media/DGXQvANXoAENoux.jpg",
 "https://pbs.twimg.com/media/DGRn9I3VYAA85bW.jpg",
 "https://pbs.twimg.com/media/DGMGPm-XYAAHHRW.jpg",
-"https://pbs.twimg.com/media/DGRMfC4W0AA86Y1.jpg"
+"https://pbs.twimg.com/media/DGRMfC4W0AA86Y1.jpg",
+"https://pbs.twimg.com/media/DHAzGGEXoAAXq2M.jpg",
+"https://pbs.twimg.com/media/DHAURf0XgAAIrEi.jpg",
+"https://pbs.twimg.com/media/DHACxH0XUAA_vIn.jpg",
+"https://pbs.twimg.com/media/DHAKEY3XoAAcmW7.jpg",
+"https://pbs.twimg.com/media/DG5YSeeWAAEprjG.jpg",
+"https://i.imgur.com/1vif1m4.png",
+"https://pbs.twimg.com/media/DGqmuYGW0AAhVjH.jpg",
+"https://pbs.twimg.com/media/DGqnALPWAAQh8o4.jpg",
+"https://pbs.twimg.com/media/DGqqs23XYAAYKnN.jpg"
 ],
 "imagegenerator":["#image#","#image#","#imagebot#"],
 "imagebot":["https://www.shitpostbot.com/img/sourceimages/peer-roni-590f0886ccdec.png",
@@ -2954,7 +2963,12 @@
 "my melody[zcaps:MY MELODY][zthey:she][zthem:her][ztheir:her][ztheyre:she's][zare:is][zpfp:#https#i.imgur.com/xNbTgfa.png]",
 "MC mimimi[zcaps:MC MIMIMI][zthey:she][zthem:her][ztheir:her][ztheyre:she's][zare:is][zpfp:#https#i.imgur.com/rtBs35m.png]",
 "stinkoman[zcaps:STINKOMAN][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/IqZbcBT.png]",
-"1up[zcaps:1UP][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/KPcXNsN.png]"
+"1up[zcaps:1UP][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/KPcXNsN.png]",
+"chaley[zcaps:CHALEY][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/XFQRVjL.png]",
+"puppycat[zcaps:PUPPYCAT][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/OOIMmLd.png]",
+"cardamon[zcaps:CARDAMON][zthey:he][zthem:him][ztheir:his][ztheyre:he's][zare:is][zpfp:#https#i.imgur.com/WHjnRwV.png]",
+"maddie flour[zcaps:MADDIE FLOUR][zthey:she][zthem:her][ztheir:her][ztheyre:she's][zare:is][zpfp:#https#i.imgur.com/CHcWMDh.png]",
+"ena[zcaps:ENA][zthey:she][zthem:her][ztheir:her][ztheyre:she's][zare:is][zpfp:#https#i.imgur.com/xDcN448.png]"
 ],
 "zthey":["they"],
 "zthem":["them"],
@@ -3415,7 +3429,8 @@
 "Mundial Ronaldinho Soccer 64",
 "Art Alive!",
 "Mario Paint",
-"Friday Night Funkin'"],
+"Friday Night Funkin'",
+"Among Us"],
 "franchise":["Super Mario",
 "Sonic the Hedgehog",
 "Crash Bandicoot",
@@ -3491,6 +3506,7 @@
 "BFDI",
 "Gravity Falls",
 "Ruby Gloom",
+"Among Us",
 "Ketchup Dreams"],
 "console":["Atari 2600",
 "Atari 5200",
@@ -4257,11 +4273,6 @@
 "[TEMPLATE 62 - Scooby Doo Movies][#z#]{svg <svg    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"    xmlns:cc=\"http://creativecommons.org/ns\\#\"    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns\\#\"    xmlns:svg=\"http://www.w3.org/2000/svg\"    xmlns=\"http://www.w3.org/2000/svg\"    xmlns:xlink=\"http://www.w3.org/1999/xlink\"    width=\"634\"    height=\"480\"    viewBox=\"0 0 167.74583 127\"    version=\"1.1\"    id=\"svg8\">   <defs      id=\"defs2\" />   <metadata      id=\"metadata5\">     <rdf:RDF>       <cc:Work          rdf:about=\"\">         <dc:format>image/svg+xml</dc:format>         <dc:type            rdf:resource=\"http://purl.org/dc/dcmitype/StillImage\" />         <dc:title></dc:title>       </cc:Work>     </rdf:RDF>   </metadata>   <g      id=\"layer1\"      transform=\"translate(0,-34.773808)\">     <image        width=\"60.587307\"        height=\"60.587307\"        preserveAspectRatio=\"none\"        xlink:href=\"#zpfp#\"        id=\"image3055\"        x=\"91.447617\"        y=\"83.41687\" />     <image        width=\"167.74583\"        height=\"127\"        preserveAspectRatio=\"none\"        xlink:href=\"https://www.shitpostbot.com/img/templates/new-scooby-doo-movies-59d5c8c199b90-overlay.png\"        id=\"image3041\"        x=\"0\"        y=\"34.773808\" />   </g> </svg> }"
 ]
 } 
-
-
-
-
-
 
 
 
