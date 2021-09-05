@@ -1,0 +1,41 @@
+@font-face {
+        font-family: '7 GRAND FONT 2.0';
+        src: url(7-grand-font-2-0.ttf);  format('truetype');
+    }
+
+@font-face {
+        font-family: 'MARIO Font v3';
+        src: url(MARIO_Font_v3_Solid.otf);  format('opentype');
+    }
+
+@font-face {
+        font-family: 'Westminster';
+        src: url(Westminster.ttf);  format('truetype');
+    }
+
+@font-face {
+        font-family: 'Commodore 64 Pixelized';
+        src: url(Commodore.ttf);  format('truetype');
+    }
+
+@font-face {
+        font-family: 'Glitch0';
+        src: url(Glitch0.ttf);  format('truetype');
+    }
+
+@font-face {
+        font-family: 'Magic English';
+        src: url(MagicEnglish.ttf);  format('truetype');
+    }
+@font-face {
+        font-family: 'Impact';
+        src: url(impact.ttf);  format('truetype');
+    }
+@font-face {
+        font-family: 'Comic Sans MS';
+        src: url(comic.ttf);  format('truetype');
+    }
+@font-face {
+        font-family: 'Press Start 2P';
+        src: url(PressStart2P.ttf);  format('truetype');
+    }
