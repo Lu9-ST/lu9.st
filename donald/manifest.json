@@ -1,15 +1,12 @@
 {
   "background_color": "#0C77A3",
   "description": "Hello! Whatsupp?",
-  "dir": "ltr",
   "display": "standalone",
   "name": "Donald Alves",
   "orientation": "landscape-primary",
-  "scope": "/donald",
   "short_name": "Donald Alves",
-  "start_url": "/donald",
+  "start_url": "https://lu9.io/donald",
   "theme_color": "#0C77A3",
-  "categories": [],
   "screenshots": [
     {
       "src": "https://i.imgur.com/IGzlTSt.png",
@@ -19,10 +16,14 @@
   ],
   "icons": [
     {
+      "src": "https://lu9.io/donald/donald_pwa_icon_small.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
       "src": "https://lu9.io/donald/donald_pwa_icon.png",
       "type": "image/png",
-      "sizes": "256x256"
+      "sizes": "512x512"
     }
-  ],
-  "shortcuts": []
+  ]
 }
