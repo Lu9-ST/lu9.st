@@ -1,7 +1,7 @@
 {
   "background_color": "#0C77A3",
   "description": "Hello! Whatsupp?",
-  "display": "standalone",
+  "display": "fullscreen",
   "name": "Donald Alves",
   "orientation": "landscape-primary",
   "short_name": "Donald Alves",
