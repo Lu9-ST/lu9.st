@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "Donald Alves",
   "orientation": "landscape-primary",
-  "scope": "/",
+  "scope": "/donald",
   "short_name": "Donald Alves",
-  "start_url": "/",
+  "start_url": "/donald",
   "theme_color": "#0C77A3",
   "categories": [],
   "screenshots": [
@@ -19,7 +19,7 @@
   ],
   "icons": [
     {
-      "src": "/donald_pwa_icon.png",
+      "src": "/donald/donald_pwa_icon.png",
       "type": "image/png",
       "sizes": "256x256"
     }
