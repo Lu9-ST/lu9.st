@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <!--PWA Mother Fu Ker !!!-->
   <meta property="og:title" content="Donald Alves">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lu9.io/donald">
   <meta property="og:image" content="https://i.imgur.com/IGzlTSt.png">
   <meta property="og:description" content="Hello! Whatsupp?">
   <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="256x256"  href="/donald_pwa_icon.png">
+  <link rel="manifest" href="/manifest.json">
 <title>Donald Alves</title>
+  <!--Service Worker Begin-->
+  <script type="module">
+  import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+    const CACHE = "pwabuilder-offline";
+
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+
+self.addEventListener("message", (event) => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+workbox.routing.registerRoute(
+  new RegExp('/*'),
+  new workbox.strategies.StaleWhileRevalidate({
+    cacheName: CACHE
+  })
+);
+  </script>
+   <!--Service Worker End-->
+   <!--Ruffle Emulator-->
 <script src="ruffle.js"></script>
 </head>
 <body style="overflow:hidden;background-color:black;">
