@@ -1,0 +1,28 @@
+{
+  "background_color": "#0C77A3",
+  "description": "Hello! Whatsupp?",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Donald Alves",
+  "orientation": "landscape-primary",
+  "scope": "/",
+  "short_name": "Donald Alves",
+  "start_url": "/",
+  "theme_color": "#0C77A3",
+  "categories": [],
+  "screenshots": [
+    {
+      "src": "https://i.imgur.com/IGzlTSt.png",
+      "sizes": "1361x872",
+      "type": "image/png"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/donald_pwa_icon.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "shortcuts": []
+}
