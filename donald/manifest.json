@@ -19,7 +19,7 @@
   ],
   "icons": [
     {
-      "src": "/donald/donald_pwa_icon.png",
+      "src": "https://lu9.io/donald/donald_pwa_icon.png",
       "type": "image/png",
       "sizes": "256x256"
     }
