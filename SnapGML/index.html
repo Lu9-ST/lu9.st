@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html><head>
+      <meta http-equiv="Access-Control-Allow-Origin" content="*" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>headers: {
+'Access-Control-Allow-Origin': '*'
+		}</script>
 <!--Load Prism Library-->
 <link id="import-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"></script>
@@ -17,35 +21,35 @@
         <title>SnapGML</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!--Load Snap! Dependencies-->
-        <script src="src/morphic.js"></script>
-        <script src="src/symbols.js"></script>
-        <script src="src/widgets.js"></script>
-        <script src="src/blocks.js"></script>
-        <script src="src/threads.js"></script>
-        <script src="src/objects.js"></script>
-        <script src="src/scenes.js"></script>
-        <script src="src/gui.js"></script>
-        <script src="src/paint.js"></script>
-        <script src="src/lists.js"></script>
-        <script src="src/byob.js"></script>
-        <script src="src/tables.js"></script>
-        <script src="src/sketch.js"></script>
-        <script src="src/video.js"></script>
-        <script src="src/maps.js"></script>
-        <script src="src/extensions.js?"></script>
-        <script src="src/xml.js"></script>
-        <script src="src/store.js"></script>
-        <script src="src/locale.js"></script>
-        <script src="src/cloud.js"></script>
-        <script src="src/api.js"></script>
-        <script src="src/sha512.js"></script>
-        <script src="src/FileSaver.min.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/morphic.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/symbols.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/widgets.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/blocks.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/threads.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/objects.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/scenes.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/gui.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/paint.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/lists.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/byob.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/tables.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/sketch.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/video.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/maps.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/extensions.js?"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/xml.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/store.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/locale.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/cloud.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/api.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/sha512.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/FileSaver.min.js"></script>
 	<!--Set up Snap! Environment-->
         <script>
             var world;
             window.onload = function () {
                 var ide = new IDE_Morph({
-				path: '/',
+				path: '../',
                         load: 'https://dl.dropboxusercontent.com/s/v732ehhn3qiyc4s/Scratch2GML-Nightly.xml', //maybe soon will be hosted together with the page
                         design: "classic",
                         border: 0,
