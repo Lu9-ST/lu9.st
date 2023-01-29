@@ -2,12 +2,12 @@
 <html><head>
 	<meta name="snap-cloud-domain" location="https://snap.berkeley.edu:443">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Prism-->
+<!--Load Prism Library-->
 <link id="import-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-<!--Code-input is on GitHub ==> https://github.com/WebCoder49/code-input-->
+<!--Load Code-input  ==> https://github.com/WebCoder49/code-input-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/code-input.css">
 <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/code-input.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/plugins/indent.js"></script>
@@ -17,6 +17,7 @@
 </script>
         <title>SnapGML</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--Load Snap! Dependencies-->
         <script src="https://snap.berkeley.edu/versions/dev/src/morphic.js"></script>
         <script src="https://snap.berkeley.edu/versions/dev/src/symbols.js"></script>
         <script src="https://snap.berkeley.edu/versions/dev/src/widgets.js"></script>
@@ -40,12 +41,13 @@
         <script src="https://snap.berkeley.edu/versions/dev/src/api.js"></script>
         <script src="https://snap.berkeley.edu/versions/dev/src/sha512.js"></script>
         <script src="https://snap.berkeley.edu/versions/dev/src/FileSaver.min.js"></script>
+	<!--Set up Snap! Environment-->
         <script>
             var world;
             window.onload = function () {
                 var ide = new IDE_Morph({
 				path: '../',
-                        load: 'https://dl.dropboxusercontent.com/s/v732ehhn3qiyc4s/Scratch2GML-Nightly.xml',
+                        load: 'https://dl.dropboxusercontent.com/s/v732ehhn3qiyc4s/Scratch2GML-Nightly.xml', //maybe soon will be hosted together with the page
                         design: "classic",
                         border: 0,
                         hideControls: true,
@@ -56,7 +58,7 @@
                         noRingify: true,
                         noUserSettings: true,
                         noDevWarning: true,
-				blocksZoom: 1.4
+			blocksZoom: 1.4 //maybe soon these should be customizable
                     }),
                     code = document.getElementById('code'),
                     loop = () => {
@@ -67,7 +69,7 @@
                 ide.openIn(world);
                 ide.addMessageListener('update', txt => code.value = txt);
                 clear.addEventListener('click', () =>
-                    ide.currentSprite.synchScriptsFrom('<scripts>'));
+                    ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
                     var scripts = ide.currentSprite.scripts,
                         ln = n => this.value.substr(0, n).split('\n').length;
@@ -121,19 +123,19 @@ background-color: #1E1E1E;
     <body>
 	<div class="main">
         <div class="worlddiv" id="worlddiv"><canvas id="world" tabindex="1"></canvas></div>
-        <div class="codediv"><code-input id="code" style="resize: none; height: 80vh; overflow: hidden;" lang="gml" placeholder=" " "></code-input></div>
+        <div class="codediv"><code-input id="code" style="resize: none; height: 80vh; overflow: hidden;" lang="gml" placeholder=" "></code-input></div>
 	</div>
 <div class="buttonsdiv"><button id="clear">Clear</button></div>
 <script>
 var context = document.querySelector("canvas").getContext("2d");
 
-var render = function() {
+var responsiveCanvas = function() {
 context.canvas.width = document.documentElement.clientWidth * 0.4;
 context.canvas.height = document.documentElement.clientHeight * 0.8;
 };
 
-window.addEventListener("resize", render);
+window.addEventListener("resize", responsiveCanvas);
 
-render();
+responsiveCanvas();
 </script>
     </body></html>
