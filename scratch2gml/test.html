@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="snap-cloud-domain" location="https://snap.berkeley.edu:443">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Prism-->
+<link id="import-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<!--Code-input is on GitHub ==> https://github.com/WebCoder49/code-input-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/code-input.css">
+<script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/code-input.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/plugins/indent.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/WebCoder49/code-input@1.1/plugins/autodetect.js"></script>
+<script>
+  codeInput.registerTemplate("code-input", codeInput.templates.prism(Prism, [new codeInput.plugins.Indent()]));
+</script>
+        <title>SnapGML</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://snap.berkeley.edu/versions/dev/src/morphic.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/symbols.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/widgets.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/blocks.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/threads.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/objects.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/scenes.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/gui.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/paint.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/lists.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/byob.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/tables.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/sketch.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/video.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/maps.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/extensions.js?"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/xml.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/store.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/locale.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/cloud.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/api.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/sha512.js"></script>
+        <script src="https://snap.berkeley.edu/versions/dev/src/FileSaver.min.js"></script>
+        <script>
+            var world;
+            window.onload = function () {
+                var ide = new IDE_Morph({
+				path: '../',
+                        load: 'https://dl.dropboxusercontent.com/s/v732ehhn3qiyc4s/Scratch2GML-Nightly.xml',
+                        design: "classic",
+                        border: 0,
+                        hideControls: true,
+                        hideCategories: false,
+                        noSprites: true,
+                        noImports: true,
+                        noOwnBlocks: true,
+                        noRingify: true,
+                        noUserSettings: true,
+                        noDevWarning: true,
+				blocksZoom: 1.4
+                    }),
+                    code = document.getElementById('code'),
+                    loop = () => {
+                        requestAnimationFrame(loop);
+                        world.doOneCycle();
+                    };
+                world = new WorldMorph(document.getElementById('world'), false);
+                ide.openIn(world);
+                ide.addMessageListener('update', txt => code.value = txt);
+                clear.addEventListener('click', () =>
+                    ide.currentSprite.synchScriptsFrom('<scripts>'));
+                code.onmouseup = function () {
+                    var scripts = ide.currentSprite.scripts,
+                        ln = n => this.value.substr(0, n).split('\n').length;
+                    scripts.unflash();
+                    if (this.selectionStart < this.selectionEnd) {
+                        scripts.flashLOC(
+                            ln(this.selectionStart),
+                            ln(this.selectionEnd)
+                        );
+                    }
+                };
+                requestAnimationFrame(loop);
+            };
+        </script>
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+color: white;
+background-color: black;
+background-image: url("https://f.lu9.st/SEJK4n.png");
+background-repeat: repeat;
+background-position: 2px;
+}
+.main {
+	display: flex;
+}
+.worlddiv {
+	width: 40vw;
+	height: 80vh;
+}
+.codediv {
+	width: calc(60vw - 10px);
+	height: 80vh;
+}
+.buttonsdiv {
+	width: 100vw;
+	height: calc(20vh - 10px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+button {
+color: white;
+background-color: #1E1E1E;
+}
+</style>
+</head>
+    <body>
+	<div class="main">
+        <div class="worlddiv" id="worlddiv"><canvas id="world" tabindex="1"></canvas></div>
+        <div class="codediv"><code-input id="code" style="resize: none; height: 80vh; overflow: hidden;" lang="gml" placeholder=" " "></code-input></div>
+	</div>
+<div class="buttonsdiv"><button id="clear">Clear</button></div>
+<script>
+var context = document.querySelector("canvas").getContext("2d");
+
+var render = function() {
+context.canvas.width = document.documentElement.clientWidth * 0.4;
+context.canvas.height = document.documentElement.clientHeight * 0.8;
+};
+
+window.addEventListener("resize", render);
+
+render();
+</script>
+    </body></html>
