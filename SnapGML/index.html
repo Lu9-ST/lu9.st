@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-      <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+      <meta name="mobile-web-app-capable" content="yes"> <!--Lazy Bare Minimum PWA "Support" Enabler-->
       <meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>headers: {
 'Access-Control-Allow-Origin': '*'
@@ -103,11 +103,11 @@ background-position: 2px;
 	display: flex;
 }
 .worlddiv {
-	width: 40vw;
+	width: 50vw;
 	height: 80vh;
 }
 .codediv {
-	width: calc(60vw - 10px);
+	width: calc(50vw - 10px);
 	height: 80vh;
 }
 .buttonsdiv {
@@ -133,7 +133,7 @@ background-color: #1E1E1E;
 var context = document.querySelector("canvas").getContext("2d");
 
 var responsiveCanvas = function() {
-context.canvas.width = document.documentElement.clientWidth * 0.4;
+context.canvas.width = document.documentElement.clientWidth * 0.5;
 context.canvas.height = document.documentElement.clientHeight * 0.8;
 };
 
