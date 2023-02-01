@@ -50,7 +50,7 @@
                         load: 'https://dl.dropboxusercontent.com/s/v732ehhn3qiyc4s/Scratch2GML-Nightly.xml', //maybe soon will be hosted together with the page
                         design: "classic",
                         border: 0,
-                        hideControls: false,
+                        hideControls: true,
                         hideCategories: false,
                         noSprites: true,
                         noImports: true,
@@ -67,7 +67,12 @@
                     };
                 world = new WorldMorph(document.getElementById('world'), false);
                 ide.openIn(world);
-                ide.addMessageListener('update', txt => code.value = txt);
+                //ide.addMessageListener('update', txt => code.value = txt);
+		    start.addEventListener('click', () => { ide.enableJS = !ide.enableJS;
+						ide.flushBlocksCache('operators');
+           					ide.refreshPalette();
+            				ide.categories.refreshEmpty(); 
+						ide.broadcast('update');});
                 clear.addEventListener('click', () =>
                     ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
@@ -82,7 +87,13 @@
                     }
                 };
                 requestAnimationFrame(loop);
+		    setTimeout(() => { ide.enableJS = !ide.enableJS;
+						ide.flushBlocksCache('operators');
+           					ide.refreshPalette();
+            				ide.categories.refreshEmpty(); 
+						ide.broadcast('update'); }, 2000);
             };
+		    
         </script>
 <style>
 * {
@@ -125,7 +136,7 @@ background-color: #1E1E1E;
         <div class="worlddiv" id="worlddiv"><canvas id="world" tabindex="1"></canvas></div>
         <div class="codediv"><code-input id="code" style="resize: none; height: 80vh; overflow: hidden;" lang="gml" placeholder=" "></code-input></div>
 	</div>
-<div class="buttonsdiv"><button id="clear">Clear</button></div>
+<div class="buttonsdiv"><button id="start">Enable JavaScript</button> <button id="clear">Clear</button></div>
 <script>
 var context = document.querySelector("canvas").getContext("2d");
 
