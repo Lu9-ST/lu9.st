@@ -7,6 +7,7 @@
   "short_name": "Donald Alves",
   "start_url": "/index.html",
   "theme_color": "#0C77A3",
+  "lang": "pt-BR",
   "screenshots": [
     {
       "src": "https://i.imgur.com/IGzlTSt.png",
@@ -16,12 +17,12 @@
   ],
   "icons": [
     {
-      "src": "https://lu9.io/donald/donald_pwa_icon_small.png",
+      "src": "https://lu9.st/donald/donald_pwa_icon_small.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://lu9.io/donald/donald_pwa_icon.png",
+      "src": "https://lu9.st/donald/donald_pwa_icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
