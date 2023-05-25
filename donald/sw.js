@@ -1,10 +1,10 @@
 var cacheName = 'donald-alves';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/index.swf',
-  '/galeria.php/index.html',
-  '/main.js',
+  '/donald/',
+  '/donald/index.html',
+  '/donald/index.swf',
+  '/donald/galeria.php/index.html',
+  '/donald/main.js',
   'https://unpkg.com/@ruffle-rs/ruffle'
 ];
 
