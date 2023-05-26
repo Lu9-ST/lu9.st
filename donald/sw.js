@@ -5,6 +5,14 @@ var filesToCache = [
   '/donald/index.swf',
   '/donald/galeria.php/index.html',
   '/donald/main.js',
+  '/donald/quemsou.swf',
+  '/donald/repertorio.swf',
+  '/donald/parceiros.swf',
+  '/donald/agenda.swf',
+  '/donald/contato.swf',
+  '/donald/textos/release.txt',
+  '/donald/textos/parceiros.txt',
+  '/donald/textos/agenda.php',
   'https://unpkg.com/@ruffle-rs/ruffle'
 ];
 
