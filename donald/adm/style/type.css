@@ -1,0 +1,104 @@
+
+body{
+	color:#000;
+	margin:0;
+	padding:0;
+	text-align:justify;
+	font-size:12px;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.login{
+	background-color:#F7FEFF;
+
+}
+#text{
+padding:10px 50px 10px 50px;
+line-height:16px;
+width:80%;
+float:left;
+}
+h1{
+color:#003399;
+padding:0 0 0 10px;
+font-size:16px;
+}
+h2{
+color:#0099FF;
+padding:0 0 0 10px;
+font-size:14px;
+}
+.ass{
+font-size:10px;
+color:#999;
+float:right;
+padding:10px 0 10px 0;
+
+}
+#menu_top{
+	margin:160px 20px 0 20px;
+	background-color:transparent;
+	float:left;
+	font-size:10px;
+	display:block;
+	color:#FFF;
+}
+a:link, a:visited,a:hover, a:active {
+	text-decoration: none;
+	color:#000;
+	}
+
+
+#menu_principal_int{
+padding:110px 0 0 250px;
+color:#000;
+float:right;
+}
+
+.box{	
+	padding:5px 0 5px 80px;
+}
+.camp{	
+	margin:8px 0 2px 0px;	
+	position:absolute;
+	color:#fff;
+}.box1{	
+	padding:5px 0 5px 125px;
+}
+.camp1{	
+	margin:8px 0 2px 0px;	
+	position:absolute;
+	color:#000000;
+}
+
+.inp1{
+	border:#000000 solid 1px;
+	color:#000000;
+}
+#informacao{
+margin:0 0 0 20%;
+}
+
+.galeria_i{
+	padding:0 0 0 150px;
+}
+
+/*
+     FILE ARCHIVED ON 04:12:55 Feb 21, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:49:45 May 26, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 164.876
+  exclusion.robots: 0.089
+  exclusion.robots.policy: 0.079
+  cdx.remote: 0.057
+  esindex: 0.009
+  LoadShardBlock: 138.038 (3)
+  PetaboxLoader3.datanode: 144.393 (4)
+  load_resource: 101.865
+  PetaboxLoader3.resolve: 67.699
+*/

@@ -1,0 +1,84 @@
+/* CSS Layout */
+#wrapper{
+text-align:center;
+background:#fffff;
+width:100%;
+}
+
+/* CSS login */
+
+#box{
+	background: transparent url(/web/20150221041255im_/http://donald.com.br/adm/img/box.jpg) no-repeat;
+	width:450px;
+	height:400px;
+	margin:auto;
+	padding:160px 0 0 40px;
+	}
+
+#back_box{
+	background: transparent url(/web/20150221041255im_/http://donald.com.br/adm/img/back_box.jpg) repeat-x;
+	height:400px;
+	margin:auto;
+	}
+.box{	
+	padding:4px 0 5px 50px;
+}
+.camp{	
+	margin:2px 0 2px 0px;	
+	position:absolute;
+	color:#FFF;
+}
+input{
+border:#fff 1px solid;
+background:transparent;
+color:#FFF;
+}
+
+.button{
+background:#666;
+border:#fff 1px solid;
+margin: 5px 0 0 100px;
+padding:0 3px 0 3px;
+o
+}
+.button2{
+background:#CCC;
+border:#999 1px solid;
+o
+}
+
+#bgk{
+	background: transparent url(/web/20150221041255im_/http://donald.com.br/adm/img/inter2.jpg) repeat-x;
+	height:150px;
+}
+#header{
+	background: transparent url(/web/20150221041255im_/http://donald.com.br/adm/img/inter1.jpg) no-repeat;
+	height:150px;
+	width:100%;
+
+}
+.fts{
+width:800px;
+height:150px;
+margin:2px;
+}
+/*
+     FILE ARCHIVED ON 04:12:55 Feb 21, 2015 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:49:45 May 26, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 277.546
+  exclusion.robots: 0.105
+  exclusion.robots.policy: 0.094
+  RedisCDXSource: 21.518
+  esindex: 0.03
+  LoadShardBlock: 234.009 (3)
+  PetaboxLoader3.datanode: 208.101 (4)
+  load_resource: 168.457
+  PetaboxLoader3.resolve: 143.683
+*/
