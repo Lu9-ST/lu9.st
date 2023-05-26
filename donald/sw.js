@@ -13,7 +13,15 @@ var filesToCache = [
   '/donald/textos/release.txt',
   '/donald/textos/parceiros.txt',
   '/donald/textos/agenda.php',
-  'https://unpkg.com/@ruffle-rs/ruffle'
+  '/donald/ruffle/ruffle.js',
+  '/donald/ruffle/ruffle.map',
+  '/donald/ruffle/package.json',
+  '/donald/ruffle/core.ruffle.ee5716355123d2025211.js',
+  '/donald/ruffle/core.ruffle.ee5716355123d2025211.js.map',
+  '/donald/ruffle/core.ruffle.80c0ab95c861f22ecc26.js',
+  '/donald/ruffle/core.ruffle.80c0ab95c861f22ecc26.js.map',
+  '/donald/ruffle/64e0de8d3a9d45f537bb.wasm',
+  '/donald/ruffle/9e915ba30f800906e3ac.wasm'
 ];
 
 /* Start the service worker and cache all of the app's content */
