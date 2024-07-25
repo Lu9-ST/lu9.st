@@ -116,11 +116,11 @@ background-position: 2px;
 }
 .worlddiv {
 	width: 50vw;
-	height: 90vh;
+	height: 85vh;
 }
 .codediv {
 	width: calc(50vw - 10px);
-	height: 90vh;
+	height: 85vh;
 }
 .buttonsdiv {
 	width: 100vw;
@@ -155,7 +155,7 @@ var context = document.querySelector("canvas").getContext("2d");
 
 var responsiveCanvas = function() {
 context.canvas.width = document.documentElement.clientWidth * 0.5;
-context.canvas.height = document.documentElement.clientHeight * 0.9;
+context.canvas.height = document.documentElement.clientHeight * 0.85;
 };
 
 window.addEventListener("resize", responsiveCanvas);
