@@ -69,7 +69,8 @@
                 world = new WorldMorph(document.getElementById('world'), false);
                 ide.openIn(world);
                 //ide.addMessageListener('update', txt => code.value = txt);
-		    start.addEventListener('click', () => { ide.enableJS = !ide.enableJS;
+		    start.addEventListener('click', () => { ide.enableJS = true;
+					        Process.prototype.enableJS = true;
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
@@ -88,7 +89,8 @@
                     }
                 };
                 requestAnimationFrame(loop);
-		    setTimeout(() => { ide.enableJS = !ide.enableJS;
+		    setTimeout(() => { ide.enableJS = true;
+				                Process.prototype.enableJS = true;
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
