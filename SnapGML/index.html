@@ -18,29 +18,29 @@
         <title>SnapGML</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!--Load Snap! Dependencies-->
-        <script src="https://lu9.st/SnapGML/src/morphic.js"></script>
-        <script src="https://lu9.st/SnapGML/src/symbols.js"></script>
-        <script src="https://lu9.st/SnapGML/src/widgets.js"></script>
-        <script src="https://lu9.st/SnapGML/src/blocks.js"></script>
-        <script src="https://lu9.st/SnapGML/src/threads.js"></script>
-        <script src="https://lu9.st/SnapGML/src/objects.js"></script>
-        <script src="https://lu9.st/SnapGML/src/scenes.js"></script>
-        <script src="https://lu9.st/SnapGML/src/gui.js"></script>
-        <script src="https://lu9.st/SnapGML/src/paint.js"></script>
-        <script src="https://lu9.st/SnapGML/src/lists.js"></script>
-        <script src="https://lu9.st/SnapGML/src/byob.js"></script>
-        <script src="https://lu9.st/SnapGML/src/tables.js"></script>
-        <script src="https://lu9.st/SnapGML/src/sketch.js"></script>
-        <script src="https://lu9.st/SnapGML/src/video.js"></script>
-        <script src="https://lu9.st/SnapGML/src/maps.js"></script>
-        <script src="https://lu9.st/SnapGML/src/extensions.js"></script>
-        <script src="https://lu9.st/SnapGML/src/xml.js"></script>
-        <script src="https://lu9.st/SnapGML/src/store.js"></script>
-        <script src="https://lu9.st/SnapGML/src/locale.js"></script>
-        <script src="https://lu9.st/SnapGML/src/cloud.js"></script>
-        <script src="https://lu9.st/SnapGML/src/api.js"></script>
-        <script src="https://lu9.st/SnapGML/src/sha512.js"></script>
-        <script src="https://lu9.st/SnapGML/src/FileSaver.min.js"></script>
+        <script src="src/morphic.js"></script>
+        <script src="src/symbols.js"></script>
+        <script src="src/widgets.js"></script>
+        <script src="src/blocks.js"></script>
+        <script src="src/threads.js"></script>
+        <script src="src/objects.js"></script>
+        <script src="src/scenes.js"></script>
+        <script src="src/gui.js"></script>
+        <script src="src/paint.js"></script>
+        <script src="src/lists.js"></script>
+        <script src="src/byob.js"></script>
+        <script src="src/tables.js"></script>
+        <script src="src/sketch.js"></script>
+        <script src="src/video.js"></script>
+        <script src="src/maps.js"></script>
+        <script src="src/extensions.js"></script>
+        <script src="src/xml.js"></script>
+        <script src="src/store.js"></script>
+        <script src="src/locale.js"></script>
+        <script src="src/cloud.js"></script>
+        <script src="src/api.js"></script>
+        <script src="src/sha512.js"></script>
+        <script src="src/FileSaver.min.js"></script>
 	<!--Set up Snap! Environment-->
         <script>
             var world;
@@ -58,6 +58,7 @@
                         noRingify: true,
                         noUserSettings: true,
                         noDevWarning: true,
+			noExitWarning: true,
 			blocksZoom: 1.4 //maybe soon these should be customizable
                     }),
                     code = document.getElementById('code'),
