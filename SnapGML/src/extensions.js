@@ -55,7 +55,8 @@ var SnapExtensions = {
         'https://microworld.edc.org/', // EDC, E. Paul Goldenberg
         'https://birdbraintechnologies.com/', // BirdBrain technologies, Tom Lauwers
         'https://www.birdbraintechnologies.com/', // compatibility,
-        'https://lu9.st/' //that me LOL
+        'https://lu9.st/', //that me LOL
+        'https://lu9.st/SnapGML'
     ]
 };
 
