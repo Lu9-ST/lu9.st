@@ -47,7 +47,7 @@
             window.onload = function () {
                 var ide = new IDE_Morph({
 				path: '../',
-                        load: 'https://lu9.st/SnapGML/src/Scratch2GML-Nightly.xml', //maybe soon will be hosted together with the page
+                        load: 'https://lu9.st/SnapGML/src/Scratch2GML-Nightly.xml',
                         design: "classic",
                         border: 0,
                         hideControls: true,
@@ -70,12 +70,12 @@
                 world = new WorldMorph(document.getElementById('world'), false);
                 ide.openIn(world);
                 //ide.addMessageListener('update', txt => code.value = txt);
-		    start.addEventListener('click', () => { ide.enableJS = true;
+		    /*start.addEventListener('click', () => { ide.enableJS = true;
 					        Process.prototype.enableJS = true;
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
-						ide.broadcast('update');});
+						ide.broadcast('update');});*/
                 clear.addEventListener('click', () =>
                     ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
