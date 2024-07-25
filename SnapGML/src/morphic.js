@@ -8,7 +8,7 @@
     written by Jens Mönig
     jens@moenig.org
 
-    Copyright (C) 2010-2023 by Jens Mönig
+    Copyright (C) 2010-2024 by Jens Mönig
 
     This file is part of Snap!.
 
@@ -49,6 +49,7 @@
             (f) resize event
             (g) combined mouse-keyboard events
             (h) text editing events
+            (i) indicating unsaved changes
         (4) stepping
         (5) creating new kinds of morphs
             (a) drawing the shape
@@ -856,6 +857,19 @@
     single-line text elements can hold them apart.
 
 
+    (i) indicating unsaved changes
+    ------------------------------
+    Before closing a browser tab with a Morphic world any top level morph
+    can signal unsaved changes by implementing a
+    
+        hasUnsavedChanges()
+    
+    method, which returns a Boolean value indicating whether it is safe to
+    destroy. If any top level morph indicates unsaved changes the browser
+    pops up a dialog box warning about unsaved changes and prompting for user
+    confirmation to close it.
+
+
     (4) stepping
     ------------
     Stepping is what makes Morphic "magical". Two properties control
@@ -1306,10 +1320,9 @@
 
 /*jshint esversion: 11, bitwise: false*/
 
-var morphicVersion = '2023-January-13';
+var morphicVersion = '2024-June-04';
 var modules = {}; // keep track of additional loaded modules
 var useBlurredShadows = true;
-var keepCanvasInCPU = false;
 
 const ZERO = new Point();
 const BLACK = new Color();
@@ -1495,9 +1508,6 @@ function newCanvas(extentPoint, nonRetina, recycleMe) {
         canvas = document.createElement('canvas');
         canvas.width = ext.x;
         canvas.height = ext.y;
-        canvas.getContext("2d", {
-            willReadFrequently: keepCanvasInCPU
-        });
     }
     if (nonRetina && canvas.isRetinaEnabled) {
         canvas.isRetinaEnabled = false;
@@ -1531,9 +1541,7 @@ function getMinimumFontHeight() {
         y;
     canvas.width = size;
     canvas.height = size;
-    ctx = canvas.getContext('2d', {
-        willReadFrequently: keepCanvasInCPU
-    });
+    ctx = canvas.getContext('2d');
     ctx.font = '1px serif';
     maxX = ctx.measureText(str).width;
     ctx.fillStyle = 'black';
@@ -1698,9 +1706,7 @@ function enableRetinaSupport() {
 
     // Get the window's pixel ratio for canvas elements.
     // See: http://www.html5rocks.com/en/tutorials/canvas/hidpi/
-    var ctx = document.createElement("canvas").getContext("2d", {
-            willReadFrequently: keepCanvasInCPU
-        }),
+    var ctx = document.createElement("canvas").getContext("2d"),
         backingStorePixelRatio = ctx.webkitBackingStorePixelRatio ||
             ctx.mozBackingStorePixelRatio ||
             ctx.msBackingStorePixelRatio ||
@@ -1799,9 +1805,7 @@ function enableRetinaSupport() {
                 var pixelRatio = getPixelRatio(this),
                     context;
                 uber.width.set.call(this, width * pixelRatio);
-                context = this.getContext('2d', {
-                    willReadFrequently: keepCanvasInCPU
-                });
+                context = this.getContext('2d');
                 /*
                 context.restore();
                 context.save();
@@ -1822,9 +1826,7 @@ function enableRetinaSupport() {
             var pixelRatio = getPixelRatio(this),
                 context;
             uber.height.set.call(this, height * pixelRatio);
-            context = this.getContext('2d', {
-                willReadFrequently: keepCanvasInCPU
-            });
+            context = this.getContext('2d');
             /*
             context.restore();
             context.save();
@@ -1928,9 +1930,7 @@ function enableRetinaSupport() {
 }
 
 function isRetinaSupported () {
-    var ctx = document.createElement("canvas").getContext("2d", {
-            willReadFrequently: keepCanvasInCPU
-        }),
+    var ctx = document.createElement("canvas").getContext("2d"),
         backingStorePixelRatio = ctx.webkitBackingStorePixelRatio ||
             ctx.mozBackingStorePixelRatio ||
             ctx.msBackingStorePixelRatio ||
@@ -2144,8 +2144,10 @@ Color.prototype.toRGBstring = function () {
 
 Color.fromString = function (aString) {
     // I parse rgb/rgba strings into a Color object
-    var components = aString.split(/[\(),]/).slice(1,5);
-    return new Color(components[0], components[1], components[2], components[3]);
+    var components = aString.split(/[\(),]/),
+        channels = aString.startsWith('rgba') ?
+            components.slice(1, 5) : components.slice(0, 4);
+    return new Color(+channels[0], +channels[1], +channels[2], +channels[3]);
 };
 
 // Color copying:
@@ -2779,7 +2781,7 @@ Rectangle.prototype.boundingBox = function () {
 
 Rectangle.prototype.center = function () {
     return this.origin.add(
-        this.corner.subtract(this.origin).floorDivideBy(2)
+        this.corner.subtract(this.origin).divideBy(2)
     );
 };
 
@@ -3478,7 +3480,7 @@ Morph.prototype.setBottom = function (y) {
 Morph.prototype.setCenter = function (aPoint) {
     this.setPosition(
         aPoint.subtract(
-            this.extent().floorDivideBy(2)
+            this.extent().divideBy(2)
         )
     );
 };
@@ -3486,7 +3488,7 @@ Morph.prototype.setCenter = function (aPoint) {
 Morph.prototype.setFullCenter = function (aPoint) {
     this.setPosition(
         aPoint.subtract(
-            this.fullBounds().extent().floorDivideBy(2)
+            this.fullBounds().extent().divideBy(2)
         )
     );
 };
@@ -8275,7 +8277,7 @@ MenuMorph.prototype.adjustWidths = function () {
         if (item === this.label) {
             item.text.setPosition(
                 item.center().subtract(
-                    item.text.extent().floorDivideBy(2)
+                    item.text.extent().divideBy(2)
                 )
             );
         }
@@ -9933,7 +9935,7 @@ TriggerMorph.prototype.createLabel = function () {
 TriggerMorph.prototype.fixLayout = function () {
     this.label.setPosition(
         this.center().subtract(
-            this.label.extent().floorDivideBy(2)
+            this.label.extent().divideBy(2)
         )
     );
 };
@@ -11395,12 +11397,12 @@ HandMorph.prototype.grab = function (aMorph) {
         if (!aMorph.noDropShadow) {
             aMorph.addShadow();
         }
-        this.add(aMorph);
 
         // cache the dragged object's display resources
         this.cachedFullImage = aMorph.fullImage();
         this.cachedFullBounds = aMorph.fullBounds();
 
+        this.add(aMorph);
         this.changed();
         if (oldParent && oldParent.reactToGrabOf) {
             oldParent.reactToGrabOf(aMorph);
@@ -12074,9 +12076,6 @@ WorldMorph.prototype.init = function (aCanvas, fillPage) {
     this.isDraggable = false;
     this.currentKey = null; // currently pressed key code
     this.worldCanvas = aCanvas;
-    this.worldCanvas.getContext("2d", {
-        willReadFrequently: keepCanvasInCPU
-    });
 
     // additional properties:
     this.stamp = Date.now(); // reference in multi-world setups
@@ -12245,12 +12244,14 @@ WorldMorph.prototype.initRetina = function () {
 
 WorldMorph.prototype.getGlobalPixelColor = function (point) {
     // answer the color at the given point.
-    var dta = this.worldCanvas.getContext('2d').getImageData(
-        point.x,
-        point.y,
-        1,
-        1
-    ).data;
+    // first, create a new temporary canvas representing the fullImage
+    // and sample that one instead of the actual world canvas
+    // this slows things down but keeps Chrome from crashing
+    // in v119 in the Fall of 2023
+    var dta = Morph.prototype.fullImage.call(this)
+            .getContext('2d')
+            .getImageData(point.x, point.y, 1, 1)
+            .data;
     return new Color(dta[0], dta[1], dta[2]);
 };
 
@@ -12484,7 +12485,12 @@ WorldMorph.prototype.initEventListeners = function () {
         false
     );
 
-    window.onbeforeunload = (evt) => {
+    window.cachedOnbeforeunload = window.onbeforeunload;
+    this.onbeforeunloadListener = (evt) => {
+        if (!this.hasUnsavedEdits()) return;
+        if (window.cachedOnbeforeunload) {
+            window.cachedOnbeforeunload.call(null, evt);
+        }
         var e = evt || window.event,
             msg = "Are you sure you want to leave?";
         // For IE and Firefox
@@ -12494,6 +12500,14 @@ WorldMorph.prototype.initEventListeners = function () {
         // For Safari / chrome
         return msg;
     };
+     window.addEventListener("beforeunload", this.onbeforeunloadListener);
+};
+
+WorldMorph.prototype.hasUnsavedEdits = function () {
+    // any top-level morph can implement an hasUnsavedEdits() method
+    return this.children.some(any =>
+        any.hasUnsavedEdits && any.hasUnsavedEdits()
+    );
 };
 
 WorldMorph.prototype.mouseDownLeft = nop;
@@ -12940,4 +12954,9 @@ WorldMorph.prototype.togglePreferences = function () {
 WorldMorph.prototype.toggleHolesDisplay = function () {
     MorphicPreferences.showHoles = !MorphicPreferences.showHoles;
     this.rerender();
+};
+
+WorldMorph.prototype.destroy = function () {
+    window.removeEventListener("onbeforeunload", this.onbeforeunloadListener);
+    WorldMorph.uber.destroy.call(this);
 };

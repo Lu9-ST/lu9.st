@@ -6,7 +6,7 @@
 
     written by Jens Mönig
 
-    Copyright (C) 2023 by Jens Mönig
+    Copyright (C) 2024 by Jens Mönig
 
     This file is part of Snap!.
 
@@ -30,11 +30,12 @@
 /*global modules, List, StageMorph, Costume, SpeechSynthesisUtterance, Sound,
 IDE_Morph, CamSnapshotDialogMorph, SoundRecorderDialogMorph, isSnapObject, nop,
 Color, Process, contains, localize, SnapTranslator, isString, detect, Point,
-SVG_Costume, newCanvas, WatcherMorph, BlockMorph, HatBlockMorph*/
+SVG_Costume, newCanvas, WatcherMorph, BlockMorph, HatBlockMorph, invoke,
+BigUint64Array*/
 
 /*jshint esversion: 11, bitwise: false*/
 
-modules.extensions = '2023-January-19';
+modules.extensions = '2024-July-17';
 
 // Global stuff
 
@@ -48,8 +49,12 @@ var SnapExtensions = {
     urls: [ // allow-list of trusted servers
         'libraries/',
         'https://snap.berkeley.edu/',
+        'https://bjc.berkeley.edu/',
+        'https://cs10.org/',
         'https://ecraft2learn.github.io/ai/', // Uni-Oxford, Ken Kahn
-        'https://microworld.edc.org/' // EDC, E. Paul Goldenberg
+        'https://microworld.edc.org/', // EDC, E. Paul Goldenberg
+        'https://birdbraintechnologies.com/', // BirdBrain technologies, Tom Lauwers
+        'https://www.birdbraintechnologies.com/' // compatibility
     ]
 };
 
@@ -230,6 +235,106 @@ var SnapExtensions = {
 
 // Primitives
 
+// meta utils (snap_):
+
+SnapExtensions.primitives.set(
+    'snap_yield',
+    function (proc) {
+        if (!proc.isAtomic) {
+            proc.readyToYield = true;
+        }
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_xml_encode(script)',
+    function (script, proc) {
+        proc.assertType(script, ['command', 'reporter', 'predicate']);
+        return script.expression.toXMLString(this);
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_xml_decode(txt)',
+    function (xml, proc) {
+        proc.assertType(xml, 'text');
+        return this.parentThatIsA(IDE_Morph).deserializeScriptString(xml).reify();
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_bootstrap(block)',
+    function (script, proc) {
+        proc.assertType(script, ['command', 'reporter', 'predicate']);
+        var block = script.expression;
+        if (block.isCustomBlock &&
+            block.definition.isGlobal &&
+            block.definition.selector &&
+            !block.definition.isBootstrapped()
+            /* // require "blocks all the way" to be enabled, commented out
+            &&
+            SpriteMorph.prototype.blocks[
+                block.definition.selector
+            ].definition !== undefined
+            */
+        ) {
+            block.definition.bootstrap(proc.blockReceiver());
+        }
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_un-bootstrap(block)',
+    function (script, proc) {
+        proc.assertType(script, ['command', 'reporter', 'predicate']);
+        var block = script.expression;
+        if (block.isCustomBlock &&
+            block.definition.isGlobal &&
+            block.definition.isBootstrapped()
+        ) {
+            block.definition.unBootstrap(proc.blockReceiver());
+        }
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_bootstrapped(block)?',
+    function (script, proc) {
+        proc.assertType(script, ['command', 'reporter', 'predicate']);
+        var block = script.expression;
+        return block.isCustomBlock &&
+            block.definition.isGlobal &&
+            block.definition.isBootstrapped();
+    }
+);
+
+SnapExtensions.primitives.set(
+    'snap_block_selectors',
+    function () {
+        return new List([
+            ['label'],
+            ['definition'],
+            ['comment'],
+            ['category'],
+            ['type'],
+            ['scope'],
+            ['selector'],
+            ['slots'],
+            ['defaults'],
+            ['menus'],
+            ['editables'],
+            ['replaceables'],
+            ['separators'],
+            ['collapses'],
+            ['expands'],
+            ['initial slots'],
+            ['min slots'],
+            ['max slots'],
+            ['translations']
+        ]);
+    }
+);
+
 // errors & exceptions (err_):
 
 SnapExtensions.primitives.set(
@@ -315,6 +420,8 @@ SnapExtensions.primitives.set(
     /*
         supported transformation names:
         -------------------------------
+        select
+        unselect
         encode URI
         decode URI
         encode URI component
@@ -326,6 +433,18 @@ SnapExtensions.primitives.set(
     */
     function (name, txt) {
         return Process.prototype.reportTextFunction(name, txt);
+    }
+);
+
+SnapExtensions.primitives.set(
+    'txt_export(txt, name)',
+    function (txt, name, proc) {
+        var ide = this.parentThatIsA(IDE_Morph);
+        proc.assertType(txt, ['text', 'number']);
+        name = name || localize('data');
+        proc.assertType(name, ['text', 'number']);
+        name = name.toString();
+        ide.saveFileAs(txt.toString(), 'text/txt', name);
     }
 );
 
@@ -427,6 +546,34 @@ SnapExtensions.primitives.set(
     function (data, proc) {
         proc.assertType(data, 'list');
         return data.crossproduct();
+    }
+);
+
+SnapExtensions.primitives.set(
+    'dta_zip(list)',
+    function (data, proc) {
+        var zip, i, len,
+            join = (a, b) => [a, b],
+            append = (a, b) => {a.push(b); return a; },
+            merge = atom => atom instanceof Array ? new List(atom) : atom;
+        proc.assertType(data, 'list');
+        len = data.length();
+        if (len < 2) {
+            return data.at(1);
+        }
+        zip = proc.hyperDyadic(join, data.at(1), data.at(2));
+        for (i = 3; i <= len; i += 1) {
+            zip = proc.hyperDyadic(append, zip, data.at(i));
+        }
+        return proc.hyperMonadic(merge, zip);
+    }
+);
+
+SnapExtensions.primitives.set(
+    'dta_changeBy(data, delta)',
+    function (data, delta, proc) {
+        proc.assertType(data, 'list');
+        proc.hyperChangeBy(data, delta);
     }
 );
 
@@ -550,6 +697,56 @@ SnapExtensions.primitives.set(
 );
 
 // XHR:
+
+SnapExtensions.primitives.set(
+    'xhr_binary(url, webIDL_type)',
+    function (url, idl, proc) {
+        var response, buffer;
+        url = decodeURI(url);
+        proc.checkURLAllowed(url);
+        if (!proc.httpRequest) {
+            proc.httpRequest = new XMLHttpRequest();
+            proc.httpRequest.open("GET", url, true);
+            proc.httpRequest.responseType = "arraybuffer";
+            proc.httpRequest.send(null);
+        } else if (proc.httpRequest.readyState === 4) {
+            buffer = proc.httpRequest.response;
+            switch (idl) {
+                case 'byte':
+                    response = new List(new Int8Array(buffer));
+                    break;
+                case 'short':
+                    response = new List(new Int16Array(buffer));
+                    break;
+                case 'unsigned short':
+                    response = new List(new Uint16Array(buffer));
+                    break;
+                case 'long':
+                    response = new List(new Int32Array(buffer));
+                    break;
+                case 'unsigned long':
+                    response = new List(new Uint32Array(buffer));
+                    break;
+                case 'unrestricted float':
+                    response = new List(new Float32Array(buffer));
+                    break;
+                case 'unrestricted double':
+                    response = new List(new Float64Array(buffer));
+                    break;
+                case 'bigint':
+                    response = new List(new BigUint64Array(buffer));
+                    break;
+                case 'octet':
+                default:
+                    response = new List(new Uint8Array(buffer));
+            }
+            proc.httpRequest = null;
+            return response;
+        }
+        proc.pushContext('doYield');
+        proc.pushContext();
+    }
+);
 
 SnapExtensions.primitives.set(
     'xhr_request(mth, url, dta, hdrs)',
@@ -1058,6 +1255,29 @@ SnapExtensions.primitives.set(
     }
 );
 
+SnapExtensions.primitives.set(
+    'ide_translation_dict',
+    function () {
+        var dict = SnapTranslator.dict[SnapTranslator.language];
+        return new List(
+            Object.keys(dict).slice().sort().map(key =>
+                new List([key, dict[key]]))
+        );
+    }
+);
+
+SnapExtensions.primitives.set(
+    'ide_set_translation_dict(data)',
+    function (data, proc) {
+        var ide = this.parentThatIsA(IDE_Morph),
+            dict = {};
+        proc.assertType(data, 'list');
+        data.map(eachRow => dict[eachRow.at(1)] = eachRow.at(2));
+        SnapTranslator.dict[SnapTranslator.language] = dict;
+        ide.reflectLanguage(SnapTranslator.language);
+    }
+);
+
 // Synchronization
 
 SnapExtensions.primitives.set(
@@ -1141,7 +1361,29 @@ SnapExtensions.primitives.set(
 SnapExtensions.primitives.set(
     'srl_open(baud, buffer)',
     function (baud, buf, proc) {
-        var acc = proc.context.accumulator;
+        var acc = proc.context.accumulator,
+            stage = this.parentThatIsA(StageMorph),
+            snapProcessBlockDef =
+                stage.globalBlocks.find(
+                    def => def.spec == '__mb_process_data__'
+                );
+
+        function readCallback (port) {
+            var block = snapProcessBlockDef.blockInstance();
+            if (block && port?.writable) {
+                block.parent = stage;
+                try {
+                    invoke(
+                        block,
+                        null,  // args
+                        stage  // receiver
+                    );
+                } catch (err) {
+                    throw(err);
+                }
+            }
+            setTimeout(function() { readCallback(port); }, 25);
+        }
 
         async function forceClose(port){
             try {
@@ -1177,6 +1419,9 @@ SnapExtensions.primitives.set(
         } else if (acc.result !== false) {
             if (acc.result instanceof  Error) {
                 throw acc.result;
+            }
+            if (snapProcessBlockDef) {
+                setTimeout(function(){ readCallback(acc.result); }, 25); 
             }
             return acc.result;
         }
