@@ -71,6 +71,7 @@
                 ide.openIn(world);
                 //ide.addMessageListener('update', txt => code.value = txt);
 		    clicksnd.addEventListener('click', () => {BlockMorph.prototype.toggleSnapSound();});
+		    blocksize.addEventListener('click', () => {ide.userSetBlocksScale();});
                 clear.addEventListener('click', () =>
                     ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
