@@ -92,6 +92,7 @@
                 requestAnimationFrame(loop);
 		    setTimeout(() => { ide.enableJS = true;
 				                Process.prototype.enableJS = true;
+				                BlockMorph.prototype.toggleSnapSound();
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
