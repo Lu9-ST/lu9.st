@@ -278,7 +278,7 @@ SyntaxElementMorph.prototype.setScale = function (num) {
     this.cSlotPadding = 4 * scale;
     this.typeInPadding = scale;
     this.labelPadding = 4 * scale;
-    this.labelFontName = 'Verdana';
+    this.labelFontName = 'IBM Plex Sans, Atkinson Hyperlegible, Roboto, Verdana'; //SnapGML Change
     this.labelFontStyle = 'sans-serif';
     this.fontSize = 10 * scale;
     this.embossing = new Point(
@@ -2050,7 +2050,7 @@ SyntaxElementMorph.prototype.labelPart = function (spec) {
             spec, // text
             this.fontSize, // fontSize
             this.labelFontStyle, // fontStyle
-            true, // bold
+            false, // bold //SnapGML change
             false, // italic
             false, // isNumeric
             MorphicPreferences.isFlat ?
