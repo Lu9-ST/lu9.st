@@ -271,7 +271,7 @@ function IDE_Morph(config = {}) {
 
 IDE_Morph.prototype.init = function (config) {
     // global font setting
-    MorphicPreferences.globalFontFamily = 'Helvetica, Arial';
+    MorphicPreferences.globalFontFamily = 'IBM Plex Sans, Roboto, Atkinson Hyperlegible, Helvetica, Arial'; //SnapGML Change
 
     // additional properties:
     this.cloud = new Cloud();
