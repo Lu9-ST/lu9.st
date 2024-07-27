@@ -72,10 +72,15 @@
                 //ide.addMessageListener('update', txt => code.value = txt);
 		    clicksnd.addEventListener('click', () => {BlockMorph.prototype.toggleSnapSound();});
 		    blocksize.addEventListener('click', () => {ide.userSetBlocksScale();});
-		    design.addEventListener('click', () => { if (MorphicPreferences.isFlat == true) 
-			    ide.setDefaultDesign();
+		    design.addEventListener('click', () => { if (MorphicPreferences.isFlat == true) {
+			    MorphicPreferences.isFlat = false
+			    SyntaxElementMorph.prototype.contrast = 65;
+		    }
 			else
-			    ide.setFlatDesign()});
+		    {
+			    MorphicPreferences.isFlat = true
+			    SyntaxElementMorph.prototype.contrast = 25;
+		    }});
                 clear.addEventListener('click', () =>
                     ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
@@ -93,6 +98,8 @@
 		    setTimeout(() => { ide.enableJS = true;
 				                Process.prototype.enableJS = true;
 				                BlockMorph.prototype.toggleSnapSound();
+				                MorphicPreferences.isFlat = true
+				                SyntaxElementMorph.prototype.contrast = 25;
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
@@ -100,7 +107,6 @@
             };
 		    
         </script>
-	<!--<script src="src/darkinject.js"></script>-->
 <style>
 * {
 	padding: 0;
