@@ -8609,7 +8609,7 @@ StringMorph.prototype.init = function (
     this.shadowOffset = shadowOffset || ZERO;
     this.shadowColor = shadowColor || null;
     this.isShowingBlanks = false;
-    this.blanksColor = new Color(215, 215, 215); //SnapGML change: blanks color
+    this.blanksColor = new Color(200, 200, 200); //SnapGML change: blanks color
 
     // additional properties for text-editing:
     this.isScrollable = true; // scrolls into view when edited
