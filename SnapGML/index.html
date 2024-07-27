@@ -72,6 +72,10 @@
                 //ide.addMessageListener('update', txt => code.value = txt);
 		    clicksnd.addEventListener('click', () => {BlockMorph.prototype.toggleSnapSound();});
 		    blocksize.addEventListener('click', () => {ide.userSetBlocksScale();});
+		    design.addEventListener('click', () => { if (MorphicPreferences.isFlat == true) 
+			    ide.setDefaultDesign();
+			else
+			    ide.setFlatDesign()});
                 clear.addEventListener('click', () =>
                     ide.currentSprite.synchScriptsFrom('<scripts>')); //Clear button
                 code.onmouseup = function () {
@@ -89,6 +93,7 @@
 		    setTimeout(() => { ide.enableJS = true;
 				                Process.prototype.enableJS = true;
 				                BlockMorph.prototype.toggleSnapSound();
+				                ide.setFlatDesign();
 						ide.flushBlocksCache('operators');
            					ide.refreshPalette();
             				ide.categories.refreshEmpty(); 
@@ -149,7 +154,7 @@ background-color: #4f4f4f;
         <div class="worlddiv" id="worlddiv"><canvas id="world" tabindex="1"></canvas></div>
         <div class="codediv"><code-input id="code" style="resize: none; height: 85vh; overflow: hidden;" lang="gml" placeholder=" "></code-input></div>
 	</div>
-<div class="buttonsdiv"><button id="clicksnd">Toggle Sound</button><button id="clear">Clear</button><button id="blocksize">Block Size</button></div>
+<div class="buttonsdiv"><button id="clicksnd">Toggle Sound</button><button id="clear">Clear</button><button id="blocksize">Block Size</button><button id="design">Flat/Classic Design</button></div>
 <script>
 var context = document.querySelector("canvas").getContext("2d");
 
