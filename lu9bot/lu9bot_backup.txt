@@ -4659,3 +4659,18 @@
 "[PHP 5 - ATOM SMASHER ERROR] {img https://barrarchiverio.7m.pl/p/error/#atom_style#.png.php?icon=#atom_icon#&style=#atom_style#&bstyle=#atom_bstyle#&title=#text3#&close=x&closeon=x&text=#text2#&b1=#atom_btn#&b2=#atom_btn#&b3=#atom_btn#}"
 ]
 } 
+
+
+REPLY:
+{
+"[Gg][Ii][Ll][Ll][Ii][Gg][Aa][Nn]":"On The New Adventures Of Gilligan Gilligan Gilligan Gilligan Gilligan Gilligan Gilligan Gilligan Gilligan Gilligan",
+"dies yay":"what if that happen to you",
+"\\b[Gg][Aa][Mm][Ee]\\b":"#game##sequelyesno#",
+"\\b[Mm][Oo][Vv][Ii][Ee]\\b":"#tv##sequelyesno#",
+"\\b[Ss][Hh][Oo][Ww]\\b":"#tv##sequelyesno#",
+"\\b[Rr][Oo][Mm]\\b":"#romreply#",
+"\\b[Vv][Ii][Dd][Ee][Oo]\\b":"#video#",
+"[Ss][Hh][Ii][Tt][Pp][Oo][Ss][Tt]":"#svg2#",
+"[Pp][Hh][Pp]":"#php#",
+".":"#reply#"
+}
