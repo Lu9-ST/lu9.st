@@ -2,4 +2,4 @@
 
                    its not done
 
-best viewed in vivalti 7.0 or newer
+best viewed in vivalti 9.0 or newer
