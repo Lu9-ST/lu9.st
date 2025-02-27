@@ -1,0 +1,35 @@
+{
+"theme_color":"#c42655",
+"background_color":"#139f72",
+"icons":[
+{
+"purpose":"maskable","sizes":"512x512",
+"src":"icon512_maskable.png",
+"type":"image/png"
+},
+{
+"purpose":"any",
+"sizes":"512x512","src":"icon512_rounded.png",
+"type":"image/png"
+}],
+"shortcuts": [
+  {
+    "name": "Archive",
+    "url": "https://blog.lu9.st/archive/"
+  },
+  {
+    "name": "Test Page",
+    "url": "https://blog.lu9.st/test/"
+  }],
+"orientation":"any",
+"display":"standalone",
+"dir":"auto",
+"lang":"en-US",
+"name":"Bitty Bits",
+"short_name":"Bitty Bits",
+"start_url":"https://blog.lu9.st/",
+"scope":"https://blog.lu9.st/",
+"description":"Hi!",
+"categories": ["blog", "newsletter"],
+"id":"https://blog.lu9.st"
+}
