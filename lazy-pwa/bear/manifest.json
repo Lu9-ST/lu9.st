@@ -3,11 +3,6 @@
 "background_color":"#01242E",
 "icons":[
 {
-"purpose":"maskable","sizes":"124x120",
-"src":"https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
-"type":"image/png"
-},
-{
 "purpose":"any",
 "sizes":"124x120",
 "src":"https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
@@ -19,7 +14,7 @@
 "lang":"en-US",
 "name":"Bear Blog",
 "short_name":"Bear Blog",
-"start_url":"https://bearblog.dev/lu9/dashboard/",
+"start_url":"https://bearblog.dev/dashboard/",
 "scope":"https://bearblog.dev/",
 "description":"Free, no-nonsense, super-fast blogging",
 "categories": ["blog"],
