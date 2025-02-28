@@ -13,15 +13,6 @@
 "src":"https://bear-images.sfo2.cdn.digitaloceanspaces.com/herman-1683556668-0.png",
 "type":"image/png"
 }],
-"shortcuts": [
-  {
-    "name": "Archive",
-    "url": "https://blog.lu9.st/archive/"
-  },
-  {
-    "name": "Test Page",
-    "url": "https://blog.lu9.st/test/"
-  }],
 "orientation":"any",
 "display":"standalone",
 "dir":"auto",
