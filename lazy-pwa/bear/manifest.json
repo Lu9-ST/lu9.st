@@ -14,9 +14,9 @@
 "lang":"en-US",
 "name":"Bear Blog",
 "short_name":"Bear Blog",
-"start_url":"https://lu9.st/lazy-pwa/bear/",
-"scope":"https://lu9.st/lazy-pwa/bear/",
+"start_url":"https://bearblog.dev/dashboard/",
+"scope":"https://bearblog.dev/",
 "description":"Free, no-nonsense, super-fast blogging",
 "categories": ["blog"],
-"id":"https://lu9.st/lazy-pwa/bear/"
+"id":"https://bearblog.dev/"
 }
