@@ -62,3 +62,12 @@
         font-family: 'PROPHECYTYPE';
         src: url(https://lu9.st/lu9bot/PROPHECYTYPE.ttf);  format('truetype');
     }
+ @font-face {
+        font-family: 'Minecraft Standard';
+        src: url(https://lu9.st/lu9bot/MinecraftStandard.ttf);  format('opentype');
+    }
+ @font-face {
+        font-family: 'Minecraft Standard';
+        src: url(https://lu9.st/lu9bot/MinecraftStandardBold.ttf);  format('opentype');
+        font-weight: bold;
+    }
