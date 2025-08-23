@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    id="svg8"
    version="1.1"
@@ -6,13 +7,9 @@
    width="640"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/">
+   xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs2">
-  </defs>
+     id="defs2" />
   <image
      width="169.33333"
      height="152.39999"
@@ -30,45 +27,45 @@
      y="9.260416" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:7.05556px;line-height:1.3;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;letter-spacing:-0.52916666px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.990411;fill:#061a47;fill-opacity:1;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:5"
-     x="84.300308"
-     y="27.834436"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.98169px;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:0.990411;fill:#061a47;fill-opacity:1;stroke-width:0.529167;stroke-linejoin:round;stroke-miterlimit:5"
+     x="84.483353"
+     y="27.117577"
      id="text1"><tspan
        id="tspan1"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="27.834436">Hey Stuart</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="37.006664"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="27.117577">Hey Stuart</tspan><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="36.193779"
        id="tspan2">Can you shit your pant</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="46.17889"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="45.269966"
        id="tspan3">this is a test</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="55.35112"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="54.346161"
        id="tspan4">lets test</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="64.523346"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="63.422356"
        id="tspan5">then</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="73.695572"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="72.498558"
        id="tspan6">the epic test of </tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="82.867805"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="81.574745"
        id="tspan7">tests and testing</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="84.300308"
-       y="92.040031"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.483353"
+       y="90.65094"
        id="tspan8">greatness</tspan><tspan
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'Press Start 2P';-inkscape-font-specification:'Press Start 2P Medium';text-align:center;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167;letter-spacing:-0.52916666px"
-       x="83.951057"
-       y="101.21226"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0;font-family:'Minecraft Standard';-inkscape-font-specification:'Minecraft Standard Bold';text-align:center;letter-spacing:0px;text-anchor:middle;fill:#061a47;fill-opacity:1;stroke-width:0.529167"
+       x="84.137756"
+       y="99.727127"
        id="tspan9">shapes</tspan></text>
   <image
      width="169.33333"
