@@ -40,14 +40,14 @@ if (document.body.classList.contains('post')) {
               within_the_last_minute:'few seconds ago',
           
               msg_thankyou:'Thank you!',
-              msg_approval:'Thank you!(Pending approval)',
+              msg_approval:'Thank you! (Pending approval)',
               msg_approval_required:'Thank you! (Pending approval from moderator)',
           
               err_bad_html:'Error: unsupported HTML!',
               err_bad_email:'Error: invalid email address.',
-              err_too_frequent:'Slow it down, dude! Wait a little before commenting again.',
+              err_too_frequent:'Hey, slow down! Wait a little before commenting again.',
               err_comment_empty:'Your comment was not posted because it was empty!',
-              err_denied:'Your comment was not approved :(',
+              err_denied:'Your comment was not approved.',
               err_unknown:'Your comment was blocked for unknown reasons, please report this.',
               err_spam:'Your comment was detected as spam.',
               err_blocked:'Your comment was blocked by site policy.',
