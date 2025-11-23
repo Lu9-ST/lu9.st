@@ -1,10 +1,6 @@
 if (document.body.classList.contains('post')) {
         const widgetHTML = `
-          <!-- customize labels of htmlcommentbox.com -->
-          <!-- done customizing labels of htmlcommentbox.com -->
-          <!-- begin wwww.htmlcommentbox.com -->
            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
-          <!-- end www.htmlcommentbox.com -->
         `;
           hcb_user = {
               /* L10N */
