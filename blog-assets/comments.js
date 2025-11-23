@@ -62,9 +62,9 @@ if (document.body.classList.contains('post')) {
           <!-- done customizing labels of htmlcommentbox.com -->
           <!-- begin wwww.htmlcommentbox.com -->
            <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Widget</a> is loading comments...</div>
-           <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24uTUe7W1XbtCoB9TFe6qNI1"+"&opts=16798&num=10&ts=1763893041482");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
           <!-- end www.htmlcommentbox.com -->
         `;
+        if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24uTUe7W1XbtCoB9TFe6qNI1"+"&opts=16798&num=10&ts=1763893041482");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();
         const targetElement = document.querySelector('main');
 
         if (targetElement) {
