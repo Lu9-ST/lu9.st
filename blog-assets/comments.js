@@ -27,7 +27,7 @@ if (document.body.classList.contains('post')) {
               add_image:'Add Image',
               are_you_sure:'Do you want to flag this comment?',
           
-              reply:'<span class="material-icons">reply</span>',
+              reply:'<span class="material-icons-round">reply</span>',
               flag:'<span class="material-icons-round">flag</span>',
               like:'<span class="material-icons-round">thumb_up</span>',
           
