@@ -112,12 +112,12 @@
                     transform: translate(-50%, -50%);
                 "
             >
-                <p>Your browser doesn't support HTML5 canvas.</p>
+                <p>Hey Stuart, your browser doesn't support HTML5 canvas.</p>
+                <p>Oops, sorry George!</p>
             </canvas>
 
             <!-- Custom PostCanvas code is injected here -->
         </div>
-
         <!-- Run the game code -->
         <script
             type="text/javascript"
@@ -133,6 +133,103 @@
         <!-- Builtin injector for injecting google analytics code -->
 
         <!-- Custom BodyEnd code is injected here -->
+        <main
+            style="
+                color: white;
+                padding-left: 20px;
+                padding-top: 50%;
+                font-family: sans-serif;
+            "
+        >
+            <h1>Stuart Little (GBC) Text Generator</h1>
+            <p>(a.k.a. "Thanks for the tip, George!")</p>
+            <p>
+                <strong>How to use:</strong> Select one of the two generators,
+                then click/tap and drag in any allowed area to add a block of
+                text. It will be selected, and you can then type in it or drag
+                it to another spot.
+            </p>
+            <p>On mobile, long-press the block of text to change the text.</p>
+            <p>
+                Press <strong>Alt+V</strong> to paste clipboard text or insert
+                special characters (not supported by all fonts)
+            </p>
+            <p>
+                Click the "X" icon (or press <strong>Delete</strong> to remove a
+                block of text, or drag one to the "X" icon.
+            </p>
+            <p>
+                In the Diary generator, click the left arrow (or press
+                <strong>Left</strong>) to align a block of text horizontally.
+            </p>
+            <p>
+                Click the floppy disk icon (or press <strong>F2</strong>) to
+                save an image at the current resolution, or click the icon next
+                to it with the "1" to save an image at the original 1:1 GBC
+                resolution (or press <strong>F1</strong>).
+            </p>
+            <p>
+                Click the speaker icon (or press <strong>Alt+M</strong>) to mute
+                the music.
+            </p>
+            <p>
+                Hold <strong>Alt</strong> and press numbers 1-5 to switch
+                resolution sizes at any time.
+            </p>
+            <h2>Why?</h2>
+            <p>
+                Because. But more importantly, because foone wanted to implement
+                a generator for this game on their Death Generator website
+                (shoutouts!), only to be devastated by the somewhat disgusting
+                truth behind the text rendering in
+                <em>Stuart Little: The Journey Home</em> -
+                <em>everything is just pre-rendered bitmaps.</em> There is no
+                in-game font, however we do know the fonts that they've used in
+                those bitmaps, as the developers and/or artists at Tiertex liked
+                to use the software "DeluxePaint II" for them.<br />Its system
+                font is widely used throughout the game. For the Diary bitmaps,
+                the header font is called "Olive" at 12pt (9px). While the body
+                text font is good old Arial at 8pt (with no anti-aliasing of
+                course)<br />For all I know, at least the "Thanks for the tip,
+                George!" generator <em>can</em> "pixel perfectly" recreate the
+                bitmaps from the real game if you were to just spam a bunch of
+                blocks of text whenever the spacing isn't right. However the
+                Diary generator is not as accurate just yet because of how the
+                outlines for the header font are handled. A full rip of the
+                game's bitmaps (NTSC version) can be found
+                <a
+                    href="https://www.spriters-resource.com/game_boy_gbc/stuartlittle/asset/472758/"
+                    >here.</a
+                >
+            </p>
+
+            <h2>How?</h2>
+            <p>
+                Made in GameMaker™ 2026.<br />Screenshot Save code by
+                <a href="https://yellowafterlife.itch.io/screenshot-save-dialog"
+                    >YellowAfterLife</a
+                >
+            </p>
+            <h2>Known Issues</h2>
+            <ul>
+                <li>Diary "header" font outline style is not fully accurate</li>
+                <li>It also is not fully inside the selection box</li>
+                <li>
+                    On mobile, adding new text <em>sometimes</em> doesn't work
+                </li>
+                <li>
+                    Leaving a generator with selected text and coming back
+                    causes issues
+                </li>
+                <li></li>
+            </ul>
+            <h2>Coming Soon (?)</h2>
+            <ul>
+                <li>Auto-save</li>
+                <li>"Delete everything" button</li>
+                <li>More accurate outline for Diary "header" font</li>
+            </ul>
+        </main>
     </body>
 
     <!-- Custom PostBody code is injected here -->
