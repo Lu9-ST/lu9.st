@@ -918,6 +918,16 @@
       "extra":    ""
     },
     {
+      "name":     "Meowth",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "meowth.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
       "name":     "Quaxly",
       "nameAlt":  "",
       "tags":     ["heart"],
@@ -1980,12 +1990,12 @@
     {
       "name":     "WordGirl",
       "nameAlt":  "🇧🇷 Garota Supersábia",
-      "tags":     ["star","kin"],
+      "tags":     ["star"],
       "media":    "",
       "mediaAlt": "",
       "image":    "",
       "initials": "WG",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    ""
     },
     {
       "name":     "Chikn Nuggit",
@@ -2725,16 +2735,6 @@
       "mediaAlt": "",
       "image":    "oshawott.png",
       "initials": "OW",
-      "extra":    ""
-    },
-    {
-      "name":     "Meowth",
-      "nameAlt":  "",
-      "tags":     ["star"],
-      "media":    "Pokémon",
-      "mediaAlt": "",
-      "image":    "meowth.png",
-      "initials": "M",
       "extra":    ""
     },
     {
