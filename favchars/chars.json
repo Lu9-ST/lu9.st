@@ -1,0 +1,3335 @@
+{
+  "tags": {
+    "heart":       { "label": "❤️",       "class": "tag-heart" },
+    "star":    { "label": "⭐",    "class": "tag-star" },
+    "thumbsup":  { "label": "👍",  "class": "tag-thumbsup" },
+    "kin":     { "label": "Kin™",     "class": "tag-kin" },
+    "ednaldo":  { "label": "Ednaldo Pereira",  "class": "tag-ednaldo" }
+  },
+  "characters": [
+//HEARTS
+    {
+      "name":     "Calimero",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "calimero.png",
+      "initials": "C",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Ongo",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Jelly Jamm",
+      "mediaAlt": "",
+      "image":    "ongo.png",
+      "initials": "O",
+      "extra":    "<small><b>Kin level:</b> 10/10</small>"
+    },
+    {
+      "name":     "Robot Jones",
+      "nameAlt":  "🇧🇷 Jonas, o Robô",
+      "tags":     ["heart", "kin"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "robotjones.png",
+      "initials": "RJ",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Rover",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "rover.png",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Bob",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "bob.png",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Punchy",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "punchy.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Raymond",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "raymond.png",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Sasha",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "sasha.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Villager",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "villager.png",
+      "initials": "V",
+      "extra":    ""
+    },
+    {
+      "name":     "Mips",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Super Mario",
+      "mediaAlt": "",
+      "image":    "mips.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "F.L.U.D.D.",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Super Mario",
+      "mediaAlt": "",
+      "image":    "fludd.png",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Cappy",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Super Mario",
+      "mediaAlt": "",
+      "image":    "cappy.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Connie",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mario & Luigi",
+      "mediaAlt": "",
+      "image":    "connie.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Vivian",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Paper Mario",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "V",
+      "extra":    ""
+    },
+    {
+      "name":     "Goombella",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Paper Mario",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "G",
+      "extra":    ""
+    },
+    {
+      "name":     "Spitz",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "WarioWare",
+      "mediaAlt": "",
+      "image":    "spitz.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "9-Volt",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "WarioWare",
+      "mediaAlt": "",
+      "image":    "9volt.png",
+      "initials": "9V",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "DeMille",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tomato Adventure",
+      "mediaAlt": "",
+      "image":    "demille.png",
+      "initials": "DM",
+      "extra":    ""
+    },
+    {
+      "name":     "Tails",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Sonic the Hedgehog",
+      "mediaAlt": "",
+      "image":    "tails.png",
+      "initials": "T",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Cheese the Chao",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sonic the Hedgehog",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Omochao",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sonic the Hedgehog",
+      "mediaAlt": "",
+      "image":    "omochao.png",
+      "initials": "O",
+      "extra":    ""
+    },
+    {
+      "name":     "Charmy Bee",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sonic the Hedgehog",
+      "mediaAlt": "",
+      "image":    "charmy.png",
+      "initials": "CB",
+      "extra":    ""
+    },
+    {
+      "name":     "Coconuts",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Adventures of Sonic the Hedgehog",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Vita-Boy",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "vita-boy.png",
+      "initials": "VB",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Elec-Tron",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "elec-tron.png",
+      "initials": "ET",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Boyo Sable",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "boyo.png",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Komasan",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Yo-kai Watch",
+      "mediaAlt": "",
+      "image":    "komasan.png",
+      "initials": "K",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Wydeawake",
+      "nameAlt":  "TETSUYA",
+      "tags":     ["heart", "kin"],
+      "media":    "Yo-kai Watch",
+      "mediaAlt": "",
+      "image":    "wydeawake.png",
+      "initials": "WA",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Chocobo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Final Fantasy",
+      "mediaAlt": "",
+      "image":    "chocobo.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Vivi Ornitier",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Final Fantasy",
+      "mediaAlt": "",
+      "image":    "vivi.png",
+      "initials": "VV",
+      "extra":    ""
+    },
+    {
+      "name":     "Niko",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "OneShot",
+      "mediaAlt": "",
+      "image":    "niko.png",
+      "initials": "N",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Kiyoshi",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Hanazuki",
+      "mediaAlt": "",
+      "image":    "niko.png",
+      "initials": "KY",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Cardamon",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Bee and Puppycat",
+      "mediaAlt": "🇧🇷 Bee e o Gatiorrinho",
+      "image":    "cardamon.png",
+      "initials": "C",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Alfur Aldric",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "alfur.png",
+      "initials": "AA",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Eugene",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "eugene.png",
+      "initials": "E",
+      "extra":    ""
+    },
+    {
+      "name":     "Sprig Plantar",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Amphibia",
+      "mediaAlt": "",
+      "image":    "sprig.png",
+      "initials": "SP",
+      "extra":    ""
+    },
+    {
+      "name":     "Polly Plantar",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Amphibia",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "PP",
+      "extra":    ""
+    },
+    {
+      "name":     "Maddie Flour",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Amphibia",
+      "mediaAlt": "",
+      "image":    "maddie.png",
+      "initials": "MF",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Ivy Sundew",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Amphibia",
+      "mediaAlt": "",
+      "image":    "ivy.png",
+      "initials": "IS",
+      "extra":    ""
+    },
+    {
+      "name":     "The Collector",
+      "nameAlt":  "🇧🇷 O Coletor",
+      "tags":     ["heart"],
+      "media":    "The Owl House",
+      "mediaAlt": "🇧🇷 A Casa Coruja",
+      "image":    "collector.png",
+      "initials": "TC",
+      "extra":    ""
+    },
+    {
+      "name":     "Snap",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "ChalkZone",
+      "mediaAlt": "🇧🇷 Mundo Giz",
+      "image":    "snap.png",
+      "initials": "S",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Jenny X-J9",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "My Life As A Teenage Robot",
+      "mediaAlt": "🇧🇷 Uma Robô Adolescente",
+      "image":    "xj9.png",
+      "initials": "XJ9",
+      "extra":    ""
+    },
+    {
+      "name":     "Manny Rivera",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "El Tigre",
+      "mediaAlt": "",
+      "image":    "eltigre.png",
+      "initials": "MR",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Frida Suarez",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "El Tigre",
+      "mediaAlt": "",
+      "image":    "frida.png",
+      "initials": "FS",
+      "extra":    ""
+    },
+    {
+      "name":     "Lucy Loud",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Loud House",
+      "mediaAlt": "",
+      "image":    "lucy.png",
+      "initials": "LL",
+      "extra":    ""
+    },
+    {
+      "name":     "Wakko Warner",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Animaniacs",
+      "mediaAlt": "",
+      "image":    "wakko.png",
+      "initials": "WW",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "K.O.",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OK K.O.! Let's Be Heroes",
+      "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
+      "image":    "",
+      "initials": "KO",
+      "extra":    ""
+    },
+    {
+      "name":     "Dendy",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "OK K.O.! Let's Be Heroes",
+      "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
+      "image":    "",
+      "initials": "D",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Fink",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OK K.O.! Let's Be Heroes",
+      "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Purrcival",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OK K.O.! Let's Be Heroes",
+      "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
+      "image":    "purrcival.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Ninjin",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "ninjin.png",
+      "initials": "N",
+      "extra":    ""
+    },
+    {
+      "name":     "Flink",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Ninjin",
+      "mediaAlt": "",
+      "image":    "flink.png",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Jejum",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Ninjin",
+      "mediaAlt": "",
+      "image":    "jejum.png",
+      "initials": "J",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Mage",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Trick Moon",
+      "mediaAlt": "",
+      "image":    "mage.png",
+      "initials": "M",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "GIR",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Invader ZIM",
+      "mediaAlt": "🇧🇷 Invasor ZIM",
+      "image":    "",
+      "initials": "GR",
+      "extra":    ""
+    },
+    {
+      "name":     "Asriel Dreemurr",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Undertale",
+      "mediaAlt": "",
+      "image":    "asriel.png",
+      "initials": "AD",
+      "extra":    ""
+    },
+    {
+      "name":     "Flowey",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Undertale",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+  {
+      "name":     "Mooch",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Undertale Yellow",
+      "mediaAlt": "",
+      "image":    "mooch.png",
+      "initials": "M",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Ralsei",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "ralsei.png",
+      "initials": "R",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Virovirokun",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "virovirokun.png",
+      "initials": "VVK",
+      "extra":    ""
+    },
+    {
+      "name":     "Cuptains",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "cuptain.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Syrup",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Puzzle & Dragons",
+      "mediaAlt": "",
+      "image":    "syrup.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Cinnamoroll",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sanrio",
+      "mediaAlt": "",
+      "image":    "cinnamoroll.png",
+      "initials": "CR",
+      "extra":    ""
+    },
+    {
+      "name":     "My Melody",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sanrio",
+      "mediaAlt": "",
+      "image":    "mymelody.png",
+      "initials": "MM",
+      "extra":    ""
+    },
+    {
+      "name":     "Kuririn",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sanrio",
+      "mediaAlt": "",
+      "image":    "kuririn.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Yumetaro",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Gimmick!",
+      "mediaAlt": "",
+      "image":    "yumetaro.png",
+      "initials": "Y!",
+      "extra":    ""
+    },
+    {
+      "name":     "Klonoa",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "klonoa.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Tat",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Klonoa",
+      "mediaAlt": "",
+      "image":    "tat.png",
+      "initials": "TAT",
+      "extra":    ""
+    },
+    {
+      "name":     "Kirby",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Ron",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Ron's Gone Wrong",
+      "mediaAlt": "🇧🇷 Ron Bugado",
+      "image":    "ron.png",
+      "initials": "RON",
+      "extra":    ""
+    },
+    {
+      "name":     "Cut Man",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mega Man",
+      "mediaAlt": "",
+      "image":    "cutman.png",
+      "initials": "CM",
+      "extra":    ""
+    },
+    {
+      "name":     "Roll",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mega Man",
+      "mediaAlt": "",
+      "image":    "roll.png",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Aquaman.exe",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mega Man",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "AX",
+      "extra":    ""
+    },
+    {
+      "name":     "Servbot",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mega Man",
+      "mediaAlt": "",
+      "image":    "servbot.png",
+      "initials": "SB",
+      "extra":    ""
+    },
+    {
+      "name":     "Metalls",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mega Man",
+      "mediaAlt": "",
+      "image":    "met.png",
+      "initials": "MT",
+      "extra":    ""
+    },
+    {
+      "name":     "Darwin Watterson",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "The Amazing World of Gumball",
+      "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
+      "image":    "darwin.png",
+      "initials": "DW",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Carrie Krueger",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Amazing World of Gumball",
+      "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
+      "image":    "carrie.png",
+      "initials": "CK",
+      "extra":    ""
+    },
+    {
+      "name":     "Rachel Wilson",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "The Amazing World of Gumball",
+      "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
+      "image":    "rachel.png",
+      "initials": "RW",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Penny Fitzgerald",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Amazing World of Gumball",
+      "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
+      "image":    "penny.png",
+      "initials": "PF",
+      "extra":    ""
+    },
+    {
+      "name":     "Teri",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Amazing World of Gumball",
+      "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
+      "image":    "teri.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Veemon",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Digimon",
+      "mediaAlt": "",
+      "image":    "veemon.png",
+      "initials": "VM",
+      "extra":    ""
+    },
+    {
+      "name":     "Quote",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "quote.png",
+      "initials": "Q",
+      "extra":    ""
+    },
+    {
+      "name":     "Jack",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "jack.png",
+      "initials": "J",
+      "extra":    ""
+    },
+    {
+      "name":     "Sue Sakamoto",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "sue.png",
+      "initials": "SS",
+      "extra":    ""
+    },
+    {
+      "name":     "Pit",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Kid Icarus",
+      "mediaAlt": "",
+      "image":    "pit.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Drizzile",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "drizzile.png",
+      "initials": "D",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Chespin",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "chespin.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Pancham",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "pancham.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Shinx",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "shinx.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Victini",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "victini.png",
+      "initials": "V",
+      "extra":    ""
+    },
+    {
+      "name":     "Popplio",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "popplio.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Quaxly",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "quaxly.png",
+      "initials": "Q",
+      "extra":    ""
+    },
+    {
+      "name":     "Rotom / Rotom Pokédex",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "rotomdex.png",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Allister",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "allister.png",
+      "initials": "C",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Morgana",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Persona",
+      "mediaAlt": "",
+      "image":    "morgana.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Rita",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Jelly Jamm",
+      "mediaAlt": "",
+      "image":    "rita.png",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Valeriano",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Calimero",
+      "mediaAlt": "",
+      "image":    "valeriano.png",
+      "initials": "V",
+      "extra":    ""
+    },
+    {
+      "name":     "A Kockásfülű Nyúl",
+      "nameAlt":  "The Rabbit With the Checkered Ears / The Bunny in the Suitcase",
+      "tags":     ["heart"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "kockasfulunyul.png",
+      "initials": "KN",
+      "extra":    ""
+    },
+    {
+      "name":     "Kistöfi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "A Kockásfülű Nyúl",
+      "mediaAlt": "",
+      "image":    "kistofi.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Solar Flare",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Plants vs Zombies",
+      "mediaAlt": "",
+      "image":    "solarflare.png",
+      "initials": "SF",
+      "extra":    ""
+    },
+    {
+      "name":     "Greg",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Over the Garden Wall",
+      "mediaAlt": "🇧🇷 O Segredo Além do Jardim",
+      "image":    "greg.png",
+      "initials": "G",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Glitch",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "The GaMERCaT",
+      "mediaAlt": "",
+      "image":    "glitch.png",
+      "initials": "G",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Yugo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Wakfu / Dofus",
+      "mediaAlt": "",
+      "image":    "yugo.png",
+      "initials": "Y",
+      "extra":    ""
+    },
+    {
+      "name":     "Joris Jurgen",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Wakfu / Dofus",
+      "mediaAlt": "",
+      "image":    "joris.png",
+      "initials": "JJ",
+      "extra":    ""
+    },
+    {
+      "name":     "Luke Triton",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Professor Layton",
+      "mediaAlt": "",
+      "image":    "luke.png",
+      "initials": "LT",
+      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+    },
+    {
+      "name":     "Vinicius",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Vinicius & Tom (Rio 2016 Olympics)",
+      "mediaAlt": "",
+      "image":    "vinicius.png",
+      "initials": "V",
+      "extra":    ""
+    },
+    {
+      "name":     "Tom",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Vinicius & Tom (Rio 2016 Olympics)",
+      "mediaAlt": "",
+      "image":    "tom.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Tempo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tempo (Sega 32X/Saturn)",
+      "mediaAlt": "",
+      "image":    "tempo.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Kuro-chan",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Cyborg Kuro-chan",
+      "mediaAlt": "",
+      "image":    "kuro-chan.png",
+      "initials": "KC",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Mi-kun",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Cyborg Kuro-chan",
+      "mediaAlt": "",
+      "image":    "mi-kun.png",
+      "initials": "MK",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+    {
+      "name":     "Peep",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Peep and the Big Wide World",
+      "mediaAlt": "🇧🇷 O Mundo Divertido de Peep",
+      "image":    "peep.png",
+      "initials": "PP",
+      "extra":    ""
+    },
+    {
+      "name":     "Mouse",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Mechanicals",
+      "mediaAlt": "🇧🇷 Mecanimais",
+      "image":    "mouse.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Island Owl",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Animal Mechanicals",
+      "mediaAlt": "🇧🇷 Mecanimais",
+      "image":    "mouse.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Teemo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "League of Legends",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Fizz",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "League of Legends",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Gangle",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "The Amazing Digital Circus",
+      "mediaAlt": "🇧🇷 O Incrível Circo Digital",
+      "image":    "gangle.png",
+      "initials": "G",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Mametchi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "mametchi.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Kuromametchi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "kuromametchi.png",
+      "initials": "KM",
+      "extra":    ""
+    },
+    {
+      "name":     "Candy Pakupaku",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "candypakupaku.png",
+      "initials": "CPP",
+      "extra":    ""
+    },
+    {
+      "name":     "Tosakatchi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "tosakatchi.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Meowtchi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "meowtchi.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Shimagurutchi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "shimagurutchi.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Toodles",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mickey Mouse Clubhouse",
+      "mediaAlt": "🇧🇷 A Casa do Mickey Mouse",
+      "image":    "toodles.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Pedro",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Saludos Amigos",
+      "mediaAlt": "🇧🇷 Alô Amigos",
+      "image":    "pedro.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "The Orange Bird",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Disney",
+      "mediaAlt": "",
+      "image":    "orangebird.png",
+      "initials": "OB",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Snowflake",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Catching Kringle",
+      "mediaAlt": "🇧🇷 Capturem o Velhinho",
+      "image":    "snowflake.png",
+      "initials": "SF",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Tamama",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Keroro Gunsou",
+      "mediaAlt": "",
+      "image":    "tamama.png",
+      "initials": "T",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+    {
+      "name":     "Merfle",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin"],
+      "media":    "Wario Land: Shake It!",
+      "mediaAlt": "",
+      "image":    "merfle.png",
+      "initials": "T",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+   {
+      "name":     "Fark",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Spark the Electric Jester",
+      "mediaAlt": "",
+      "image":    "fark.png",
+      "initials": "F",
+      "extra":    ""
+    },
+   {
+      "name":     "Sirilo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sea Princesses",
+      "mediaAlt": "🇧🇷 Princesas do Mar",
+      "image":    "sirilo.png",
+      "initials": "S",
+      "extra":    ""
+    },
+   {
+      "name":     "Haerang-E",
+      "nameAlt":  "해랑이",
+      "tags":     ["heart"],
+      "media":    "Koren mascot",
+      "mediaAlt": "",
+      "image":    "haerang.png",
+      "initials": "해",
+      "extra":    ""
+    },
+   {
+      "name":     "Puppycorn",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Unikitty!",
+      "mediaAlt": "🇧🇷 Unigata!",
+      "image":    "puppycorn.png",
+      "initials": "PC",
+      "extra":    ""
+    },
+   {
+      "name":     "Tiny Miracle",
+      "nameAlt":  "🇧🇷 Pequeno Milagre",
+      "tags":     ["heart"],
+      "media":    "Uncle Grandpa",
+      "mediaAlt": "🇧🇷 Titio Avô",
+      "image":    "tinymiracle.png",
+      "initials": "TM",
+      "extra":    ""
+    },
+  {
+      "name":     "Hebe",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Hebereke",
+      "mediaAlt": "",
+      "image":    "hebe.png",
+      "initials": "H",
+      "extra":    ""
+    },
+   {
+      "name":     "Shag Rugg",
+      "nameAlt":  "🇧🇷 Chapeuzinho",
+      "tags":     ["heart","kin"],
+      "media":    "Jellystone!",
+      "mediaAlt": "",
+      "image":    "shag.png",
+      "initials": "SR",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+   {
+      "name":     "Trixie Roughhouse",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Epithet Erased",
+      "mediaAlt": "",
+      "image":    "trixie.png",
+      "initials": "TR",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+  {
+      "name":     "Pike",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pike's Lagoon",
+      "mediaAlt": "",
+      "image":    "pike.png",
+      "initials": "P",
+      "extra":    ""
+    },
+  {
+      "name":     "Frilligan",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pike's Lagoon",
+      "mediaAlt": "",
+      "image":    "frilligan.png",
+      "initials": "F",
+      "extra":    ""
+    },
+  {
+      "name":     "Scammers",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Dups (LittleBigPlanet)",
+      "mediaAlt": "",
+      "image":    "scammers.png",
+      "initials": "S",
+      "extra":    ""
+    },
+  {
+      "name":     "Fwench Fwy",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Chikn Nuggit",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+  {
+      "name":     "Iscream",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Chikn Nuggit",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "IS",
+      "extra":    ""
+    },
+  {
+      "name":     "Cofi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Chikn Nuggit",
+      "mediaAlt": "",
+      "image":    "cofi.png",
+      "initials": "C",
+      "extra":    ""
+    },
+  {
+      "name":     "Fatigue",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Bedfellows",
+      "mediaAlt": "",
+      "image":    "fatigue.png",
+      "initials": "F",
+      "extra":    ""
+    },
+  {
+      "name":     "Bibi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OC by o-den",
+      "mediaAlt": "",
+      "image":    "bibi.png",
+      "initials": "BB",
+      "extra":    ""
+    },
+  {
+      "name":     "Renuvem",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Anittinha's Club",
+      "mediaAlt": "🇧🇷 Clube da Anittinha",
+      "image":    "renuvem.gif",
+      "initials": "R",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+  {
+      "name":     "Izumi Konata",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Lucky Star",
+      "mediaAlt": "",
+      "image":    "konata.png",
+      "initials": "K",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "Minami Iwasaki",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Lucky Star",
+      "mediaAlt": "",
+      "image":    "minami.png",
+      "initials": "M",
+      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+    },
+  {
+      "name":     "Jiba Jinpei",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Yo-kai Academy Y",
+      "mediaAlt": "",
+      "image":    "jinpei.png",
+      "initials": "JJ",
+      "extra":    ""
+    },
+  {
+      "name":     "Tera",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Scratch",
+      "mediaAlt": "",
+      "image":    "tera.png",
+      "initials": "T",
+      "extra":    ""
+    },
+  {
+      "name":     "Nano",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Scratch",
+      "mediaAlt": "",
+      "image":    "nano.png",
+      "initials": "N",
+      "extra":    ""
+    },
+  {
+      "name":     "Scratchy",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Super Scratch Programming Adventure",
+      "mediaAlt": "",
+      "image":    "scratchy.png",
+      "initials": "S",
+      "extra":    ""
+    },
+  {
+      "name":     "Murphy",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Murphy & Mitzi by AJMarekArt",
+      "mediaAlt": "",
+      "image":    "murphy.png",
+      "initials": "M",
+      "extra":    ""
+    },
+  {
+      "name":     "Mitzi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Murphy & Mitzi by AJMarekArt",
+      "mediaAlt": "",
+      "image":    "mitzi.png",
+      "initials": "M",
+      "extra":    ""
+    },
+  {
+      "name":     "Annie",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OC by Rafielo",
+      "mediaAlt": "",
+      "image":    "annie.png",
+      "initials": "A",
+      "extra":    ""
+    },
+  {
+      "name":     "Mao Mao",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mao Mao: Heroes of Pure Heart",
+      "mediaAlt": "🇧🇷 Mao Mao: Heróis de Puro Coração",
+      "image":    "",
+      "initials": "MM",
+      "extra":    ""
+    },
+  {
+      "name":     "Adorabat",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mao Mao: Heroes of Pure Heart",
+      "mediaAlt": "🇧🇷 Mao Mao: Heróis de Puro Coração",
+      "image":    "",
+      "initials": "A",
+      "extra":    ""
+    },
+  {
+      "name":     "Tsunoda",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Aggretsuko",
+      "mediaAlt": "",
+      "image":    "tsunoda.png",
+      "initials": "T",
+      "extra":    ""
+    },
+  {
+      "name":     "N",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Murder Drones",
+      "mediaAlt": "",
+      "image":    "n.png",
+      "initials": "N",
+      "extra":    ""
+    },
+  {
+      "name":     "Beau",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Murder Drones",
+      "mediaAlt": "",
+      "image":    "beau.png",
+      "initials": "B",
+      "extra":    ""
+    },
+  {
+      "name":     "Garu",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Pucca",
+      "mediaAlt": "",
+      "image":    "garu.png",
+      "initials": "G",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "Cloudchaser",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "cloudchaser.png",
+      "initials": "CC",
+      "extra":    ""
+    },
+  {
+      "name":     "Pipsqueak",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "PS",
+      "extra":    ""
+    },
+  {
+      "name":     "Mae Borowski",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Night in the Woods",
+      "mediaAlt": "",
+      "image":    "mae.png",
+      "initials": "MB",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+  {
+      "name":     "Gingerbrave",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Cookie Run",
+      "mediaAlt": "",
+      "image":    "gingerbrave.png",
+      "initials": "GB",
+      "extra":    ""
+    },
+  {
+      "name":     "Fuzz the Cat",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "OC by CerealBowlby",
+      "mediaAlt": "",
+      "image":    "fuzz.png",
+      "initials": "FC",
+      "extra":    ""
+    },
+  {
+      "name":     "Underling",
+      "nameAlt":  "🇧🇷 Subordinado",
+      "tags":     ["heart","kin"],
+      "media":    "Bad End Theater",
+      "mediaAlt": "🇧🇷 Teatro dos Finais Infelizes",
+      "image":    "underling.png",
+      "initials": "UL",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "Jared",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "We Baby Bears",
+      "mediaAlt": "🇧🇷 Ursinhos Em Curso",
+      "image":    "jared.png",
+      "initials": "J",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "Meow",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Space Dandy",
+      "mediaAlt": "",
+      "image":    "meow.png",
+      "initials": "M",
+      "extra":    ""
+    },
+  {
+      "name":     "Auton",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Mekanikko",
+      "mediaAlt": "",
+      "image":    "auton.gif",
+      "initials": "A",
+      "extra":    ""
+    },
+  {
+      "name":     "Roxie Richter",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Scott Pilgrim",
+      "mediaAlt": "",
+      "image":    "roxie.png",
+      "initials": "RR",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+  {
+      "name":     "Sulu",
+      "nameAlt":  "",
+      "tags":     ["heart","kin"],
+      "media":    "Kunshikter",
+      "mediaAlt": "🇰🇿 Күншіктер",
+      "image":    "sulu.png",
+      "initials": "S",
+      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+    },
+  {
+      "name":     "Dazzi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Palworld",
+      "mediaAlt": "",
+      "image":    "dazzi.png",
+      "initials": "D",
+      "extra":    ""
+    },
+  {
+      "name":     "Octopuss / Octocat",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "GitHub",
+      "mediaAlt": "",
+      "image":    "octocat.png",
+      "initials": "OC",
+      "extra":    ""
+    },
+  {
+      "name":     "DJ Catnip",
+      "nameAlt":  "🇧🇷 DJ Risonho",
+      "tags":     ["heart"],
+      "media":    "Gabby's Dollhouse",
+      "mediaAlt": "🇧🇷 A Casa Mágica da Gabby",
+      "image":    "djcatnip.png",
+      "initials": "DJCN",
+      "extra":    ""
+    },
+  {
+      "name":     "Shrimpo",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Dandy's World",
+      "mediaAlt": "",
+      "image":    "shrimpo.png",
+      "initials": "S",
+      "extra":    ""
+    },
+  {
+      "name":     "Astro",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Dandy's World",
+      "mediaAlt": "",
+      "image":    "astro.png",
+      "initials": "A",
+      "extra":    ""
+    },
+  {
+      "name":     "Toro Inoue",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Together Everywhere",
+      "mediaAlt": "🇯🇵 Doko Demo Issyo",
+      "image":    "toro.png",
+      "initials": "TI",
+      "extra":    ""
+    },
+  {
+      "name":     "Tako Maki",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sushi Pack",
+      "mediaAlt": "",
+      "image":    "tako.png",
+      "initials": "TM",
+      "extra":    ""
+    },
+  {
+      "name":     "Kani Maki",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Sushi Pack",
+      "mediaAlt": "",
+      "image":    "kani.png",
+      "initials": "KM",
+      "extra":    ""
+    },
+//STARS
+    {
+      "name":     "Cueio",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Turma do Cueio",
+      "mediaAlt": "",
+      "image":    "cueio.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Tigui",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Turma do Cueio",
+      "mediaAlt": "",
+      "image":    "tigui.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Beep-0",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Mario + Rabbids",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "B0",
+      "extra":    ""
+    },
+    {
+      "name":     "Toad",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Super Mario",
+      "mediaAlt": "",
+      "image":    "toad.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Mouser",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Super Mario",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Koops",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Paper Mario",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Chill",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Dr. Mario",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Fronk",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "WarioWare",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Penny Crygor",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "WarioWare",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "PC",
+      "extra":    ""
+    },
+    {
+      "name":     "Ashley",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "WarioWare",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "A",
+      "extra":    ""
+    },
+    {
+      "name":     "Samurai Drummer",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Rhythm Heaven",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SD",
+      "extra":    ""
+    },
+    {
+      "name":     "Clappy Trio",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Rhythm Heaven",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "CT",
+      "extra":    ""
+    },
+    {
+      "name":     "Mina-Girl",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "mina-girl.png",
+      "initials": "MG",
+      "extra":    ""
+    },
+    {
+      "name":     "Pro-Biotic",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "PB",
+      "extra":    ""
+    },
+    {
+      "name":     "DJ Dog-Bone",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "djdogbone.png",
+      "initials": "DB",
+      "extra":    ""
+    },
+    {
+      "name":     "Selenium",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Vitamin Connection",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Proto",
+      "nameAlt":  "",
+      "tags":     ["star","kin"],
+      "media":    "OneShot",
+      "mediaAlt": "",
+      "image":    "proto.png",
+      "initials": "PB",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Hanazuki",
+      "nameAlt":  "",
+      "tags":     ["star","kin"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "hanazuki.png",
+      "initials": "HZ",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "WordGirl",
+      "nameAlt":  "🇧🇷 Garota Supersábia",
+      "tags":     ["star","kin"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "WG",
+      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+    },
+    {
+      "name":     "Chikn Nuggit",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "chikn.png",
+      "initials": "CN",
+      "extra":    ""
+    },
+    {
+      "name":     "Slushi",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Chikn Nuggit",
+      "mediaAlt": "",
+      "image":    "slushi.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "King",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "The Owl House",
+      "mediaAlt": "🇧🇷 A Casa Coruja",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Kikimora",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "The Owl House",
+      "mediaAlt": "🇧🇷 A Casa Coruja",
+      "image":    "kikimora.png",
+      "initials": "KK",
+      "extra":    ""
+    },
+    {
+      "name":     "Monster Kid",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Undertale",
+      "mediaAlt": "",
+      "image":    "monsterkid.png",
+      "initials": "MK",
+      "extra":    ""
+    },
+    {
+      "name":     "Lancer",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Kuromi",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Sanrio",
+      "mediaAlt": "",
+      "image":    "kuromi.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Hakkun",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Sutte Hakkun",
+      "mediaAlt": "",
+      "image":    "hakkun.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "ZeeTee",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Eversion",
+      "mediaAlt": "",
+      "image":    "zeetee.png",
+      "initials": "ZT",
+      "extra":    ""
+    },
+    {
+      "name":     "Bello",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Jelly Jamm",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Mina",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Jelly Jamm",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Dodos",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Jelly Jamm",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "DD",
+      "extra":    ""
+    },
+    {
+      "name":     "Bumper",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Gilligan's Planet",
+      "mediaAlt": "",
+      "image":    "bumper.png",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Whizzer",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Gilligan's Planet",
+      "mediaAlt": "",
+      "image":    "whizzer.png",
+      "initials": "W",
+      "extra":    ""
+    },
+    {
+      "name":     "Maya the Bee",
+      "nameAlt":  "🇧🇷 A Abelha Maia",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "maya.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Maggie Pesky",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "The Buzz on Maggie",
+      "mediaAlt": "🇧🇷 Maggie, a Mosca Zoadora",
+      "image":    "maggie.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Pirata",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pirata & Capitano",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Capitano",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pirata & Capitano",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Peter Porker / Spider-Ham",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Into the Spider-Verse",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SH",
+      "extra":    ""
+    },
+    {
+      "name":     "Peni Parker",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Into the Spider-Verse",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "PP",
+      "extra":    ""
+    },
+    {
+      "name":     "Ruby Gloom",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "ruby.png",
+      "initials": "RG",
+      "extra":    ""
+    },
+    {
+      "name":     "Emília",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Sítio do Pica-Pau Amarelo (2013)",
+      "mediaAlt": "",
+      "image":    "emilia.png",
+      "initials": "E",
+      "extra":    ""
+    },
+    {
+      "name":     "Unikitty",
+      "nameAlt":  "🇧🇷 Unigata",
+      "tags":     ["star"],
+      "media":    "The LEGO Movie / Unikitty!",
+      "mediaAlt": "🇧🇷 Uma Aventura LEGO / Unigata!",
+      "image":    "",
+      "initials": "UK",
+      "extra":    ""
+    },
+    {
+      "name":     "Pizzard",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pizza Tower",
+      "mediaAlt": "",
+      "image":    "pizzard.png",
+      "initials": "PZ",
+      "extra":    ""
+    },
+    {
+      "name":     "O-Chan",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hebereke",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "OC",
+      "extra":    ""
+    },
+    {
+      "name":     "Sukezaemon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hebereke",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SZ",
+      "extra":    ""
+    },
+    {
+      "name":     "Jennifer",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hebereke",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "J",
+      "extra":    ""
+    },
+    {
+      "name":     "Tom Nook",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "TN",
+      "extra":    ""
+    },
+    {
+      "name":     "Ankha",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Animal Crossing",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "A",
+      "extra":    ""
+    },
+    {
+      "name":     "Pepper Roni",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "LEGO Island",
+      "mediaAlt": "🇧🇷 A Ilha LEGO",
+      "image":    "pepper.png",
+      "initials": "PR",
+      "extra":    ""
+    },
+    {
+      "name":     "Sparky",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "LEGO Racers 2",
+      "mediaAlt": "",
+      "image":    "sparky.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "The Brave Little Toaster",
+      "nameAlt":  "🇧🇷 A Torradeira Valente",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "BLT",
+      "extra":    ""
+    },
+    {
+      "name":     "Lena",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "DuckTales (2017)",
+      "mediaAlt": "",
+      "image":    "lena.png",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Boyd",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "DuckTales (2017)",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Little Green Men",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Buzz Lightyear of Star Command",
+      "mediaAlt": "🇧🇷 Buzz Lightyear do Comando Estelar",
+      "image":    "",
+      "initials": "LGM",
+      "extra":    ""
+    },
+    {
+      "name":     "Star Butterfly",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Star vs The Forces of Evil",
+      "mediaAlt": "🇧🇷 Star vs As Forças do Mal",
+      "image":    "",
+      "initials": "SB",
+      "extra":    ""
+    },
+    {
+      "name":     "Piglet",
+      "nameAlt":  "🇧🇷 Leitão",
+      "tags":     ["star"],
+      "media":    "Winnie the Pooh",
+      "mediaAlt": "🇧🇷 Ursinho Pooh",
+      "image":    "",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Roo",
+      "nameAlt":  "🇧🇷 Guru",
+      "tags":     ["star"],
+      "media":    "Winnie the Pooh",
+      "mediaAlt": "🇧🇷 Ursinho Pooh",
+      "image":    "",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Magolor",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kirby",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Tiff",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kirby: Right Back At Ya!",
+      "mediaAlt": "🇧🇷 Kirby e Seus Poderes",
+      "image":    "",
+      "initials": "TI",
+      "extra":    ""
+    },
+    {
+      "name":     "Tuff",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kirby: Right Back At Ya!",
+      "mediaAlt": "🇧🇷 Kirby e Seus Poderes",
+      "image":    "tuff.png",
+      "initials": "TU",
+      "extra":    ""
+    },
+    {
+      "name":     "Escargoon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kirby: Right Back At Ya!",
+      "mediaAlt": "🇧🇷 Kirby e Seus Poderes",
+      "image":    "",
+      "initials": "EG",
+      "extra":    ""
+    },
+    {
+      "name":     "Silica",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kirby: Right Back At Ya!",
+      "mediaAlt": "🇧🇷 Kirby e Seus Poderes",
+      "image":    "",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Ness",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "EarthBound/MOTHER",
+      "mediaAlt": "",
+      "image":    "ness.png",
+      "initials": "N",
+      "extra":    ""
+    },
+    {
+      "name":     "Lucas",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "EarthBound/MOTHER",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Sock Sowachowski",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Welcome To Hell",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SS",
+      "extra":    ""
+    },
+    {
+      "name":     "Satina",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "satina.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Mega Man",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "megaman.png",
+      "initials": "MM",
+      "extra":    ""
+    },
+    {
+      "name":     "Cósmico",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "World-turner Circus",
+      "mediaAlt": "🇧🇷 Garoto Cósmico",
+      "image":    "cosmi.png",
+      "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Black Cuervo / Zoe Aves",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "El Tigre",
+      "mediaAlt": "",
+      "image":    "zoe.png",
+      "initials": "BC",
+      "extra":    ""
+    },
+    {
+      "name":     "Princess Morbucks",
+      "nameAlt":  "🇧🇷 Princesa Maisgrana",
+      "tags":     ["star"],
+      "media":    "The Powerpuff Girls",
+      "mediaAlt": "As Meninas Super Poderosas",
+      "image":    "morbucks.png",
+      "initials": "PM",
+      "extra":    ""
+    },
+    {
+      "name":     "Squiddly Diddly",
+      "nameAlt":  "🇧🇷 Lula Lelé",
+      "tags":     ["star"],
+      "media":    "Hanna-Barbera",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SD",
+      "extra":    ""
+    },
+    {
+      "name":     "Top Cat",
+      "nameAlt":  "🇧🇷 Manda-Chuva",
+      "tags":     ["star"],
+      "media":    "Hanna-Barbera",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "TC",
+      "extra":    ""
+    },
+    {
+      "name":     "Augie Doggie",
+      "nameAlt":  "🇧🇷 Bobi Filha",
+      "tags":     ["star"],
+      "media":    "Jellystone!",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "AD",
+      "extra":    ""
+    },
+    {
+      "name":     "Choo Choo",
+      "nameAlt":  "🇧🇷 Chuchu",
+      "tags":     ["star"],
+      "media":    "Jellystone!",
+      "mediaAlt": "",
+      "image":    "choochoo.png",
+      "initials": "CC",
+      "extra":    ""
+    },
+    {
+      "name":     "Henry Hugglemonster",
+      "nameAlt":  "🇧🇷 Henry Monstrinho",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "HH",
+      "extra":    ""
+    },
+    {
+      "name":     "Impmon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Digimon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "IM",
+      "extra":    ""
+    },
+    {
+      "name":     "Curly Brace",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "curly.png",
+      "initials": "CB",
+      "extra":    ""
+    },
+    {
+      "name":     "King",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "king.png",
+      "initials": "K",
+      "extra":    ""
+    },
+    {
+      "name":     "Balrog",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Cave Story",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Luxio",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Helioptile",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "helioptile.png",
+      "initials": "H",
+      "extra":    ""
+    },
+    {
+      "name":     "Snivy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "snivy.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Flygon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Latios",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Furret",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+    {
+      "name":     "Ampharos",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "A",
+      "extra":    ""
+    },
+    {
+      "name":     "Buizel",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "B",
+      "extra":    ""
+    },
+    {
+      "name":     "Lickitung",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+    {
+      "name":     "Raichu",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "R",
+      "extra":    ""
+    },
+    {
+      "name":     "Umbreon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "U",
+      "extra":    ""
+    },
+    {
+      "name":     "Sylveon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "sylveon.png",
+      "initials": "S",
+      "extra":    ""
+    },
+    {
+      "name":     "Typhlosion",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
+      "name":     "Oshawott",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "oshawott.png",
+      "initials": "OW",
+      "extra":    ""
+    },
+    {
+      "name":     "Meowth",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Pokémon",
+      "mediaAlt": "",
+      "image":    "meowth.png",
+      "initials": "M",
+      "extra":    ""
+    },
+    {
+      "name":     "Cuphead",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "CH",
+      "extra":    ""
+    },
+    {
+      "name":     "Four",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Battle For Dream Island",
+      "mediaAlt": "",
+      "image":    "four.png",
+      "initials": "4",
+      "extra":    ""
+    },
+    {
+      "name":     "X",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Battle For Dream Island",
+      "mediaAlt": "",
+      "image":    "x.png",
+      "initials": "X",
+      "extra":    ""
+    },
+  {
+      "name":     "Spike",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "S",
+      "extra":    ""
+    },
+  {
+      "name":     "Rainbow Dash",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "RD",
+      "extra":    ""
+    },
+  {
+      "name":     "Twilight Sparkle",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "TS",
+      "extra":    ""
+    },
+  {
+      "name":     "Fluttershy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "FS",
+      "extra":    ""
+    },
+  {
+      "name":     "Pinkie Pie",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "PP",
+      "extra":    ""
+    },
+  {
+      "name":     "Apple Bloom",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "applebloom.png",
+      "initials": "AB",
+      "extra":    ""
+    },
+  {
+      "name":     "Sweetie Belle",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "SB",
+      "extra":    ""
+    },
+  {
+      "name":     "Scootaloo",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "SL",
+      "extra":    ""
+    },
+  {
+      "name":     "Derpy Hooves / Muffins",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "DH",
+      "extra":    ""
+    },
+  {
+      "name":     "Vinyl Scratch",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "My Little Pony: Friendship is Magic",
+      "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
+      "image":    "",
+      "initials": "VS",
+      "extra":    ""
+    },
+  {
+      "name":     "Pita",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "PythagoraSwitch",
+      "mediaAlt": "🇧🇷 Viva Pitágoras",
+      "image":    "",
+      "initials": "P",
+      "extra":    ""
+    },
+  {
+      "name":     "Gora",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "PythagoraSwitch",
+      "mediaAlt": "🇧🇷 Viva Pitágoras",
+      "image":    "",
+      "initials": "G",
+      "extra":    ""
+    },
+  {
+      "name":     "Soo",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "PythagoraSwitch",
+      "mediaAlt": "🇧🇷 Viva Pitágoras",
+      "image":    "",
+      "initials": "SU",
+      "extra":    ""
+    },
+  {
+      "name":     "Framy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "PythagoraSwitch",
+      "mediaAlt": "🇧🇷 Viva Pitágoras",
+      "image":    "",
+      "initials": "F",
+      "extra":    ""
+    },
+  {
+      "name":     "Tape Measure Jackie",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "PythagoraSwitch",
+      "mediaAlt": "🇧🇷 Viva Pitágoras",
+      "image":    "",
+      "initials": "TMJ",
+      "extra":    ""
+    },
+  {
+      "name":     "Ristar",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "SEGA",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "RS",
+      "extra":    ""
+    },
+  {
+      "name":     "Marvin the Martian",
+      "nameAlt":  "🇧🇷 Marvin o Marciano",
+      "tags":     ["star"],
+      "media":    "Looney Tunes",
+      "mediaAlt": "",
+      "image":    "marvin.png",
+      "initials": "MV",
+      "extra":    ""
+    },
+  {
+      "name":     "Dizzy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Bob the Builder",
+      "mediaAlt": "🇧🇷 Bob o Construtor",
+      "image":    "dizzy.png",
+      "initials": "DZ",
+      "extra":    ""
+    },
+  {
+      "name":     "Mr. Skipperdoo",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Mr. Incredible and Pals",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SD",
+      "extra":    ""
+    },
+  {
+      "name":     "Horace",
+      "nameAlt":  "🇧🇷 Horácio",
+      "tags":     ["star"],
+      "media":    "Monica's Gang",
+      "mediaAlt": "🇧🇷 Turma da Mônica",
+      "image":    "",
+      "initials": "H",
+      "extra":    ""
+    },
+  {
+      "name":     "Mr. Zig Zag",
+      "nameAlt":  "🇧🇷 Coelho Caolho",
+      "tags":     ["star"],
+      "media":    "Monica's Gang",
+      "mediaAlt": "🇧🇷 Turma da Mônica",
+      "image":    "",
+      "initials": "ZZ",
+      "extra":    ""
+    },
+  {
+      "name":     "Orlando Estudioso",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "A Demanda do \"R\"",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "OE",
+      "extra":    ""
+    },
+  {
+      "name":     "Polly Esther",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Samurai Pizza Cats",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "PE",
+      "extra":    ""
+    },
+  {
+      "name":     "Woodstock",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Peanuts",
+      "mediaAlt": "🇧🇷 Snoopy & Charlie Brown",
+      "image":    "",
+      "initials": "WS",
+      "extra":    ""
+    },
+  {
+      "name":     "Peppermint Patty",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Peanuts",
+      "mediaAlt": "🇧🇷 Snoopy & Charlie Brown",
+      "image":    "",
+      "initials": "WS",
+      "extra":    ""
+    },
+  {
+      "name":     "Giovanni Potage",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Epithet Erased",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "GP",
+      "extra":    ""
+    },
+  {
+      "name":     "Yoomtah Zing",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Epithet Erased",
+      "mediaAlt": "",
+      "image":    "yoomtah.png",
+      "initials": "YZ",
+      "extra":    ""
+    },
+  {
+      "name":     "Airy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "ONE",
+      "mediaAlt": "",
+      "image":    "airy.png",
+      "initials": "A",
+      "extra":    ""
+    },
+  {
+      "name":     "Gregg Lee",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Night In The Woods",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "GL",
+      "extra":    ""
+    },
+  {
+      "name":     "Angus Delaney",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Night In The Woods",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "AD",
+      "extra":    ""
+    },
+  {
+      "name":     "Germ Warfare",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Night In The Woods",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "GW",
+      "extra":    ""
+    },
+  {
+      "name":     "Chekeratchi",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Tamagotchi",
+      "mediaAlt": "",
+      "image":    "chekeratchi.png",
+      "initials": "C",
+      "extra":    ""
+    },
+  {
+      "name":     "Harmony",
+      "nameAlt":  "🇯🇵 Paruko",
+      "tags":     ["star"],
+      "media":    "Splatoon",
+      "mediaAlt": "",
+      "image":    "harmony.png",
+      "initials": "H",
+      "extra":    ""
+    },
+  {
+      "name":     "Mitu",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Xiaomi",
+      "mediaAlt": "",
+      "image":    "mitu.png",
+      "initials": "MI",
+      "extra":    ""
+    },
+  {
+      "name":     "Kid Dracula",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Castlevania",
+      "mediaAlt": "",
+      "image":    "kiddracula.png",
+      "initials": "KD",
+      "extra":    ""
+    },
+  {
+      "name":     "Cadpig",
+      "nameAlt":  "🇧🇷 Queridinha",
+      "tags":     ["star"],
+      "media":    "101 Dalmatians",
+      "mediaAlt": "🇧🇷 101 Dálmatas",
+      "image":    "cadpig.png",
+      "initials": "CD",
+      "extra":    ""
+    },
+  {
+      "name":     "Gaz Membrane",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Invader ZIM",
+      "mediaAlt": "🇧🇷 Invasor ZIM",
+      "image":    "",
+      "initials": "GM",
+      "extra":    ""
+    },
+  {
+      "name":     "Moshy",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Wiwichus (PEPSI)",
+      "mediaAlt": "",
+      "image":    "moshy.png",
+      "initials": "M",
+      "extra":    ""
+    },
+  {
+      "name":     "Nando",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Wiwichus (PEPSI)",
+      "mediaAlt": "",
+      "image":    "nando.png",
+      "initials": "N",
+      "extra":    ""
+    },
+  {
+      "name":     "Kim Pine",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Scott Pilgrim",
+      "mediaAlt": "",
+      "image":    "kimpine.png",
+      "initials": "KP",
+      "extra":    ""
+    },
+  {
+      "name":     "Young Neil",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Scott Pilgrim",
+      "mediaAlt": "",
+      "image":    "youngneil.png",
+      "initials": "YN",
+      "extra":    ""
+    },
+  {
+      "name":     "Lala",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kunshikter",
+      "mediaAlt": "🇰🇿 Күншіктер",
+      "image":    "",
+      "initials": "L",
+      "extra":    ""
+    },
+  {
+      "name":     "Tima",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Kunshikter",
+      "mediaAlt": "🇰🇿 Күншіктер",
+      "image":    "",
+      "initials": "T",
+      "extra":    ""
+    },
+  {
+      "name":     "The Great Raven",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "GR",
+      "extra":    ""
+    },
+  {
+      "name":     "David's Marra",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "DM",
+      "extra":    ""
+    },
+  {
+      "name":     "Kelly",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+  {
+      "name":     "Kaisa",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+  {
+      "name":     "Pooka",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Hilda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "P",
+      "extra":    ""
+    },
+  {
+      "name":     "Akai",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Ninjin",
+      "mediaAlt": "",
+      "image":    "akai.png",
+      "initials": "AKI",
+      "extra":    ""
+    },
+  {
+      "name":     "YAY-OK",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Rocket Monkeys 💀",
+      "mediaAlt": "",
+      "image":    "yayok.png",
+      "initials": "OK",
+      "extra":    ""
+    },
+  {
+      "name":     "Pandy Paws",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Gabby's Dollhouse",
+      "mediaAlt": "🇧🇷 A Casa Mágica da Gabby",
+      "image":    "pandy.png",
+      "initials": "PP",
+      "extra":    ""
+    },
+  {
+      "name":     "The Doodads",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Gabby's Dollhouse",
+      "mediaAlt": "🇧🇷 A Casa Mágica da Gabby",
+      "image":    "doodads.png",
+      "initials": "DD",
+      "extra":    ""
+    },
+  {
+      "name":     "Masked Niyander",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Nyanda Kamen",
+      "mediaAlt": "",
+      "image":    "nyanda.png",
+      "initials": "NK",
+      "extra":    ""
+    },
+  {
+      "name":     "Jot",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "",
+      "mediaAlt": "",
+      "image":    "jot.png",
+      "initials": "J",
+      "extra":    ""
+    },
+//THUMBSUP
+/*    {
+      "name":     "The Infomaniac",
+      "nameAlt":  "🇧🇷 Infomaníaco",
+      "tags":     ["thumbsup"],
+      "media":    "LEGO Island",
+      "mediaAlt": "🇧🇷 A Ilha LEGO",
+      "image":    "infomaniac.png",
+      "initials": "I",
+      "extra":    ""
+    },                          */
+//Ednaldo Pereira
+    {
+      "name":     "Ednaldo Pereira",
+      "nameAlt":  "Ednaldo Pereira",
+      "tags":     ["ednaldo"],
+      "media":    "Ednaldo Pereira",
+      "mediaAlt": "Ednaldo Pereira",
+      "image":    "ednaldo.png",
+      "initials": "EP",
+      "extra":    ""
+    }
+  ]
+}

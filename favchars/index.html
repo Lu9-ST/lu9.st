@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blorbopage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #32213f;
+    --surface: #291727;
+    --surface2: #3c2546;
+    --border: #4b2d38;
+    --border-light: #7c4c63;
+    --gold: #c75cad;
+    --gold-dim: #c44ff1;
+    --gold-glow: rgba(201, 168, 76, 0.15);
+    --text: #e8c8d4;
+    --text-muted: #ba84a4;
+    --text-dim: #a46e85;
+    --accent-red: #c63636;
+    --accent-blue: #2c6ccc;
+    --accent-green: #38a656;
+    --accent-purple: #a86edf;
+    --accent-orange: #d66c2a;
+    --accent-teal: #2dc197;
+    --radius: 6px;
+    --card-w: 200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: IBM Plex Sans, Roboto, sans-serif;
+    min-height: 100vh;
+    background-blend-mode: multiply;
+    background-color: rgba(15,14,13,0.88);
+    background-image: url("https://files.catbox.moe/lqpjf0.png");
+  }
+
+  /* ── HEADER ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 40px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgb(15 13 15 / 88%);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .site-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-shadow: 0 0 30px rgba(201,168,76,0.3);
+    white-space: nowrap;
+  }
+
+  .site-title span {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-left: 10px;
+    font-style: italic;
+  }
+
+  /* ── SEARCH ── */
+  .search-wrap {
+    position: relative;
+    flex: 0 0 260px;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+
+  #search {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 40px;
+    padding: 9px 16px 9px 38px;
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  #search::placeholder { color: var(--text-muted); }
+
+  #search:focus {
+    border-color: var(--gold-dim);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+  }
+
+  /* ── TABS ── */
+  .tabs {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-bottom: 1px;
+  }
+
+  .tabs::-webkit-scrollbar { display: none; }
+
+  .tab {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding: 10px 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s;
+    position: relative;
+    top: 1px;
+  }
+
+  .tab:hover { color: var(--text); }
+
+  .tab.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .tab .count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface2);
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 1px 6px;
+    margin-left: 5px;
+    color: var(--text-muted);
+    font-style: italic;
+    letter-spacing: 0;
+  }
+
+  .tab.active .count {
+    background: var(--gold-glow);
+    color: var(--gold);
+  }
+
+  /* ── MAIN ── */
+  main {
+    padding: 36px 40px 60px;
+  }
+
+  .results-info {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+    font-style: italic;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── GALLERY GRID ── */
+  #gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-w), 1fr));
+    gap: 20px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    cursor: default;
+    animation: fadeIn 0.35s ease both;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-dim);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px var(--gold-glow);
+  }
+
+  .card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    background: var(--surface2);
+  }
+
+  .card-img-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: var(--border-light);
+    letter-spacing: 0.05em;
+    user-select: none;
+  }
+
+  .card-body {
+    padding: 14px 14px 16px;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .tag {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    border: 1px solid;
+  }
+
+  .tag-heart      { color: var(--accent-blue);   border-color: var(--accent-blue);   background: rgba(76,126,201,0.08); }
+  .tag-star   { color: var(--accent-red);    border-color: var(--accent-red);    background: rgba(201,76,76,0.08); }
+  .tag-ednaldo { color: var(--accent-orange); border-color: var(--accent-orange); background: rgba(201,124,76,0.08); }
+  .tag-thumbsup    { color: var(--accent-green);  border-color: var(--accent-green);  background: rgba(76,168,124,0.08); }
+  .tag-kin { color: var(--accent-purple); border-color: var(--accent-purple); background: rgba(140,76,201,0.08); }
+  .tag-other     { color: var(--text-muted);    border-color: var(--border-light);  background: transparent; }
+
+  .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .card-name-alt {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+
+  .card-divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 10px;
+  }
+
+  .card-media:not(:empty) {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-top: 1px solid var(--border);
+  }
+
+  .card-media-alt {
+    font-size: 10px;
+    color: var(--text-dim);
+    font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-extra:not(:empty) {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  /* ── LOADING / ERROR STATES ── */
+  #status {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  #status.error { color: var(--accent-red); }
+
+  /* ── EMPTY STATE ── */
+  #empty {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-dim);
+  }
+
+  #empty.visible { display: block; }
+
+  #empty .empty-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+
+  #empty p {
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    header { padding: 20px 20px 0; }
+    main   { padding: 24px 20px 48px; }
+    .header-top { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .search-wrap { flex: 0 0 100%; width: 100%; }
+    :root { --card-w: 155px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="site-title">
+      BLORBOPAGE
+      <span>fave chars™</span>
+    </div>
+    <div class="search-wrap">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="search" placeholder="Search" autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+</header>
+
+<main>
+  <div class="results-info" id="results-info"></div>
+  <div id="status">Loading...</div>
+  <div id="gallery"></div>
+  <div id="empty">
+    <div class="empty-icon">¯\_(ツ)_/¯</div>
+    <p>No matches.</p>
+  </div>
+</main>
+
+<script>
+// ─────────────────────────────────────────────
+//  CONFIG
+// ─────────────────────────────────────────────
+const DATA_URL = "chars.json";
+
+let CHARACTERS = [];
+let TAG_CONFIG  = {};
+let activeTag   = "heart";
+let searchQuery = "";
+
+// ─────────────────────────────────────────────
+//  LOAD DATA
+// ─────────────────────────────────────────────
+async function loadData() {
+  const statusEl = document.getElementById("status");
+  try {
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    CHARACTERS = data.characters || [];
+    TAG_CONFIG  = data.tags      || {};
+
+    statusEl.style.display = "none";
+    buildTabs();
+    render();
+  } catch (err) {
+    statusEl.className = "error";
+    statusEl.textContent = `Could not load characters.json — ${err.message}`;
+    console.error(err);
+  }
+}
+
+// ─────────────────────────────────────────────
+//  BUILD TABS
+// ─────────────────────────────────────────────
+function buildTabs() {
+  const tabsEl = document.getElementById("tabs");
+  tabsEl.innerHTML = "";
+
+  // Collect unique tags in the order they appear in the data
+  const tagSet = new Set();
+  CHARACTERS.forEach(c => c.tags.forEach(t => tagSet.add(t)));
+  const allTags = [...tagSet,"all"];
+
+  allTags.forEach(tag => {
+    const count = tag === "all"
+      ? CHARACTERS.length
+      : CHARACTERS.filter(c => c.tags.includes(tag)).length;
+
+    const label = tag === "all"
+      ? "All"
+      : (TAG_CONFIG[tag]?.label || tag);
+
+    const btn = document.createElement("button");
+    btn.className = "tab" + (tag === "heart" ? " active" : "");
+    btn.dataset.tag = tag;
+    btn.innerHTML = `${label} <span class="count">${count}</span>`;
+    btn.addEventListener("click", () => {
+      activeTag = tag;
+      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    });
+    tabsEl.appendChild(btn);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  RENDER
+// ─────────────────────────────────────────────
+function render() {
+  const q = searchQuery.toLowerCase().trim();
+
+  const filtered = CHARACTERS.filter(c => {
+    const tagMatch = activeTag === "all" || c.tags.includes(activeTag);
+    if (!tagMatch) return false;
+    if (!q) return true;
+    return (
+      c.name.toLowerCase().includes(q) ||
+      (c.nameAlt  || "").toLowerCase().includes(q) ||
+      c.media.toLowerCase().includes(q) ||
+      (c.mediaAlt || "").toLowerCase().includes(q) ||
+      c.tags.some(t => t.includes(q))
+    );
+  });
+
+  const gallery = document.getElementById("gallery");
+  const empty   = document.getElementById("empty");
+  const info    = document.getElementById("results-info");
+
+  gallery.innerHTML = "";
+
+  if (filtered.length === 0) {
+    empty.classList.add("visible");
+    info.textContent = "";
+    return;
+  }
+
+  empty.classList.remove("visible");
+  info.textContent = `${filtered.length} char${filtered.length !== 1 ? "s" : ""}`;
+
+  filtered.forEach((c, i) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.style.animationDelay = `${i * 40}ms`;
+
+    // ── img / placeholder ──
+    let imgHtml;
+    if (c.image) {
+      imgHtml = `<img class="card-img" src="${c.image}" alt="${c.name}" title="${c.name}" loading="lazy">`;
+    } else {
+      imgHtml = `<div class="card-img-placeholder">${c.initials || c.name[0]}</div>`;
+    }
+
+    // ── tags ──
+    const tagsHtml = c.tags.map(t => {
+      const cls   = TAG_CONFIG[t]?.class || "tag-other";
+      const label = TAG_CONFIG[t]?.label || t;
+      return `<span class="tag ${cls}">${label}</span>`;
+    }).join("");
+
+    // ── extra HTML ──
+    const extraHtml = c.extra || "";
+
+    card.innerHTML = `
+      ${imgHtml}
+      <div class="card-body">
+        <div class="card-tags">${tagsHtml}</div>
+        <div class="card-name">${c.name}</div>
+        ${c.nameAlt  ? `<div class="card-name-alt">${c.nameAlt}</div>`   : ""}
+        <div class="card-media">${c.media}</div>
+        ${c.mediaAlt ? `<div class="card-media-alt">${c.mediaAlt}</div>` : ""}
+        <div class="card-extra">${extraHtml}</div>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+}
+
+// ─────────────────────────────────────────────
+//  SEARCH
+// ─────────────────────────────────────────────
+document.getElementById("search").addEventListener("input", e => {
+  searchQuery = e.target.value;
+  render();
+});
+
+// ─────────────────────────────────────────────
+//  INIT
+// ─────────────────────────────────────────────
+loadData();
+</script>
+</body>
+</html>
