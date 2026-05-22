@@ -83,7 +83,7 @@
       "tags":     ["heart"],
       "media":    "Animal Crossing",
       "mediaAlt": "",
-      "image":    "sasha.png",
+      "image":    "sasha.jpg",
       "initials": "S",
       "extra":    ""
     },
@@ -313,7 +313,7 @@
       "tags":     ["heart", "kin"],
       "media":    "OneShot",
       "mediaAlt": "",
-      "image":    "niko.png",
+      "image":    "niko.jpg",
       "initials": "N",
       "extra":    "<small><b>Kin level:</b> 9/10</small>"
     },
@@ -323,7 +323,7 @@
       "tags":     ["heart", "kin"],
       "media":    "Hanazuki",
       "mediaAlt": "",
-      "image":    "niko.png",
+      "image":    "kiyoshi.png",
       "initials": "KY",
       "extra":    "<small><b>Kin level:</b> 9/10</small>"
     },
@@ -483,7 +483,7 @@
       "tags":     ["heart", "kin"],
       "media":    "OK K.O.! Let's Be Heroes",
       "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
-      "image":    "",
+      "image":    "dendy.png",
       "initials": "D",
       "extra":    "<small><b>Kin level:</b> 9/10</small>"
     },
@@ -1263,7 +1263,7 @@
       "tags":     ["heart", "kin"],
       "media":    "Catching Kringle",
       "mediaAlt": "🇧🇷 Capturem o Velhinho",
-      "image":    "snowflake.png",
+      "image":    "snowflake.jpg",
       "initials": "SF",
       "extra":    "<small><b>Kin level:</b> 7/10</small>"
     },
