@@ -7,7 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
 <style>
+  @font-face {
+  font-family: "TwemojiColor";
+  src: url("https://lu9.st/blog-assets/Twemoji%20Mozilla.ttf");
+}
   :root {
     --bg: #32213f;
     --surface: #291727;
@@ -35,7 +40,7 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: IBM Plex Sans, Roboto, sans-serif;
+    font-family: IBM Plex Sans, "TwemojiColor", Roboto, sans-serif;
     min-height: 100vh;
     background-blend-mode: multiply;
     background-color: rgba(15,14,13,0.88);
