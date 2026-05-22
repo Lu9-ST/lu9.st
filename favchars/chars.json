@@ -7,7 +7,7 @@
     "ednaldo":  { "label": "Ednaldo Pereira",  "class": "tag-ednaldo" }
   },
   "characters": [
-//HEARTS
+/* HEARTS */
     {
       "name":     "Calimero",
       "nameAlt":  "",
@@ -1798,7 +1798,7 @@
       "initials": "KM",
       "extra":    ""
     },
-//STARS
+/* STARS */
     {
       "name":     "Cueio",
       "nameAlt":  "",
@@ -3309,8 +3309,8 @@
       "initials": "J",
       "extra":    ""
     },
-//THUMBSUP
-/*    {
+/* THUMBSUP
+    {
       "name":     "The Infomaniac",
       "nameAlt":  "🇧🇷 Infomaníaco",
       "tags":     ["thumbsup"],
@@ -3319,8 +3319,8 @@
       "image":    "infomaniac.png",
       "initials": "I",
       "extra":    ""
-    },                          */
-//Ednaldo Pereira
+    },
+Ednaldo Pereira */
     {
       "name":     "Ednaldo Pereira",
       "nameAlt":  "Ednaldo Pereira",
