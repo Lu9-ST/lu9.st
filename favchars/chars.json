@@ -7,7 +7,6 @@
     "ednaldo":  { "label": "Ednaldo Pereira",  "class": "tag-ednaldo" }
   },
   "characters": [
-/* HEARTS */
     {
       "name":     "Calimero",
       "nameAlt":  "",
@@ -1798,7 +1797,6 @@
       "initials": "KM",
       "extra":    ""
     },
-/* STARS */
     {
       "name":     "Cueio",
       "nameAlt":  "",
@@ -3309,18 +3307,6 @@
       "initials": "J",
       "extra":    ""
     },
-/* THUMBSUP
-    {
-      "name":     "The Infomaniac",
-      "nameAlt":  "🇧🇷 Infomaníaco",
-      "tags":     ["thumbsup"],
-      "media":    "LEGO Island",
-      "mediaAlt": "🇧🇷 A Ilha LEGO",
-      "image":    "infomaniac.png",
-      "initials": "I",
-      "extra":    ""
-    },
-Ednaldo Pereira */
     {
       "name":     "Ednaldo Pereira",
       "nameAlt":  "Ednaldo Pereira",
