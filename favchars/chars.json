@@ -15,7 +15,7 @@
       "mediaAlt": "",
       "image":    "calimero.png",
       "initials": "C",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Ongo",
@@ -25,7 +25,7 @@
       "mediaAlt": "",
       "image":    "ongo.png",
       "initials": "O",
-      "extra":    "<small><b>Kin level:</b> 10/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 10/10</small>"
     },
     {
       "name":     "Robot Jones",
@@ -35,7 +35,7 @@
       "mediaAlt": "",
       "image":    "robotjones.png",
       "initials": "RJ",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Rover",
@@ -175,7 +175,7 @@
       "mediaAlt": "",
       "image":    "9volt.png",
       "initials": "9V",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "DeMille",
@@ -195,7 +195,7 @@
       "mediaAlt": "",
       "image":    "tails.png",
       "initials": "T",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Cheese the Chao",
@@ -245,7 +245,7 @@
       "mediaAlt": "",
       "image":    "vita-boy.png",
       "initials": "VB",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Elec-Tron",
@@ -255,7 +255,7 @@
       "mediaAlt": "",
       "image":    "elec-tron.png",
       "initials": "ET",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Boyo Sable",
@@ -275,7 +275,7 @@
       "mediaAlt": "",
       "image":    "komasan.png",
       "initials": "K",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Wydeawake",
@@ -285,7 +285,7 @@
       "mediaAlt": "",
       "image":    "wydeawake.png",
       "initials": "WA",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Chocobo",
@@ -315,7 +315,7 @@
       "mediaAlt": "",
       "image":    "niko.jpg",
       "initials": "N",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Kiyoshi",
@@ -325,7 +325,7 @@
       "mediaAlt": "",
       "image":    "kiyoshi.png",
       "initials": "KY",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Cardamon",
@@ -335,7 +335,7 @@
       "mediaAlt": "🇧🇷 Bee e o Gatiorrinho",
       "image":    "cardamon.png",
       "initials": "C",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Alfur Aldric",
@@ -345,7 +345,7 @@
       "mediaAlt": "",
       "image":    "alfur.png",
       "initials": "AA",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Eugene",
@@ -385,7 +385,7 @@
       "mediaAlt": "",
       "image":    "maddie.png",
       "initials": "MF",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Ivy Sundew",
@@ -415,7 +415,7 @@
       "mediaAlt": "🇧🇷 Mundo Giz",
       "image":    "snap.png",
       "initials": "S",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Jenny X-J9",
@@ -435,7 +435,7 @@
       "mediaAlt": "",
       "image":    "eltigre.png",
       "initials": "MR",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Frida Suarez",
@@ -465,7 +465,7 @@
       "mediaAlt": "",
       "image":    "wakko.png",
       "initials": "WW",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "K.O.",
@@ -485,7 +485,7 @@
       "mediaAlt": "🇧🇷 OK K.O.! Vamos Ser Heróis",
       "image":    "dendy.png",
       "initials": "D",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Fink",
@@ -535,7 +535,7 @@
       "mediaAlt": "",
       "image":    "jejum.png",
       "initials": "J",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Mage",
@@ -545,7 +545,7 @@
       "mediaAlt": "",
       "image":    "mage.png",
       "initials": "M",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "GIR",
@@ -585,7 +585,7 @@
       "mediaAlt": "",
       "image":    "mooch.png",
       "initials": "M",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Ralsei",
@@ -595,7 +595,7 @@
       "mediaAlt": "",
       "image":    "ralsei.png",
       "initials": "R",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Virovirokun",
@@ -765,7 +765,7 @@
       "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
       "image":    "darwin.png",
       "initials": "DW",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Carrie Krueger",
@@ -785,7 +785,7 @@
       "mediaAlt": "🇧🇷 O Incrível Mundo de Gumball",
       "image":    "rachel.png",
       "initials": "RW",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Penny Fitzgerald",
@@ -865,7 +865,7 @@
       "mediaAlt": "",
       "image":    "drizzile.png",
       "initials": "D",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Chespin",
@@ -955,7 +955,7 @@
       "mediaAlt": "",
       "image":    "allister.png",
       "initials": "C",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Morgana",
@@ -1025,7 +1025,7 @@
       "mediaAlt": "🇧🇷 O Segredo Além do Jardim",
       "image":    "greg.png",
       "initials": "G",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Glitch",
@@ -1035,7 +1035,7 @@
       "mediaAlt": "",
       "image":    "glitch.png",
       "initials": "G",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Yugo",
@@ -1065,7 +1065,7 @@
       "mediaAlt": "",
       "image":    "luke.png",
       "initials": "LT",
-      "extra":    "<small><b>Kin level:</b> 9/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 9/10</small>"
     },
     {
       "name":     "Vinicius",
@@ -1105,7 +1105,7 @@
       "mediaAlt": "",
       "image":    "kuro-chan.png",
       "initials": "KC",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Mi-kun",
@@ -1115,7 +1115,7 @@
       "mediaAlt": "",
       "image":    "mi-kun.png",
       "initials": "MK",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
     {
       "name":     "Peep",
@@ -1175,7 +1175,7 @@
       "mediaAlt": "🇧🇷 O Incrível Circo Digital",
       "image":    "gangle.png",
       "initials": "G",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Mametchi",
@@ -1265,7 +1265,7 @@
       "mediaAlt": "",
       "image":    "orangebird.png",
       "initials": "OB",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Snowflake",
@@ -1275,7 +1275,7 @@
       "mediaAlt": "🇧🇷 Capturem o Velhinho",
       "image":    "snowflake.jpg",
       "initials": "SF",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Tamama",
@@ -1285,7 +1285,7 @@
       "mediaAlt": "",
       "image":    "tamama.png",
       "initials": "T",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Merfle",
@@ -1295,7 +1295,7 @@
       "mediaAlt": "",
       "image":    "merfle.png",
       "initials": "T",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
    {
       "name":     "Fark",
@@ -1365,7 +1365,7 @@
       "mediaAlt": "",
       "image":    "shag.png",
       "initials": "SR",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
    {
       "name":     "Trixie Roughhouse",
@@ -1375,7 +1375,7 @@
       "mediaAlt": "",
       "image":    "trixie.png",
       "initials": "TR",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
   {
       "name":     "Pike",
@@ -1465,7 +1465,7 @@
       "mediaAlt": "🇧🇷 Clube da Anittinha",
       "image":    "renuvem.gif",
       "initials": "R",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
   {
       "name":     "Izumi Konata",
@@ -1475,7 +1475,7 @@
       "mediaAlt": "",
       "image":    "konata.png",
       "initials": "K",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "Minami Iwasaki",
@@ -1485,7 +1485,7 @@
       "mediaAlt": "",
       "image":    "minami.png",
       "initials": "M",
-      "extra":    "<small><b>Kin level:</b> 8/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 8/10</small>"
     },
   {
       "name":     "Jiba Jinpei",
@@ -1615,7 +1615,7 @@
       "mediaAlt": "",
       "image":    "garu.png",
       "initials": "G",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "Cloudchaser",
@@ -1645,7 +1645,7 @@
       "mediaAlt": "",
       "image":    "mae.png",
       "initials": "MB",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
   {
       "name":     "Gingerbrave",
@@ -1675,7 +1675,7 @@
       "mediaAlt": "🇧🇷 Teatro dos Finais Infelizes",
       "image":    "underling.png",
       "initials": "UL",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "Jared",
@@ -1685,7 +1685,7 @@
       "mediaAlt": "🇧🇷 Ursinhos Em Curso",
       "image":    "jared.png",
       "initials": "J",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "Meow",
@@ -1715,7 +1715,7 @@
       "mediaAlt": "",
       "image":    "roxie.png",
       "initials": "RR",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
   {
       "name":     "Sulu",
@@ -1725,7 +1725,7 @@
       "mediaAlt": "🇰🇿 Күншіктер",
       "image":    "sulu.png",
       "initials": "S",
-      "extra":    "<small><b>Kin level:</b> 6/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
   {
       "name":     "Dazzi",
@@ -1975,7 +1975,7 @@
       "mediaAlt": "",
       "image":    "proto.png",
       "initials": "PB",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Hanazuki",
@@ -1985,7 +1985,7 @@
       "mediaAlt": "",
       "image":    "hanazuki.png",
       "initials": "HZ",
-      "extra":    "<small><b>Kin level:</b> 7/10</small>"
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "WordGirl",
@@ -2290,12 +2290,12 @@
     {
       "name":     "Pepper Roni",
       "nameAlt":  "",
-      "tags":     ["star"],
+      "tags":     ["star","kin"],
       "media":    "LEGO Island",
       "mediaAlt": "🇧🇷 A Ilha LEGO",
       "image":    "pepper.png",
       "initials": "PR",
-      "extra":    ""
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
     },
     {
       "name":     "Sparky",
