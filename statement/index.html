@@ -1,0 +1,770 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>In case of callout, drop statement and run - Lu9 edition</title><style>
+@font-face {
+  font-family: "TwemojiColor";
+  src: url("https://lu9.st/blog-assets/Twemoji%20Mozilla.ttf");
+}
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+	background-color: #1f1f1f;
+	color: #efefeb;
+	}
+	hr {
+	border-bottom: 1px solid rgb(55 53 47 / 61%) !important;
+	}
+	.table_of_contents-link {
+	color: #9a9a9a;
+	border-bottom: 1px solid rgb(55 53 47 / 61%) !important;
+	}
+	mark {
+	color: #efefeb;
+	}
+	.block-color-red_background {
+	background-color: #512f2d !important;
+	}
+	.bookmark-description {
+	color: #efefeb88 !important;
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 0%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: "IBM Plex Sans", "TwemojiColor", -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article class="page sans"><header><h1 class="page-title" dir="auto">In case of callout, drop statement and run - Lu9 edition</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p>Hi. It’s me again. I’m tired. I have been dealing with harassment and slanderous campaigns pretty much since I <em>turned </em>18 (wonder why, huh) and while some people moved on from it (as far as I can tell) others came to me because of continued spread of misinformation. I really want to put this to rest, and not have to revisit these mentally scarring topics.</p></div><div style="display:contents" dir="auto"><p>There are a couple of friends I have (who I will <em>obviously</em> not disclose <em>for their own safety and anonymity</em>) that don’t even feel <em>safe</em> associating with me publicly (even though they either “align” with my views or just don’t mind them) because of how <em>aggressive</em> and <em>inhuman</em> some people can get, as you’ll see below.</p></div><div style="display:contents" dir="auto"><p>This is a new document (started in <mark class="highlight-yellow_background">2023</mark>, finished in <mark class="highlight-orange_background">2026</mark>, updated in <mark class="highlight-orange_background"><time>@May 27, 2026</time></mark>) to unify two past documents. You may cross reference this with the <a href="https://www.notion.so/SiIvaGunner-Almost-4-years-later-545b857ca0ae4e128557694a8aa5b070?pvs=21">previous</a> <a href="https://www.notion.so/the-nat-document-db7c5b0b63df4bddb662f4b222369d40?pvs=21">ones</a> to verify the consistency of the presented claims.</p></div><div style="display:contents" dir="auto"><hr/></div><div style="display:contents" dir="ltr"><nav class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cf11cf8-9338-80d5-a280-e096ae4ab18a">Introduction</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9220126e-c7b3-4321-acb2-4e564919d398">What is true (things I’ve addressed and apologized for)</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cf11cf8-9338-8068-b9ca-e6310b722852">SiivaGunner</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1cf11cf8-9338-8056-82f4-cec33bf77131">Lewdstones server</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1cf11cf8-9338-80ad-8b86-e6453a6ed53e">Promotion and Demotion</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#2ef26e29-3efa-4ccc-b581-638f77e2e365">Natalie</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1cf11cf8-9338-80ca-91cc-fb0ccd567ddf">Relationship</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#33d11cf8-9338-8035-9217-c98a725c72a4">Dumb fights</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#33d11cf8-9338-8081-95d4-ec02f53102bf">Baseless claims</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33aae6f2-411a-425c-b3fd-5db2c46fd625">SiivaGunner - part 2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#33e11cf8-9338-80cf-926d-f4b875ca9ebf">Kicked out</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1cf11cf8-9338-80d6-8d7b-ffa353d90e17">The light at the end of the backrooms</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#34711cf8-9338-809f-86a1-c51c3f81a68c">MtH’s response</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#33d11cf8-9338-8025-9f4d-e45dc81945c0">MtH in 2026</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33e11cf8-9338-8007-a56d-e361608433b1">Natalie - part 2</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#34711cf8-9338-805c-8b81-e78fac71870f">Retconning the narrative</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#34711cf8-9338-808b-a057-e9ff703ad8cc">“grooming”</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#34711cf8-9338-805f-84b8-e992cce88428">Nat’s past</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cf11cf8-9338-809d-89ed-e687f5019dc8">Amber</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cf11cf8-9338-80d4-88a1-c0f340ddd005">Maddy</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1cf11cf8-9338-80c9-831a-e1cb58e52677">Maddy and Nat</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33d11cf8-9338-808f-9485-d6f96818d5ae">Current day</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#33d11cf8-9338-80cd-9935-de9a8620656c">SiIvaGunner Wiki</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#34711cf8-9338-805e-9d11-c861d7590f89">Special Thanks</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#33d11cf8-9338-80e2-a770-f5b64be477fb">Special Unthanks</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#1cf11cf8-9338-80c2-a5e5-e9e37e996e24">Further reading</a></div></nav></div><div style="display:contents" dir="auto"><hr/></div><div style="display:contents" dir="ltr"><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p><mark class="highlight-default"><mark class="highlight-default_background"><strong>Content/Trigger Warnings for: </strong></mark></mark><mark class="highlight-default"><mark class="highlight-default_background">NSFW subjects, mentions of paraphilias and grooming</mark></mark></p></div><div style="display:contents" dir="auto"><p>It also really should go without saying but <em>people are dense:</em> do not seek or harass anyone mentioned in this document, it just makes things worse for everyone.</p></div></div></figure></div><div style="display:contents" dir="auto"><hr/></div><div style="display:contents" dir="auto"><h2 id="1cf11cf8-9338-80d5-a280-e096ae4ab18a" >Introduction</h2></div><div style="display:contents" dir="auto"><p>Before getting to the subject at hand, I’d like to ask you, the reader, to have good faith, mature and nuanced thoughts to process what I have to say, even if you don’t agree.</p></div><div style="display:contents" dir="auto"><p>For the longest time online, I’ve been what some folk these days call “<em>pro-ship</em>” or “<em>pro-fic</em>”, a reliable definition of that can be found <a href="https://define-proship.carrd.co">here</a>. I don’t like labels like that much as they are reductive, prone to generalizations, etc. but the core beliefs presented are something I agree with, and that’s not changing any time soon. I’m friends with several <em>NSFW</em> artists, and draw it myself sometimes. Some draw loli, shota, cub, feral, non-con… who cares. It’s fiction, it IS as simple as that, and we really mustn’t revive pointless “videogames cause violence” discourse that we all know isn’t true, or parrot what are basically conservative christian puritan views under a progressive coat of paint. “A drawing of what?” is also. Sure, you can say it depicts a child/animal/whatever, the argument is that it doesn’t matter, and doesn’t correlate with one’s morals and desires 1:1, full stop. (At the end of this document there are links for anyone interested in learning more) I also don’t believe in thoughtcrime, or that merely having a paraphilia makes anyone an abuser. And many other things! I’m brazilian, and time and time again it has been shown that this insistence on what is almost entirely rooted in evangelical guilt is mostly an american thing.<br/>That and a lot of projection has been seen - some pretty loud voices claiming moral superiority while having their own skeletons in their closet. That does not “prove” the arguments made by pro-fic folk, but it is a statistical phenomenon that can’t be ignored.</p></div><div style="display:contents" dir="auto"><p>Most importantly, people should realize that… people are complex. The whole world is too complex to view everything as just black or white. “Good” or “evil”. Everyone is imperfect, makes mistakes, and many times just won’t get along with each other, and that’s okay. As long as we can have mature, civilized conversations, without having to appeal to emotions or personal attacks, everything is fair game.</p></div><div style="display:contents" dir="auto"><p>If you’re still with me and actually want to hear what I have to say, good. We can continue.</p></div><div style="display:contents" dir="auto"><h2 id="9220126e-c7b3-4321-acb2-4e564919d398" >What is true (things I’ve addressed and apologized for)</h2></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">I had a locked (private) NSFW account on Twitter that I made as a minor (15).<br/>Puberty and stuff, you know how it is. Other friends around my age had similar accounts as well. Contrary to what mostly uneducated USAmericans think, teens <em>do</em> get sexual amongst themselves and we should stop pretending they don’t and stop infantilizing them and lumping them with children. That, of course, DOESN’T excuse how <em>terrible</em> of an idea this was (and how it could’ve potentially put me and/or others in danger), but I thought I’d mention it.<br/>That account stayed up until even <em>after</em> I turned 18, with the same people around my age allowed in, still. I took longer than I should have to both realize how this could’ve gone <em>very</em> wrong (with me even allowing some 18+ people to access the account <em>when I was 15 myself</em>) and to kick anyone who was still underage (by the time I turned 18) out.</li></ul></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">As mentioned previously, I draw NSFW content myself sometimes. It’s niche and not for everyone. I only started doing it when I was close to turning 18 and nothing was made public online <em>until</em> after the fact. While this is true, I have nothing to apologize for regarding this. Anything NSFW I make is posted under an entirely separate alias (Which was never supposed to be a “secret” either, just separate enough that minors and people who wouldn’t want to see this type of content wouldn’t have to come across it.)<br/>So if you don’t want to see it, you don’t have to.<br/>Everything is tagged, and the block button is free.</li></ul></div><div style="display:contents" dir="auto"><p><strong>Anything else</strong> claimed by others in this document regarding my behavior is either a bad faith interpretation/distortion or outright false. I will of course elaborate on why that is, so let’s begin.</p></div><div style="display:contents" dir="auto"><h2 id="1cf11cf8-9338-8068-b9ca-e6310b722852" >SiivaGunner</h2></div><div style="display:contents" dir="auto"><p>For the uninitiated, a brief summary: SiIvaGunner, formerly GiIvaSunner (both with an uppercase “i”) is a collaborative YouTube channel originally made in 2016 as a meme, bait and switch parody version of GilvaSunner (with a lowercase “L”), a now defunct channel that posted music rips of mostly Nintendo games. Interested in the channel’s concept from the beginning, having some experience with manipulating video game music, I made my own unofficial “rips” and I was soon invited by the channel’s creator and at-the-time lead manager, Chaze the Chat.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/Untitled.webp"><img style="width:710px" src="images/Untitled.webp"/></a></figure></div><div style="display:contents" dir="auto"><p>They initially had a Discord server where invited contributors could submit their “high quality rips” and chat with the channel’s staff (”backroom members”, as they called it).<br/>It also, like many other servers at the time, had a channel dedicated to sharing NSFW content. I was 16, some members and contributors were slightly younger or older.</p></div><div style="display:contents" dir="auto"><p>For some reason, perhaps due to the level of activity that the NSFW channel was having, it has been decided at some point that an entire separate <em>server</em> would be made for contributors and backroom members to share NSFW content, rather than a singular channel. Thus the lewdstones server was created.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%201.webp"><img style="width:288px" src="images/Untitled%201.webp"/></a><figcaption>The lewdstones server profile image</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="1cf11cf8-9338-8056-82f4-cec33bf77131" >Lewdstones server</h3></div><div style="display:contents" dir="auto"><p>The lewdstones server was split into channels separated by subject and preferences. For instance, <mark class="highlight-default"><code>#gaystones</code></mark> was for any male/male or female/female content. There was even a channel for kodocon (loli and shota) called <mark class="highlight-default"><code>#smolstones</code></mark><mark class="highlight-default">.</mark></p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image.png"><img style="width:612.9666748046875px" src="images/image.png"/></a><figcaption>A former Siiva contributor sharing a screenshot from the #gaystones channel</figcaption></figure></div><div style="display:contents" dir="auto"><p>One notable, infamous figure in the SiivaGunner community that has been discussed about a lot already is Blazephlozard. He was, at the time, a backroom member, and a frequent user of lewdstones.</p></div><div style="display:contents" dir="auto"><p>On that server, Blaze had made sexual advancements and comments towards minors who were in there, as well as questionable claims such as “not believing in the age of consent” and others which some SiivaGunner fans may be familiar with.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%201.png"><img style="width:432px" src="images/image%201.png"/></a><figcaption>Blazephlozard screencaps from lewdstones that have been shared many times (Which by the way, I saw unfold in real time)</figcaption></figure></div><div style="display:contents" dir="auto"><p>One person shared their experiences with Blaze in a TwitLonger post <a href="https://web.archive.org/web/20210222032937/https://www.twitlonger.com/show/n_1sragc2">here</a>.</p></div><div style="display:contents" dir="auto"><p>One day the lewdstones server was dissolved without warning. It was likely for the best, considering minors (such as myself) were there, with Blaze, and other much older people.</p></div><div style="display:contents" dir="auto"><p>You likely will not find anyone currently associated with SiivaGunner acknowledging the existence of this server.</p></div><div style="display:contents" dir="auto"><p>By October of 2016, Blazephlozard had been officially kicked out from the team.</p></div><div style="display:contents" dir="auto"><p>Blaze would start his own SiIva “fan channel” called TimmyTurnersGrandDad, but would quickly step down from his position.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%202.png"><img style="width:710px" src="images/image%202.png"/></a><figcaption>Recollections of “lewdstones” by Blazinter, 2017</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="1cf11cf8-9338-80ad-8b86-e6453a6ed53e" >Promotion and Demotion</h3></div><div style="display:contents" dir="auto"><p>As time went on, I was “promoted” on SiivaGunner to the role of “QoC” (Quality of Control) which meant I could approve, reject and give feedback on submissions.</p></div><div style="display:contents" dir="auto"><p>Eventually I would be promoted again, this time to a full on “backroom member”, the highest “ranking” in Siiva, up with the channel managers. I was then invited to join a separate server for backroom members.</p></div><div style="display:contents" dir="auto"><p>I did not participate in that server a lot, as it felt overwhelming, and at times uncomfortable.</p></div><div style="display:contents" dir="auto"><p>The environment in general was not pleasant. At times it was toxic. At least at the time I joined, they had a text channel named <mark class="highlight-default"><mark class="highlight-default_background"><code>#lolcows</code></mark></mark>.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%202.webp"><img style="width:416px" src="images/Untitled%202.webp"/></a><figcaption>The #lolcows channel and its channel topic.</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%203.png"><img style="width:709.9833374023438px" src="images/image%203.png"/></a><figcaption>The names listed in the channel topic.</figcaption></figure></div><div style="display:contents" dir="auto"><p>One of the people they’d also talk about on that channel was my friend Blazinter (NOT to be confused with Blaze/phlozard) who you might remember for consistently commenting on every Cave Story rip back then.</p></div><div style="display:contents" dir="auto"><p>After they found out I had been sending screencaps from the backroom server to him, I was (understandably) “demoted” back to QoC.</p></div><div style="display:contents" dir="auto"><p>After all of this, things stayed quiet for a while. We will get back to SiivaGunner, but first, a new key character enters the story. </p></div><div style="display:contents" dir="auto"><h2 id="2ef26e29-3efa-4ccc-b581-638f77e2e365">Natalie</h2></div><div style="display:contents" dir="auto"><p>a.k.a. natalietchi / ytpmvinthemorning / wattlerose / hotelvalentine / kirbysblockball / other names</p></div><div style="display:contents" dir="ltr"><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p><strong>Especially for this section (and part 2) - </strong><mark class="highlight-default"><mark class="highlight-default_background"><strong>Content/Trigger Warnings for: </strong></mark></mark><mark class="highlight-default"><mark class="highlight-default_background">mentions of mental illnesses, abuse, manipulation, doxxing</mark></mark></p></div></div></figure></div><div style="display:contents" dir="auto"><p>In 2017, I started dating this person. She first contacted me to alert me about artwork of mine being stolen in some print-on-demand website, but had been wanting to talk to me for a long time.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%204.png"><img style="width:432px" src="images/image%204.png"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="1cf11cf8-9338-80ca-91cc-fb0ccd567ddf">Relationship</h3></div><div style="display:contents" dir="auto"><p>We would quickly get along well, aided by us both being autistic (with me having been “officially” diagnosed at around the same time) and being 17 years old, with our birthdays being only a month apart.</p></div><div style="display:contents" dir="auto"><p>The more we continued talking to each other, the more flirty she would get, and I’d reciprocate the feelings as I had just gotten out of a difficult break up and was quite lonesome as a result.</p></div><div style="display:contents" dir="auto"><p>Eventually we started dating officially, though in order to do that, she broke up with her previous partner who would “only talk to her twice a week and then leave”, according to her, and she was tired of waiting (this was much before we both discovered our poly tendencies)</p></div><div style="display:contents" dir="auto"><p>This of course was a bit weird to me at the time, but I accepted it, I felt lonely enough that I was willing to take any romantic relationship I could get (this <em>would</em> eventually lead to my poly/aro self-discovery journey)</p></div><div style="display:contents" dir="auto"><p>Before we started dating officially, she had already sent NSFW artwork, it was humorous in tone, but it did serve as a sort of gateway to talking about sexual topics. This would escalate quickly after we were officially together, with her getting very sexual with me, and initially, I wouldn’t mind it.</p></div><div style="display:contents" dir="auto"><p>Our relationship was going well, she told me some information she thought was relevant and that I should know, such as her having BPD (Borderline Personality Disorder). I thought of course that was quite fair and didn’t have any problem with that, and Nat was taking proper care of herself too.<br/></p></div><div style="display:contents" dir="auto"><h3 id="33d11cf8-9338-8035-9217-c98a725c72a4">Dumb fights</h3></div><div style="display:contents" dir="auto"><p>After some time, I presented Nat to my then best friend (as well as ex) Amber (who I’ll be talking about more specifically later) and we all mostly got along. Sometimes though, Amber would start pointless arguments and discussions with me (as she already would do prior to me meeting Nat, and seemingly at random, in specific moments of the year, like a seasonal mood swing maybe, I wouldn’t know how to explain it), and that would upset Nat.</p></div><div style="display:contents" dir="auto"><p>As time went on I started to feel more like I was stuck to this relationship like I had a ball chain attached, I didn’t feel free. I thought a peaceful break up would be the best course of action. This would be the starting point of an important self-discovery journey to me.</p></div><div style="display:contents" dir="auto"><p>So we broke up, but we were still friends. Of course, she was sad at first, but got over it quickly. Amber was also still around. As was one of my current partners, who, in 2018, <a href="https://lu9.itch.io/switchbot">worked on a game jam game with me and Nat</a>. Today she seems regretful about this game (considering she designed the main character and drew sprites), but even at the time, she tried to coerce this partner into a dubious mindset.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%205.png"><img style="width:480px" src="images/image%205.png"/></a></figure></div><div style="display:contents" dir="auto"><p><em>(Some years later)</em></p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%206.png"><img style="width:710px" src="images/image%206.png"/></a><figcaption>For transparency, I personally do not have any evidence of the “i forgot my meds” claim.</figcaption></figure></div><div style="display:contents" dir="auto"><p>Despite this, we finished the game and were still fine with each other.</p></div><div style="display:contents" dir="auto"><p>One day, Amber seemingly randomly decided that she’s had enough of me for reasons she was also “guilty” of -- liking kodocon-adjacent art. Nat, who also enjoyed such art, still considered me a friend even after that and defended me for a little while, until she <em>also</em> decided to pull a 180° and started outright hating me. Then the bullshit began.</p></div><div style="display:contents" dir="auto"><h3 id="33d11cf8-9338-8081-95d4-ec02f53102bf" >Baseless claims</h3></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%207.png"><img style="width:612px" src="images/image%207.png"/></a></figure></div><div style="display:contents" dir="auto"><p>Natalie started a twitter thread (starting with the above tweet) after Amber did one as well regarding the fictional problematic content which they both enjoyed <strong>not too long before that, even.</strong></p></div><div style="display:contents" dir="auto"><p>But more importantly, in Nat&#x27;s thread, which she quickly took down, there were some <em>very</em> strong accusations and <em>blatant lies</em> about me.</p></div><div style="display:contents" dir="auto"><p >A few days later Nat also uploaded a video, containing the same accusations in the video description, and screencaps of Amber&#x27;s thread in the video itself. I was sleeping at the time but friends of mine quickly noticed it and talked about it.</p></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%208.png"><img style="width:553px" src="images/image%208.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%209.png"><img style="width:591px" src="images/image%209.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p>The video was, much like everything else, taken down quickly.</p></div><div style="display:contents" dir="auto"><p>The accusations ranged from “he had lots of issues with The SJWs (tm)” to “he sent me unsolicited nudes” with blatant appeal to disgust.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2010.png"><img style="width:498px" src="images/image%2010.png"/></a><figcaption>the only surviving evidence of the video&#x27;s description. (discord keeps even tweets that have been deleted in its cache for some time)</figcaption></figure></div><div style="display:contents" dir="auto"><p>Really? Did I do such a thing? Let’s see…</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-08.png"><img style="width:576px" src="images/unknown-08.png"/></a><figcaption>Discord screenshot - nat asking for a nude</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-06.png"><img style="width:480px" src="images/unknown-06.png"/></a><figcaption>Telegram screenshot - nat after sending an unsolicited nude</figcaption></figure></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:43.75%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-17.png"><img style="width:331.98333740234375px" src="images/unknown-17.png"/></a><figcaption>Telegram screenshot - nat soliciting from me</figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:56.25%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-16.png"><img style="width:491px" src="images/unknown-16.png"/></a><figcaption>Telegram screenshot - nat solicitng again</figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:62.5%" class="column"><div style="display:contents" dir="ltr"><figure  class="image" style="text-align:left"><a href="images/unknown-18.png"><img style="width:490.9666748046875px" src="images/unknown-18.png"/></a><figcaption>Telegram screenshot - nat soliciting again since I didn&#x27;t send her anything due to personal reasons (parents awake, being uncomfortable, etc.)</figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:37.5%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-07.png"><img style="width:292px" src="images/unknown-07.png"/></a><figcaption>Discord screenshot - nat waiting for me to send her a picture</figcaption></figure></div></div></div></div></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-05.png"><img style="width:332px" src="images/unknown-05.png"/></a><figcaption>Telegram screenshot - nat after sending another unsolicited nude</figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2011.png"><img style="width:384px" src="images/image%2011.png"/></a><figcaption>Discord screenshot - Nat after sending a nude in a group chat primarily made for a game jam (more about that later)</figcaption></figure></div></div></div></div></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled.png"><img style="width:768px" src="images/Untitled.png"/></a><figcaption>me explaining to friends</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/smRJChWX.png"><img style="width:768px" src="images/smRJChWX.png"/></a><figcaption>text about nat I sent to a friend who wanted proof</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%201.png"><img style="width:514.9833374023438px" src="images/Untitled%201.png"/></a><figcaption>Telegram has an archive feature which results in an HTML containing chat history and other information, which if<em> really</em> necessary can be provided to prove the legitimacy of these screencaps.</figcaption></figure></div><div style="display:contents" dir="auto"><p>As you can see, not only did Nat solicit a lot (and I didn’t always give her, usually due to personal space reasons but also laziness), but <em><strong>she</strong></em> was often sending unsolicited nudes <em><strong>herself</strong></em>.</p></div><div style="display:contents" dir="auto"><p>As for my NSFW account, I <em>had</em> posted pictures after I turned 18 (still very rarely) though there were still people under 18 in there as I mentioned before. This <strong>was</strong> a mistake and I took care of it. Such an occurrence <em>has not happened since then</em>.</p></div><div style="display:contents" dir="auto"><p>The claim mentioning “problems with the SJWs (tm)” is an exaggeration of old opinions I had that I no longer support, although I still oppose a lot of extreme, radical stances, but mostly this was over me arguing that having your pronouns in your bio are a good thing but “not an absolute requirement”, as some people could be in situations where having them publicly displayed could put them in danger, or they just simply don’t want to be bullied. And that’s all. I did use the term “SJW” negatively back in 2017 and before, but I’ve grown to learn that people in general are more nuanced than that.</p></div><div style="display:contents" dir="auto"><p>Anyways, after all of this died out, Natalie would still try to enact her plan, to “bar me from every community channel I was a part of”, as she put it herself.<br/>She tried with Vinesauce, because she saw that I edited a video for them once, it didn&#x27;t work. (Yes, I haven&#x27;t edited another video for Vinesauce, but that&#x27;s because I wasn&#x27;t &quot;hired&quot; as an editor. I just offered to edit a video once as a one-off thing)<br/>However it may have worked on our favorite high quality rip channel. Let’s go back to it now.</p></div><div style="display:contents" dir="auto"><h2 id="33aae6f2-411a-425c-b3fd-5db2c46fd625" >SiivaGunner - part 2</h2></div><div style="display:contents" dir="auto"><h3 id="33e11cf8-9338-80cf-926d-f4b875ca9ebf" >Kicked out</h3></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:center"><a href="images/image%2012.png"><img style="width:1152px" src="images/image%2012.png"/></a></figure></div><div style="display:contents" dir="auto"><p>In December of 2019, a decision has been made to kick me, with former SiIva backroom member Twonko (who is also currently no longer part of the team, and goes by a different name that I do not know at this point) giving me the news that it was due to allegations that are all too familiar. I wasn’t given a single chance to defend myself (Or the decision had been made while I was away or sleeping). They never sent me whatever this &quot;evidence&quot; was. And we&#x27;ll likely never know.</p></div><div style="display:contents" dir="auto"><p>I believe we <em>do</em> know who it was that sent it, though…</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2013.png"><img style="width:709.9666748046875px" src="images/image%2013.png"/></a></figure></div><div style="display:contents" dir="auto"><p>After 2020, Chaze the Chat had mysteriously vanished from the internet. The channel’s co-creator, MtH, took his position as leader, as a consequence.</p></div><div style="display:contents" dir="auto"><p>It would be revealed much later by MtH that the decision to ban me from SG was mostly insisted upon by Twonko. They already didn’t like me much in the first place and has caused trouble of their own for the team. More on that to follow.</p></div><div style="display:contents" dir="auto"><h3 id="1cf11cf8-9338-80d6-8d7b-ffa353d90e17" >The light at the end of the backrooms</h3></div><div style="display:contents" dir="auto"><p>One day in 2022 I thought I’d send a message to MtH telling everything I knew… couldn’t hurt, and it did seem to me that MtH was somewhat chill and would know to handle this maturely.</p></div><div style="display:contents" dir="auto"><p>I wasn’t expecting a response (or at least, not too soon), but one day, out of nowhere, I get something… not from MtH, though, but seemingly <em>another</em> backroom member who has reached out in an anonymous manner.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2014.png"><img style="width:1008px" src="images/image%2014.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2015.png"><img style="width:704px" src="images/image%2015.png"/></a></figure></div><div style="display:contents" dir="auto"><p>After this exchange, this individual has basically disappeared and I never heard back from them. Wherever <em>you</em> are, if you’re reading this, I just hope you’re doing well, and thanks for the kind words.</p></div><div style="display:contents" dir="auto"><h3 id="34711cf8-9338-809f-86a1-c51c3f81a68c" >MtH’s response</h3></div><div style="display:contents" dir="auto"><p>Eventually, in 2023, I tried reaching out again and this time she <em>did</em> reply, and I’d say it went… much better than I was expecting.</p></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2016.png"><img style="width:317px" src="images/image%2016.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2017.png"><img style="width:313px" src="images/image%2017.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2018.png"><img style="width:314px" src="images/image%2018.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p>So that’s… interesting. She acknowledges that “false accusations are involved”, but made it clear that, seemingly, the problem is mostly what I draw under a separate alias (that no one has to engage with to begin with).</p></div><div style="display:contents" dir="auto"><p>All things considered, that is something I can respect. It’s not baseless. What can I do if people are not comfortable around me knowing what I draw (That isn’t to say that “rather large library of nsfw art of mostly underage characters” isn’t a massive exaggeration, with it not being “rather large” nor being “mostly underage characters”, I’d say <em>most</em> of them are ageless, but, y’know, doesn’t matter.)</p></div><div style="display:contents" dir="auto"><p >I think it was considerably fair, and so I let things go for a while…</p></div><div style="display:contents" dir="auto"><h3 id="33d11cf8-9338-8025-9f4d-e45dc81945c0" >MtH in 2026</h3></div><div style="display:contents" dir="auto"><p>For a bit I didn’t think I’d even <em>have</em> to say anything further regarding MtH, and I would’ve ended the subject there.</p></div><div style="display:contents" dir="auto"><p>From the response to my message a few years earlier, I understood that we were at least on neutral terms, or so I thought. For some time I was blocked by her on Bluesky. That seems to no longer be the case (?)</p></div><div style="display:contents" dir="auto"><p>Fast forward to 2026… the… <em>very unnecessary “</em>news” that MtH has “reposted feral pokémon art” reaches me (I didn’t seek for this info myself, it was just brought up in a conversation).</p></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:43.75%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2019.png"><img style="width:336px" src="images/image%2019.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:56.25%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2020.png"><img style="width:384px" src="images/image%2020.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p>It might not be obvious to some, but… furry pornography depicting non-anthropomorphized “feral” animals (or in this case, fictional monsters I guess) is <em>also</em> a heated topic of debate (for illiterate idiots) much like kodocon media, for similar reasons. On top of it, said reposted art might even fall into “noncon” or at least “dubcon”.</p></div><div style="display:contents" dir="auto"><p>Yes, I don’t think any person should care about what kind of fictional porn MtH or <em>anyone else</em> enjoys on their personal account, but still, knowing what she has said previously, it all does come off as quite hypocritical. Are there not people in the SiivaGunner team who would be uncomfortable with that? Is it only bad when -I- do it? What does she think about this potential hypocrisy? I was curious to get a reaction, so I made a post and tagged her from my NSFW account (because as I said, she had blocked me before), and…</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2021.png"><img style="width:384px" src="images/image%2021.png"/></a></figure></div><div style="display:contents" dir="auto"><p>Oh. Well.</p></div><div style="display:contents" dir="auto"><p>If at the end of the day it isn’t about the kodocon media, it’s possible Natalie’s bullshit might still be persisting around through word of mouth, and insane previously unseen fucked levels of telephone game.</p></div><div style="display:contents" dir="auto"><p>Oh yeah, there’s more about her.</p></div><div style="display:contents" dir="auto"><h2 id="33e11cf8-9338-8007-a56d-e361608433b1" >Natalie - part 2</h2></div><div style="display:contents" dir="auto"><h3 id="34711cf8-9338-805c-8b81-e78fac71870f" >Retconning the narrative</h3></div><div style="display:contents" dir="auto"><p>On April 2020, Natalie decides to give a shot at #cancelling me again, so she finds my NSFW alias on Twitter, and claims that I “groomed” one of her friends.</p></div><div style="display:contents" dir="auto"><p>i was careful this time and archived the tweet before she would take it down, <a href="http://web.archive.org/web/20200406170418/https://twitter.com/kirbysblockball/status/1247171259651076096">here.</a></p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%202.png"><img style="width:491px" src="images/Untitled%202.png"/></a><figcaption>the &quot;kid&quot; was for the character &quot;kid dracula&quot; (shown in a screenshot under this tweet), which is literally his name. According to “canon” they are “10009 years old”. This of course means nothing, I just thought it was kinda funny</figcaption></figure></div><div style="display:contents" dir="auto"><p>So, the alleged “unsolicited pictures” and the personal nsfw account and other things are no longer a problem? Pretending it didn&#x27;t happen? Geez... it&#x27;s almost like maybe… <em>you made all of that up...</em></p></div><div style="display:contents" dir="auto"><p>She never elaborates on who was &quot;groomed&quot; here. (We will see that in the next section)<br/>If it&#x27;s because of anyone who used to follow my old nsfw account, well they&#x27;re not there anymore, as they should.<br/></p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%203.png"><img style="width:491px" src="images/Untitled%203.png"/></a><figcaption>you&#x27;re saying this but...</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/7EVTfAFf.png"><img style="width:491px" src="images/7EVTfAFf.png"/></a><figcaption>you also said this</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="34711cf8-9338-808b-a057-e9ff703ad8cc" >“grooming”</h3></div><div style="display:contents" dir="auto"><p>September 2020, Nat is back at it again with another spicy callout... or... whatever this is.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%204.png"><img style="width:491px" src="images/Untitled%204.png"/></a><figcaption>No you won&#x27;t. <a href="https://web.archive.org/web/20200918140814/https://twitter.com/hotelvalentine/status/1306957118533033986">Archive link.</a></figcaption></figure></div><div style="display:contents" dir="auto"><p>First of all, she could very well find “receipts” as she has <em>not</em> deleted her entire Telegram chat history with me (which is something you <em>can</em> do, and you can make it become deleted for the other user as well), and so I (unfortunately) still have that in my Telegram overall history.</p></div><div style="display:contents" dir="auto"><p>Second, this tweet is followed by screencaps of her own text (&quot;source: dude, trust me&quot;)<br/>and now we&#x27;re back to false/distorted claims. Let&#x27;s go over them one by one.<br/></p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%205.png"><img style="width:429.6166687011719px" src="images/Untitled%205.png"/></a><figcaption>False - the group chat was a mutual agreement, that all of us, fully legal adults, consented to. Unfortunately, I cannot find this group chat in my discord anymore so either it has been too long and discord just... doesn&#x27;t like going all the way back in the direct messages tab I guess, or I was kicked out of it. The chat itself however wasn&#x27;t specifically for nsfw, but rather just a general chat for the 3 of us. There would be nsfw in the chat eventually, though. But with no pressure from us -- although for that claim you&#x27;ll just have to take my word for it i guess, but <strong>considering the telegram screencaps from up above</strong>, it shouldn&#x27;t be a hard thing to believe. The only gc I still have access to is the one we used for organizing our game for the game jam. And even in THAT i think there were a couple nsfw things from nat.</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%206.png"><img style="width:432px" src="images/Untitled%206.png"/></a><figcaption>Distorted - partially true. From memory (because of what I mentioned in the previous image) we did add this person to the chat, i&#x27;ll refer to them as simply &quot;person&quot; here. As I mentioned, the chat wasn&#x27;t specifically &quot;nsfw only&quot;, and my intent with the chat in the first place (i don&#x27;t remember who created it, either nat or me) was that it was for people I was close friends with to hang out. (it just happened that we were all adults and so we would talk about and post nsfw in there.) I was close with &quot;person&quot;, we were good friends and were nice to each other, so I thought it&#x27;d be a good idea to add them to the chat (it kinda wasn&#x27;t. my partner at the time didn&#x27;t even know them so it was just kinda awkward, plus, my memory might be bad on this, but i <em>think</em> &quot;person&quot; was asexual too? so inviting them to a chat specifically for nsfw, wouldn&#x27;t even make sense). I don&#x27;t remember who deleted which posts or whatever, but I know that after &quot;person&quot; got added there, the chat just kinda... slowed down overall, and nsfw talk also kinda just stopped. then i don&#x27;t know what happened to that group chat. all i know is we made a new one afterwards for our game jam project. (and that was again, only me, my partner and nat).<br/>That being said, nat <em>did</em> have a discord server with her friends (some were minors, some weren&#x27;t), <strong>which, </strong><em><strong>guess what,</strong></em><strong> had an nsfw channel. </strong>and &quot;person&quot; was a member there, and nat would post in that channel as well. one of &quot;person&quot;&#x27;s first interactions with me was them telling the source of their twitter profile pic at the time, which was a succubus character from an nsfw artist. all i said was that i didn&#x27;t have a problem with that. i did however let them into my nsfw twitter at the time, which, AGAIN - i shouldn’t have done. i think the old twitter of &quot;person&quot; was deactivated so I can&#x27;t go to their DMs to confirm. but again, despite this, the nsfw channel in nat&#x27;s server still existed, even after the fateful day one of my friends was just booted from the server with no real explanation, and then a bit afterwards I was booted from it as well. I&#x27;m not sure if my partner was there, but if they were, they probably got the boot too.<br/>So I don&#x27;t think you can say any of what I said counts as &quot;grooming&quot;…?</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%207.png"><img style="width:432px" src="images/Untitled%207.png"/></a><figcaption>I did not do anything after that group chat other than just talk to them in DMs every now and then about random stuff, until the day Amber “did the thing” and then they DMed me to defend nat and stuff.</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%208.png"><img style="width:429.6166687011719px" src="images/Untitled%208.png"/></a><figcaption>ALREADY ADDRESSED. I purged all minor followers a bit after I turned 18 (from what I can have the knowledge of, but again, <em>people can lie their age easily</em>), It wasn&#x27;t good that I had an account like that as a minor myself, again, I already said that was a mistake. I don&#x27;t even use that account anymore as I have another one, solely for art. The latter part of this is just straight up a blatant lie. If you were still following that account even after the minors purge, you&#x27;d KNOW how rare it was for me to post any actual picture and not art. &quot;regularly&quot; MY ASS.</figcaption></figure></div><div style="display:contents" dir="auto"><p>Pretty sure there’s nothing more. and at least i have receipts to show. If you find anything actually bad that isn&#x27;t a lie that I have done that I don&#x27;t have the memory of, then fair! Tell me (preferably <em>show</em> me) what it was and i&#x27;ll own up to it! But despite having access to our entire Telegram AND Discord DMs, you&#x27;re not showing anything. you just want a pat in the back. You like to put a spin on the scenarios so that you&#x27;re the &quot;good person&quot; in the whole story.</p></div><div style="display:contents" dir="auto"><p>There might be chronological inaccuracies here and there - I can only go as far as discord and my own memory lets me. Here are some related receipts:</p></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%209.png"><img style="width:388px" src="images/Untitled%209.png"/></a><figcaption>Possibly related to the &quot;person&quot;? This was in DMs and nat just kinda said &quot;15&quot; out of nowhere, this is the closest thing i can find that <em>kinda</em> matches what Nat said i guess. Still, in general, for most people around the world this age gap wouldn’t be such a big deal, but anglo-style purity culture stupidity knows no bounds.</figcaption></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%2010.png"><img style="width:240px" src="images/Untitled%2010.png"/></a><figcaption>the only remaining group chat i have access to.</figcaption></figure></div></div></div></div></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2022.png"><img style="width:704px" src="images/image%2022.png"/></a><figcaption>Some of the first messages in the new group chat - let’s remember what Nat claimed - that I’d “introduce them by saying (he) loves them”, and that does Not sound like she is “repeatedly tell(ing me) it’s a bad idea”.</figcaption></figure></div><div style="display:contents" dir="ltr"><figure  class="image" style="text-align:left"><a href="images/Untitled%2011.png"><img style="width:491px" src="images/Untitled%2011.png"/></a><figcaption>this was shown earlier, yep.<em> she did it again.</em></figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%2012.png"><img style="width:451px" src="images/Untitled%2012.png"/></a><figcaption>again... <em>unsolicited?</em></figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%2013.png"><img style="width:491px" src="images/Untitled%2013.png"/></a><figcaption>(years later) friends talking about nat&#x27;s latest bullshit</figcaption></figure></div><div style="display:contents" dir="auto"><h3 id="34711cf8-9338-805f-84b8-e992cce88428" >Nat’s past</h3></div><div style="display:contents" dir="auto"><p>At certain times during our relationship, nat would talk about her past:</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/unknown-12.png"><img style="width:432px" src="images/unknown-12.png"/></a></figure></div><div style="display:contents" dir="auto"><p>Then at some point during the time Amber and Nat were fucking around trying to cancel me, I reached out to a friend who also had a relationship with Nat, and also had info on these supposed “bad things”:</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/Untitled%2014.png"><img style="width:768px" src="images/Untitled%2014.png"/></a><figcaption>An ex of nat (who gave me permission to share this here) talking about their experience with nat, and her <em>doxxing</em> another<em> </em>ex of hers</figcaption></figure></div><div style="display:contents" dir="auto"><p>Now, I <em>do</em> want to make it clear that someone’s actions in the past Should not define someone, and that if one owns up to their mistakes, they shouldn’t be judged by what took place in the past, I do think however that this is relevant to know.</p></div><div style="display:contents" dir="auto"><h2 id="1cf11cf8-9338-809d-89ed-e687f5019dc8" >Amber</h2></div><div style="display:contents" dir="auto"><p >a.k.a. EtherianAmber / Famulator64</p></div><div style="display:contents" dir="auto"><p>Amber was my oldest friend in this entire thing, she had been with me since 2015 or so. We met through MFGG (Mario Fan Games Galaxy), we’d shitpost on Twitter together, chat on Skype (and later Discord), eventually even date… <em>twice</em>.<br/>Everything just went relatively well for years until it suddenly didn’t.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2023.png"><img style="width:572px" src="images/image%2023.png"/></a></figure></div><div style="display:contents" dir="auto"><p>I still remember having a conversation with her before involving thinking of <em>Niko</em> from <em>OneShot </em>in a sexual manner. I’d tease her over it and she’d be quick to defend the idea that Niko is a teen, like we were. All in good fun. But then as time went on in 2019 she started to gradually tweet more and more “reaffirmation” shit (pictured below), which at times seemed to be vaguely gestured towards me -- which later culminated in their first callout post. Moralism, man!</p></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2024.png"><img style="width:300.98333740234375px" src="images/image%2024.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2025.png"><img style="width:305px" src="images/image%2025.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><div class="column-list"><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2026.png"><img style="width:299px" src="images/image%2026.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2027.png"><img style="width:302px" src="images/image%2027.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p>Amber and I were also friends with Colleen (netscapenow) for a while as well, until they <em>too</em> left me in the dust and started dating Amber (not sure if they still are)</p></div><div style="display:contents" dir="auto"><h2 id="1cf11cf8-9338-80d4-88a1-c0f340ddd005" >Maddy</h2></div><div style="display:contents" dir="auto"><p>a.k.a. saladplainzone</p></div><div style="display:contents" dir="auto"><p>I probably wouldn’t have included this here if it weren’t for them <em>completely</em> breaking my trust, so now I only feel is right to say a few things about them, as it very much contributes to the other sections of this document.</p></div><div style="display:contents" dir="auto"><p>Maddie used to be a person of trust when it came to these situations, someone I could count on, who claimed to not give up on me despite everything, but perhaps I was too naive.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2028.png"><img style="width:1008px" src="images/image%2028.png"/></a><figcaption>Screencap from a private now-defunct server known as “GBA Cheese Land”, provided anonymously</figcaption></figure></div><div style="display:contents" dir="auto"><p>That said, they have trusted me with some pretty personal info of theirs that I <strong>won&#x27;t</strong> get into here as it is not relevant to the subject whatsoever. The bottom line is they <em>did</em> make it seem like they were trustworthy by going as far as telling me some of the things they told me, and to me that is the scummiest shit ever. That’s no friend of mine.</p></div><div style="display:contents" dir="auto"><p>They <em>did</em> do everything they could to not have anything to do with me and my “controversies”, including unfollowing and refollowing me on social media several times -- which I should have taken as a sign. They also explicitly did not give permission to use their (quite damning) screencaps of Nat, likely to <em>also</em> avoid just having any involvement in this whatsoever, but buddy, you broke my trust, so I believe that is void and means nothing anymore.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/GVXEMF9XsAAwkkr.jpeg"><img style="width:709.9833374023438px" src="images/GVXEMF9XsAAwkkr.jpeg"/></a></figure></div><div style="display:contents" dir="auto"><h3 id="1cf11cf8-9338-80c9-831a-e1cb58e52677" >Maddy and Nat</h3></div><div style="display:contents" dir="auto"><p>In early 2020, Maddy dated Nat <strong>for exactly </strong><em><strong>two days</strong></em>. At this time, they were 17. Not that this should truly matter to anyone, but <em>it was made pretty clear</em> by Nat that it <em>does</em> matter to her, except when she does it, apparently.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2029.png"><img style="width:710px" src="images/image%2029.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2030.png"><img style="width:710px" src="images/image%2030.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2031.png"><img style="width:710px" src="images/image%2031.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2032.png"><img style="width:710px" src="images/image%2032.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2033.png"><img style="width:710px" src="images/image%2033.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2034.png"><img style="width:672px" src="images/image%2034.png"/></a><figcaption>No comment.</figcaption></figure></div><div style="display:contents" dir="auto"><p>A bit afterwards, they started to send me things that Nat had confessed in their DMs:</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2035.png"><img style="width:486px" src="images/image%2035.png"/></a><figcaption>If “grooming” means what she thinks it means then that’s literally what she was also doing with Maddy.</figcaption></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2036.png"><img style="width:709.9666748046875px" src="images/image%2036.png"/></a></figure></div><div style="display:contents" dir="auto"><p>They tried to break up peacefully with her but still maintain a friendship.</p></div><div style="display:contents" dir="ltr"><figure class="image" style="text-align:left"><a href="images/image%2037.png"><img style="width:622px" src="images/image%2037.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2038.png"><img style="width:1008px" src="images/image%2038.png"/></a><figcaption><em>oh brother.</em></figcaption></figure></div><div style="display:contents" dir="auto"><p>I have no idea how’s the general relationship between these two nowadays, and I don’t think I really want to know. And as mentioned at the start of this page, <strong>don’t go bother them</strong>.</p></div><div style="display:contents" dir="auto"><h2 id="33d11cf8-9338-808f-9485-d6f96818d5ae" >Current day</h2></div><div style="display:contents" dir="auto"><h3 id="33d11cf8-9338-80cd-9935-de9a8620656c" >SiIvaGunner Wiki</h3></div><div style="display:contents" dir="auto"><p>At this moment, my contributor page on the officially endorsed SiIvaGunner wiki has <strong>libelous affirmations.</strong></p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2039.png"><img style="width:710px" src="images/image%2039.png"/></a></figure></div><div style="display:contents" dir="auto"><p>The alleged “confirmation” comes in the form of a lousy discord message that proves absolutely nothing, from a channel member that joined the year <em>after</em> all of this went down, and wouldn’t be officially part of the team (backroom) until 2024. They simply should not be the arbiter of a situation they never witnessed.</p></div><div style="display:contents" dir="ltr"><figure class="image"><a href="images/image%2040.png"><img style="width:1104px" src="images/image%2040.png"/></a></figure></div><div style="display:contents" dir="auto"><p>Once again, this “clear cut evidence” is <strong>not</strong> elaborated upon, <em>ever. </em>You’d think that <strong>MtH’s</strong> word <em>would </em>have more weight as the literal channel co-owner, but it doesn’t matter in the end as I am powerless to stop this -- the page has been locked indefinitely from editing. I know there are at least a couple backroom members who sympathize with my situation. So if you <em>can</em> do anything, even the smallest thing, I’d appreciate just setting things right.</p></div><div style="display:contents" dir="auto"><p>I <strong>don’t</strong> want to “scrub” the reasons for my removal from the team, or to control the narrative, or even to get back on the channel. just to correct literal misinformation, as this <strong>is</strong> libel, full stop.</p></div><div style="display:contents" dir="auto"><h2 id="34711cf8-9338-805e-9d11-c861d7590f89" >Special Thanks</h2></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">My friends/partners who helped me revise and proofread this document. And for just being there when I needed them the most while all of this was happening.</li></ul></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">The mysterious anon from the SiivaGunner backroom.</li></ul></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">Chaze the Chat, whom I have reason to believe wouldn’t have allowed this to get as out of hand as it did. Wherever you are right now, thanks for the opportunity to be a part of this otherwise great project.</li></ul></div><div style="display:contents" dir="auto"><h2 id="33d11cf8-9338-80e2-a770-f5b64be477fb" >Special Unthanks</h2></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">To everyone who antagonized me, threw me under the bus and contributed to making my online life hell. Especially: WavePrism and dille/nescartridges.</li></ul></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">PVic Games and friends (of <em>Ednaldo Pereira: Mescladasso</em> fame) for throwing me under the bus over my kodo art.</li></ul></div><div style="display:contents" dir="auto"><ul class="bulleted-list"><li style="list-style-type:disc">The 2020 admins of the Twitter gimmick account “Out of Context Everything” (idk who manages that account anymore or if the same people are still around) for the continued spread of misinformation.</li></ul></div><div style="display:contents" dir="auto"><h2 id="1cf11cf8-9338-80c2-a5e5-e9e37e996e24" >Further reading</h2></div><div style="display:contents" dir="ltr"><figure><a href="https://x.com/purity_culture/status/1614285461639364609" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">🏳️‍⚧️ The Fandom Purity Culture Archive 🆓️🇵🇸 on Twitter / X</div><div class="bookmark-description">🧵 Thread of articles and research on taboo sexual fantasies 🧵— 🏳️‍⚧️ The Fandom Purity Culture Archive 🆓️🇵🇸 (@purity_culture) January 14, 2023
+</div></div><div class="bookmark-href"><img src="https://abs.twimg.com/favicons/twitter.3.ico" class="icon bookmark-icon"/>https://x.com/purity_culture/status/1614285461639364609</div></div></a></figure></div><div style="display:contents" dir="ltr"><figure><a href="https://en.wikipedia.org/wiki/Age_of_consent_in_South_America#Brazil" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Age of consent in South America</div><div class="bookmark-description">The age of consent for sexual activity refers to an age at or above which an individual can engage in unfettered sexual relations with another who is of the same age or older. This age varies by jurisdiction across South America, codified in laws which may also stipulate the specific activities that are permitted or the gender of participants for different ages. Other variables may exist, such as close-in-age exemptions.</div></div><div class="bookmark-href"><img src="https://en.wikipedia.org/static/apple-touch/wikipedia.png" class="icon bookmark-icon"/>https://en.wikipedia.org/wiki/Age_of_consent_in_South_America#Brazil</div></div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Age_of_consent_-_South_America.svg/960px-Age_of_consent_-_South_America.svg.png" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="ltr"><figure><a href="https://en.wikipedia.org/wiki/Legal_status_of_fictional_pornography_depicting_minors#Brazil" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Legal status of fictional pornography depicting minors</div><div class="bookmark-description">Legal frameworks around fictional pornography depicting minors vary depending on country and nature of the material involved. Laws against production, distribution, and consumption of child pornography generally separate images into three categories: real, pseudo, and virtual. Pseudo-photographic child pornography is produced by digitally manipulating non-sexual images of real minors to make pornographic material (for example, deepfake pornography). Virtual child pornography depicts purely fictional characters, including drawn (for example, lolicon and shotacon works) or digitally (AI) generated. &quot;Fictional pornography depicting minors&quot;, as covered in this article, includes these latter two categories, whose legalities vary by jurisdiction, and often differ with each other and with the legality of real child pornography.</div></div><div class="bookmark-href"><img src="https://en.wikipedia.org/static/apple-touch/wikipedia.png" class="icon bookmark-icon"/>https://en.wikipedia.org/wiki/Legal_status_of_fictional_pornography_depicting_minors#Brazil</div></div></a></figure></div><div style="display:contents" dir="ltr"><figure><a href="https://www.psychologytoday.com/us/blog/women-who-stray/201808/science-stopped-believing-in-porn-addiction-you-should-too" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Science Stopped Believing in Porn Addiction. You Should, Too</div><div class="bookmark-description">Research finds that porn-related problems are predominantly caused by religious conflict. Clinically, this means people need help, but not necessarily with the porn.</div></div><div class="bookmark-href"><img src="https://cdn2.psychologytoday.com/assets/favicon.ico" class="icon bookmark-icon"/>https://www.psychologytoday.com/us/blog/women-who-stray/201808/science-stopped-believing-in-porn-addiction-you-should-too</div></div><img src="https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_images/2018-08/aw-sex-addiction-signs.jpg?itok=QG7xBQs-" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="ltr"><figure><a href="https://journal.transformativeworks.org/index.php/twc/article/view/2147/2829" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The cult structure of the American anti</div><div class="bookmark-description">Peer-reviewed paper by Samantha Aburime</div></div><div class="bookmark-href">https://journal.transformativeworks.org/index.php/twc/article/view/2147/2829</div></div></a></figure></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
