@@ -159,6 +159,16 @@
       "extra":    ""
     },
     {
+      "name":     "Merfle",
+      "nameAlt":  "メルフル",
+      "tags":     ["heart", "yume"],
+      "media":    "Wario Land: Shake It!",
+      "mediaAlt": "ワリオランドシェイク",
+      "image":    "merfle.png",
+      "initials": "T",
+      "extra":    ""
+    },
+    {
       "name":     "Spitz",
       "nameAlt":  "スピッツ",
       "tags":     ["heart"],
@@ -601,7 +611,7 @@
     {
       "name":     "Virovirokun",
       "nameAlt":  "",
-      "tags":     ["heart"],
+      "tags":     ["heart","yume"],
       "media":    "Deltarune",
       "mediaAlt": "",
       "image":    "virovirokun.png",
@@ -885,7 +895,7 @@
       "media":    "Pokémon",
       "mediaAlt": "ポケットモンスター",
       "image":    "",
-      "initials": "D",
+      "initials": "R",
       "extra":    ""
     },
     {
@@ -1307,16 +1317,6 @@
       "image":    "tamama.png",
       "initials": "T",
       "extra":    "<small><b>Kin strength:</b> 6/10</small>"
-    },
-    {
-      "name":     "Merfle",
-      "nameAlt":  "メルフル",
-      "tags":     ["heart", "yume"],
-      "media":    "Wario Land: Shake It!",
-      "mediaAlt": "ワリオランドシェイク",
-      "image":    "merfle.png",
-      "initials": "T",
-      "extra":    ""
     },
    {
       "name":     "Fark",
