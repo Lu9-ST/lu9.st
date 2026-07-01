@@ -4,7 +4,7 @@
     "star":    { "label": "⭐",    "class": "tag-star" },
     "thumbsup":  { "label": "👍",  "class": "tag-thumbsup" },
     "kin":     { "label": "Kin™",     "class": "tag-kin" },
-    "yume":     { "label": "Yūme™",     "class": "tag-yume" },
+    "yume":     { "label": "Yume™",     "class": "tag-yume" },
     "ednaldo":  { "label": "Ednaldo Pereira",  "class": "tag-ednaldo" }
   },
   "characters": [
