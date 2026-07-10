@@ -1,0 +1,32 @@
+Mario Forever FAQ:
+
+
+Q: World 7, When Mario Die, It Don't Play
+Dead Animation:
+
+A: Is A Script That interruped Death Animation. It's Normal yet.
+
+
+
+Q: Mario Does Not Die on World 8 Level:
+"Graand Final" With Bowser.
+
+A: The Script Can't do To Throw a Mecha
+Koopa on Bowser With out Mario Too.
+So i Think: Hum! "Does Not Work!"
+
+Q: Who Is "Mario World Worlds"?
+
+A: It's Worlds That Becomes to Super
+Mario World Like Switch Palace or Butter
+Bridge Bonus,Star World 1...
+
+Last Q: How You Make Mario's Movement's
+Apparence,sound Scripts?
+
+Last A: Simple. Just Take Snapshot From
+Script of Sprite "Guy" From Sample Game:
+
+  "6 Doodle" Then Add The Script You Want
+Over Enemies,Bonuses and any thing You
+Like!
