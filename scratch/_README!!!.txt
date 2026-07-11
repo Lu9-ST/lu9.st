@@ -1,0 +1,7 @@
+VOLUME WARNING: A bunch of these (especially the Mario ones) may have very loud and distorted audio recordings.
+
+Controls are usually Arrow Keys, Spacebar, Z, X, any letter or number.
+More to come eventually!
+
+Icons by: Papirus Dev Team
+https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
