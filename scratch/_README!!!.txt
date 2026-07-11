@@ -8,4 +8,7 @@ https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 Projects run with TurboWarp:
 https://turbowarp.org
 
-P.S.: Modified dates are WRONG these are all from 2008-2011 at best idk how to convince GitHub to not use the commit date for that
+Known Issues:
+- Modified dates are WRONG these are all from 2008-2011 at best idk how to convince GitHub to not use the commit date for that
+- Due to Scratch 3.0 being very different from 1.0 some differences/incompatibilities may occur
+- One prevalent issue is exposed variables (the orange number displays/sliders/etc.) are Not shown
