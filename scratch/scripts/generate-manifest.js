@@ -1,22 +1,9 @@
 #!/usr/bin/env node
-/**
- * generate-manifest.js
- *
- * GitHub Pages is static hosting -- there is no server-side code that can list
- * a directory's contents at request time. This script solves that by walking
- * the repo root ahead of time (skipping the site's own files -- index.html,
- * css/, js/, etc., see EXCLUDE_FROM_ROOT below) and writing out
- * `data/manifest.json`, which the front-end fetches instead of asking the
- * server for a live listing.
- *
- * Usage:
- *   node scripts/generate-manifest.js
- */
 
 const fs = require("fs");
 const path = require("path");
 
-const ROOT = path.join(__dirname, "..");
+const ROOT = path.join(__dirname, "scratch/", "..");
 const OUTPUT_FILE = path.join(ROOT, "data", "manifest.json");
 
 const EXCLUDE_FROM_ROOT = new Set([
