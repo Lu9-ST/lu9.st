@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const ROOT = path.join(__dirname, "scratch/", "..");
+const ROOT = path.join(__dirname, "..");
 const OUTPUT_FILE = path.join(ROOT, "data", "manifest.json");
 
 const EXCLUDE_FROM_ROOT = new Set([
