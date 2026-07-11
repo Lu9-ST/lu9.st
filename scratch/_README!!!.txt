@@ -5,3 +5,5 @@ More to come eventually!
 
 Icons by: Papirus Dev Team
 https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+Projects run with TurboWarp:
+https://turbowarp.org
