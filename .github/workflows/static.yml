@@ -24,21 +24,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-manifest:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate manifest.json
-        run: node scratch/scripts/generate-manifest.js
-
-      - name: Commit updated manifest
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add scratch/data/manifest.json
-          git diff --quiet --cached || git commit -m "chore: regenerate manifest.json"
-          git push
   deploy:
     environment:
       name: github-pages
@@ -47,6 +32,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate manifest.json
+        run: node scratch/scripts/generate-manifest.js
+      - name: Commit updated manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scratch/data/manifest.json
+          git diff --quiet --cached || git commit -m "chore: regenerate manifest.json"
+          git push
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
