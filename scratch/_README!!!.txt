@@ -7,3 +7,5 @@ Icons by: Papirus Dev Team
 https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 Projects run with TurboWarp:
 https://turbowarp.org
+
+P.S.: Modified dates are WRONG these are all from 2008-2011 at best idk how to convince GitHub to not use the commit date for that
