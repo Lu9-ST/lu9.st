@@ -122,6 +122,7 @@
       iframe.src = `https://turbowarp.org/embed?project_url=${encodeURIComponent(absoluteUrl)}&interpolate&settings-button`;
       iframe.allow = "autoplay; fullscreen";
       iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("allowtransparency", "true");
       body.appendChild(iframe);
     } else if ((entry.type === "image") || (entry.type === "video")) {
       const img = document.createElement("img");
