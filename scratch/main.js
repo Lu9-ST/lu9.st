@@ -180,15 +180,18 @@
       iframe.setAttribute("allowfullscreen", "");
       iframe.setAttribute("allowtransparency", "true");
       body.appendChild(iframe);
-    } else if ((entry.type === "image") || (entry.type === "video")) {
-      if (entry.type === "image")
+    } else if (entry.type === "image") {
       const img = document.createElement("img");
-      else if (entry.type === "video")
-      const img = document.createElement("iframe");
       img.src = absoluteUrl;
       img.alt = entry.name;
       body.appendChild(img);
-    } else {
+    } else if (entry.type === "video") {
+      const vid = document.createElement("iframe");
+      vid.src = absoluteUrl;
+      vid.alt = entry.name;
+      body.appendChild(vid);
+    }
+    else {
       //text, html or unknown
       const iframe = document.createElement("iframe");
       iframe.src = absoluteUrl;
