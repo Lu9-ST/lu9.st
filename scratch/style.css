@@ -253,6 +253,7 @@ color-mix(in oklab, var(--chrome-light), #c33a68);
   font-family: var(--font-body);
   font-size: 14px;
   color: var(--titlebar-start);
+  margin-right: 16px;
   text-decoration: none;
   white-space: nowrap;
   flex: 0 0 auto;
