@@ -181,13 +181,13 @@
       iframe.setAttribute("allowtransparency", "true");
       body.appendChild(iframe);
     } else if ((entry.type === "image") || (entry.type === "video")) {
+      if (entry.type === "image")
       const img = document.createElement("img");
+      else if (entry.type === "video")
+      const img = document.createElement("iframe");
       img.src = absoluteUrl;
       img.alt = entry.name;
-      if (entry.type === "image")
       body.appendChild(img);
-      else if (entry.type === "video")
-      body.appendChild(iframe);
     } else {
       //text, html or unknown
       const iframe = document.createElement("iframe");
