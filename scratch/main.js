@@ -12,6 +12,40 @@
   let cascadeOffset = 0;
   const openWindows = new Map();
 
+  let sortMode = localStorage.getItem("archiveSortMode") || "name"; // "name" | "date"
+
+  function setSortMode(mode) {
+    sortMode = mode;
+    localStorage.setItem("archiveSortMode", mode);
+    // re-render every open explorer window with the new order
+    openWindows.forEach((win) => {
+      if (win.entries) renderIconGrid(win.grid, win.entries);
+    });
+    document.querySelectorAll(".sort-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.mode === sortMode);
+    });
+  }
+
+  function compareByName(a, b) {
+    return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
+  }
+
+  function compareByDate(a, b) {
+    // newest first, no date at the end
+    if (!a.date && !b.date) return compareByName(a, b);
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return b.date.localeCompare(a.date) || compareByName(a, b);
+  }
+
+  function sortEntries(entries) {
+    const folders = entries.filter((e) => e.type === "folder");
+    const files = entries.filter((e) => e.type !== "folder");
+    folders.sort(compareByName); // folders always alphabetical
+    files.sort(sortMode === "date" ? compareByDate : compareByName);
+    return [...folders, ...files];
+  }
+
   // icons
   const GLYPHS = {
     folder: `<img src="data/folder.svg"></img>`,
@@ -65,28 +99,50 @@
 
   //icon grid
   function openExplorer(title, entries, opts = {}) {
-    const { el, body } = createWindow({
+    const { el, body, id } = createWindow({
       title: `📁 ${title}`,
       width: 480,
       height: 360,
       pinned: !!opts.pinned,
     });
 
+    const toolbar = document.createElement("div");
+    toolbar.className = "explorer-toolbar";
+    toolbar.innerHTML = `
+      <span class="toolbar-label">Sort:</span>
+      <button type="button" class="sort-btn" data-mode="name">Name</button>
+      <button type="button" class="sort-btn" data-mode="date">Date</button>
+    `;
+    toolbar.querySelectorAll(".sort-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.mode === sortMode);
+      btn.addEventListener("click", () => setSortMode(btn.dataset.mode));
+    });
+    body.appendChild(toolbar);
+
     const grid = document.createElement("div");
     grid.className = "icon-grid";
-
-    if (!entries.length) {
-      grid.innerHTML = `<div class="empty-state"><em>There's nothing here...</em></div>`;
-    } else {
-      entries.forEach((entry) => grid.appendChild(buildIcon(entry)));
-    }
-
     body.appendChild(grid);
+
+    // remember this window's raw entries + grid element so sort toggles can re-render it
+    const winRecord = openWindows.get(id);
+    winRecord.entries = entries;
+    winRecord.grid = grid;
+
+    renderIconGrid(grid, entries);
     el.querySelector(".win-status").textContent = `${entries.length} item${entries.length === 1 ? "" : "s"}`;
 
     placeWindow(el);
     focusWindow(el);
     return el;
+  }
+
+  function renderIconGrid(grid, entries) {
+    grid.innerHTML = "";
+    if (!entries.length) {
+      grid.innerHTML = `<div class="empty-state"><em>There's nothing here...</em></div>`;
+      return;
+    }
+    sortEntries(entries).forEach((entry) => grid.appendChild(buildIcon(entry)));
   }
 
   function buildIcon(entry) {
@@ -128,7 +184,10 @@
       const img = document.createElement("img");
       img.src = absoluteUrl;
       img.alt = entry.name;
+      if (entry.type === "image")
       body.appendChild(img);
+      else if (entry.type === "video")
+      body.appendChild(iframe);
     } else {
       //text, html or unknown
       const iframe = document.createElement("iframe");
@@ -136,7 +195,18 @@
       body.appendChild(iframe);
     }
 
-    el.querySelector(".win-status").textContent = entry.date ? `Last modified ${entry.date}` : entry.file;
+    const status = el.querySelector(".win-status");
+    status.innerHTML = "";
+    const statusText = document.createElement("span");
+    statusText.textContent = entry.date ? `Last modified ${entry.date}` : entry.file;
+    status.appendChild(statusText);
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = absoluteUrl;
+    downloadLink.download = entry.name;
+    downloadLink.className = "status-download";
+    downloadLink.textContent = "⬇ Download";
+    status.appendChild(downloadLink);
 
     placeWindow(el);
     focusWindow(el);

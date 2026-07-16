@@ -15,6 +15,7 @@ const EXCLUDE_FROM_ROOT = new Set([
   ".github",
   ".git",
   ".nojekyll",
+  ".empty",
 ]);
 
 const TYPE_BY_EXT = {
