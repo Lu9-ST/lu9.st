@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-16T07:07:39.702Z",
+  "generated": "2026-07-16T11:14:59.137Z",
   "root": ".",
   "entries": [
     {
@@ -259,6 +259,11 @@
           ]
         },
         {
+          "name": "Bananas de Pijamas",
+          "type": "folder",
+          "entries": []
+        },
+        {
           "name": "Bob, o Construtor",
           "type": "folder",
           "entries": [
@@ -287,6 +292,11 @@
               "date": "2026-07-16"
             }
           ]
+        },
+        {
+          "name": "CyberChase",
+          "type": "folder",
+          "entries": []
         },
         {
           "name": "Discovery Kids Central",
@@ -355,6 +365,11 @@
           ]
         },
         {
+          "name": "Franklin",
+          "type": "folder",
+          "entries": []
+        },
+        {
           "name": "Garota Supersábia",
           "type": "folder",
           "entries": [
@@ -371,6 +386,21 @@
               "date": "2026-07-16"
             }
           ]
+        },
+        {
+          "name": "Gatola da Cartola",
+          "type": "folder",
+          "entries": []
+        },
+        {
+          "name": "George, o Curioso",
+          "type": "folder",
+          "entries": []
+        },
+        {
+          "name": "Greeny Phatom",
+          "type": "folder",
+          "entries": []
         },
         {
           "name": "Hanazuki",
@@ -613,6 +643,11 @@
           ]
         },
         {
+          "name": "Mecanimais",
+          "type": "folder",
+          "entries": []
+        },
+        {
           "name": "Mister Maker",
           "type": "folder",
           "entries": [
@@ -629,6 +664,16 @@
               "date": "2026-07-16"
             }
           ]
+        },
+        {
+          "name": "My Little Pony Amizade é Mágica",
+          "type": "folder",
+          "entries": []
+        },
+        {
+          "name": "Noddy No País Dos Brinquedos",
+          "type": "folder",
+          "entries": []
         },
         {
           "name": "Os Amigos da Miss- Spider",
@@ -725,6 +770,11 @@
               "date": "2026-07-16"
             }
           ]
+        },
+        {
+          "name": "Rubbadubbers",
+          "type": "folder",
+          "entries": []
         },
         {
           "name": "Thomas e seus amigos",
@@ -1001,6 +1051,11 @@
               "date": "2026-07-16"
             }
           ]
+        },
+        {
+          "name": "Zooboomafoo",
+          "type": "folder",
+          "entries": []
         }
       ]
     },
