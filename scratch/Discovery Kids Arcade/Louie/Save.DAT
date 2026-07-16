@@ -1,0 +1,14 @@
+SQUEAKDATA
+@)*!@)!*@!)#fileName='Folha de desenhos do Louie.sb'
+THOVISK198)*!(*@
+
+savePen=True
+if
+{
+fileExists-'Save.DAT'
+}
+self Say ('Saved!')
+{
+else
+}
+self Say('Dont' Found the Save.dat data!')
