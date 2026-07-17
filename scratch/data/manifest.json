@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-17T08:59:55.440Z",
+  "generated": "2026-07-17T09:03:23.307Z",
   "root": ".",
   "entries": [
     {
@@ -1584,6 +1584,12 @@
       "name": "Mario Forever And Best Games",
       "type": "folder",
       "entries": [
+        {
+          "name": "Credits (converted).mp4",
+          "type": "video",
+          "file": "Mario Forever And Best Games/Credits (converted).mp4",
+          "date": "2026-07-17"
+        },
         {
           "name": "credits.txt",
           "type": "text",
