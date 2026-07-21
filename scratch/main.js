@@ -12,7 +12,10 @@
   let cascadeOffset = 0;
   const openWindows = new Map();
 
-  let sortMode = localStorage.getItem("archiveSortMode") || "name"; // "name" | "date"
+  const VALID_SORT_MODES = new Set(["name", "date-desc", "date-asc"]);
+  let sortMode = localStorage.getItem("archiveSortMode") || "name";
+  if (sortMode === "date") sortMode = "date-desc"; // migrate old value
+  if (!VALID_SORT_MODES.has(sortMode)) sortMode = "name";
 
   function setSortMode(mode) {
     sortMode = mode;
@@ -21,28 +24,35 @@
     openWindows.forEach((win) => {
       if (win.entries) renderIconGrid(win.grid, win.entries);
     });
-    document.querySelectorAll(".sort-btn").forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.mode === sortMode);
-    });
+      document.querySelectorAll(".sort-btn").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.mode === sortMode);
+      });
   }
 
   function compareByName(a, b) {
     return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
   }
 
-  function compareByDate(a, b) {
-    // newest first, no date at the end
+  function compareByDate(a, b, ascending) {
+    // entries without a date always sort to the end, regardless of direction
     if (!a.date && !b.date) return compareByName(a, b);
     if (!a.date) return 1;
     if (!b.date) return -1;
-    return b.date.localeCompare(a.date) || compareByName(a, b);
+    const cmp = a.date.localeCompare(b.date);
+    return (ascending ? cmp : -cmp) || compareByName(a, b);
   }
 
   function sortEntries(entries) {
     const folders = entries.filter((e) => e.type === "folder");
     const files = entries.filter((e) => e.type !== "folder");
     folders.sort(compareByName); // folders always alphabetical
-    files.sort(sortMode === "date" ? compareByDate : compareByName);
+    if (sortMode === "date-desc") {
+      files.sort((a, b) => compareByDate(a, b, false));
+    } else if (sortMode === "date-asc") {
+      files.sort((a, b) => compareByDate(a, b, true));
+    } else {
+      files.sort(compareByName);
+    }
     return [...folders, ...files];
   }
 
@@ -82,10 +92,10 @@
     });
     const body = el.querySelector(".win-body");
     body.innerHTML = `<div class="error-state">
-      Couldn't load data/manifest.json.<br><br>
-      ${escapeHtml(err.message)}<br><br>
-      Run <code>node scripts/generate-manifest.js</code>, or check that the file exists
-      and that this page is being served over HTTP.
+    Couldn't load data/manifest.json.<br><br>
+    ${escapeHtml(err.message)}<br><br>
+    Run <code>node scripts/generate-manifest.js</code>, or check that the file exists
+    and that this page is being served over HTTP.
     </div>`;
     placeWindow(el);
     focusWindow(el);
@@ -109,9 +119,10 @@
     const toolbar = document.createElement("div");
     toolbar.className = "explorer-toolbar";
     toolbar.innerHTML = `
-      <span class="toolbar-label">Sort:</span>
-      <button type="button" class="sort-btn" data-mode="name">Name</button>
-      <button type="button" class="sort-btn" data-mode="date">Date</button>
+    <span class="toolbar-label">Sort:</span>
+    <button type="button" class="sort-btn" data-mode="name">Name</button>
+    <button type="button" class="sort-btn" data-mode="date-desc">Date (Desc.)</button>
+    <button type="button" class="sort-btn" data-mode="date-asc">Date (Asc.)</button>
     `;
     toolbar.querySelectorAll(".sort-btn").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.mode === sortMode);
