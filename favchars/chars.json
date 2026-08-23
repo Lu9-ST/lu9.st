@@ -1,11 +1,11 @@
 {
   "tags": {
-    "heart":       { "label": "❤️",       "class": "tag-heart" },
-    "star":    { "label": "⭐",    "class": "tag-star" },
-    "thumbsup":  { "label": "👍",  "class": "tag-thumbsup" },
-    "kin":     { "label": "Kin™",     "class": "tag-kin" },
-    "yume":     { "label": "Yume™",     "class": "tag-yume" },
-    "ednaldo":  { "label": "Ednaldo Pereira",  "class": "tag-ednaldo" }
+    "heart":    { "label": "❤️",              "class": "tag-heart" },
+    "star":     { "label": "⭐",              "class": "tag-star",     "background": "hemkas_bg.png" },
+    "thumbsup": { "label": "👍",              "class": "tag-thumbsup", "background": "dodos_bg.png" },
+    "kin":      { "label": "Kin™",            "class": "tag-kin",      "background": "alfur_bg.png" },
+    "yume":     { "label": "Yume™",           "class": "tag-yume",     "background": "snap_bg.png" },
+    "ednaldo":  { "label": "Ednaldo Pereira", "class": "tag-ednaldo",  "background": "ednaldo_bg.jpg" }
   },
   "characters": [
     {
@@ -144,7 +144,7 @@
       "tags":     ["heart"],
       "media":    "Paper Mario",
       "mediaAlt": "ペーパーマリオ",
-      "image":    "",
+      "image":    "vivian.png",
       "initials": "V",
       "extra":    ""
     },
@@ -154,7 +154,7 @@
       "tags":     ["heart"],
       "media":    "Paper Mario",
       "mediaAlt": "ペーパーマリオ",
-      "image":    "",
+      "image":    "goombella.png",
       "initials": "G",
       "extra":    ""
     },
@@ -187,6 +187,16 @@
       "image":    "9volt.png",
       "initials": "9V",
       "extra":    "<small><b>Kin strength:</b> 8/10</small>"
+    },
+    {
+      "name":     "Toon Link",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "The Legend of Zelda",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "TL",
+      "extra":    ""
     },
     {
       "name":     "DeMille",
@@ -327,6 +337,16 @@
       "image":    "niko.jpg",
       "initials": "N",
       "extra":    "<small><b>Kin strength:</b> 9/10</small>"
+    },
+    {
+      "name":     "Cedric",
+      "nameAlt":  "",
+      "tags":     ["heart", "kin", "yume"],
+      "media":    "OneShot",
+      "mediaAlt": "",
+      "image":    "cedric.png",
+      "initials": "C",
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
     },
     {
       "name":     "Kiyoshi",
@@ -564,7 +584,7 @@
       "tags":     ["heart", "yume"],
       "media":    "Invader ZIM",
       "mediaAlt": "🇧🇷 Invasor ZIM",
-      "image":    "",
+      "image":    "gir.jpg",
       "initials": "GR",
       "extra":    ""
     },
@@ -626,6 +646,26 @@
       "mediaAlt": "",
       "image":    "cuptain.png",
       "initials": "C",
+      "extra":    ""
+    },
+    {
+      "name":     "Aqua",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "UU",
+      "extra":    ""
+    },
+    {
+      "name":     "Seth",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Deltarune",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "S",
       "extra":    ""
     },
     {
@@ -704,7 +744,7 @@
       "tags":     ["heart"],
       "media":    "Klonoa",
       "mediaAlt": "風のクロノア",
-      "image":    "",
+      "image":    "popka.png",
       "initials": "PK",
       "extra":    ""
     },
@@ -839,6 +879,16 @@
       "extra":    ""
     },
     {
+      "name":     "Impmon",
+      "nameAlt":  "インプモン",
+      "tags":     ["heart", "yume"],
+      "media":    "Digimon",
+      "mediaAlt": "デジモン",
+      "image":    "",
+      "initials": "IM",
+      "extra":    ""
+    },
+    {
       "name":     "Quote",
       "nameAlt":  "クォート",
       "tags":     ["heart"],
@@ -894,7 +944,7 @@
       "tags":     ["heart", "yume"],
       "media":    "Pokémon",
       "mediaAlt": "ポケットモンスター",
-      "image":    "",
+      "image":    "raboot.png",
       "initials": "R",
       "extra":    ""
     },
@@ -987,6 +1037,16 @@
       "image":    "allister.png",
       "initials": "A",
       "extra":    "<small><b>Kin strength:</b> 8/10</small>"
+    },
+    {
+      "name":     "Kieran",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Pokémon",
+      "mediaAlt": "ポケットモンスター",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
     },
     {
       "name":     "Morgana",
@@ -1434,7 +1494,7 @@
       "tags":     ["heart"],
       "media":    "Chikn Nuggit",
       "mediaAlt": "",
-      "image":    "",
+      "image":    "fwenchfwy.png",
       "initials": "F",
       "extra":    ""
     },
@@ -1828,6 +1888,86 @@
       "initials": "KM",
       "extra":    ""
     },
+  {
+      "name":     "K-VRC",
+      "nameAlt":  "",
+      "tags":     ["heart", "yume"],
+      "media":    "Love, Death + Robots",
+      "mediaAlt": "",
+      "image":    "kvrc.png",
+      "initials": "KV",
+      "extra":    ""
+    },
+  {
+      "name":     "Fish Out of Water",
+      "nameAlt":  "🇧🇷 Peixe Fora D'Água",
+      "tags":     ["heart", "kin"],
+      "media":    "Chicken Little",
+      "mediaAlt": "🇧🇷 O Galinho Chicken Little",
+      "image":    "fish.png",
+      "initials": "F",
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
+    },
+  {
+      "name":     "Shouta Magatsuchi",
+      "nameAlt":  "真ヶ土 翔太",
+      "tags":     ["heart", "kin"],
+      "media":    "Miss Kobayashi's Dragon Maid",
+      "mediaAlt": "小林さんちのメイドラゴ",
+      "image":    "shouta.png",
+      "initials": "SM",
+      "extra":    "<small><b>Kin strength:</b> 7/10</small>"
+    },
+  {
+      "name":     "Clyde",
+      "nameAlt":  "クライド",
+      "tags":     ["heart", "kin", "yume"],
+      "media":    "Pac-Man",
+      "mediaAlt": "パックマン",
+      "image":    "clyde.png",
+      "initials": "C",
+      "extra":    "<small><b>Kin strength:</b> 6/10</small>"
+    },
+  {
+      "name":     "Miru",
+      "nameAlt":  "ミル",
+      "tags":     ["heart"],
+      "media":    "Pac & Pal",
+      "mediaAlt": "パック＆パル",
+      "image":    "miru.png",
+      "initials": "MR",
+      "extra":    ""
+    },
+  {
+      "name":     "Konqi",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "KDE",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "K",
+      "extra":    ""
+    },
+  {
+      "name":     "Kori",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "KDE",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "KR",
+      "extra":    ""
+    },
+  {
+      "name":     "Sig",
+      "nameAlt":  "",
+      "tags":     ["heart"],
+      "media":    "Puyo Puyo",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "S",
+      "extra":    ""
+    },
     {
       "name":     "Cueio",
       "nameAlt":  "",
@@ -1894,7 +2034,7 @@
       "tags":     ["star"],
       "media":    "Dr. Mario",
       "mediaAlt": "ドクターマリオ",
-      "image":    "",
+      "image":    "chill.png",
       "initials": "C",
       "extra":    ""
     },
@@ -2264,7 +2404,7 @@
       "tags":     ["star"],
       "media":    "Hebereke",
       "mediaAlt": "へべれけ",
-      "image":    "",
+      "image":    "o-chan.png",
       "initials": "OC",
       "extra":    ""
     },
@@ -2273,8 +2413,8 @@
       "nameAlt":  "助左衛門",
       "tags":     ["star"],
       "media":    "Hebereke",
-      "mediaAlt": "",
-      "image":    "",
+      "mediaAlt": "へべれけ",
+      "image":    "sukezaemon.png",
       "initials": "SZ",
       "extra":    ""
     },
@@ -2283,8 +2423,8 @@
       "nameAlt":  "ヂェニファー",
       "tags":     ["star"],
       "media":    "Hebereke",
-      "mediaAlt": "",
-      "image":    "",
+      "mediaAlt": "へべれけ",
+      "image":    "jennifer.png",
       "initials": "J",
       "extra":    ""
     },
@@ -2304,7 +2444,7 @@
       "tags":     ["star"],
       "media":    "Animal Crossing",
       "mediaAlt": "どうぶつの森",
-      "image":    "",
+      "image":    "ankha.png",
       "initials": "A",
       "extra":    ""
     },
@@ -2579,16 +2719,6 @@
       "extra":    ""
     },
     {
-      "name":     "Impmon",
-      "nameAlt":  "インプモン",
-      "tags":     ["star"],
-      "media":    "Digimon",
-      "mediaAlt": "デジモン",
-      "image":    "",
-      "initials": "IM",
-      "extra":    ""
-    },
-    {
       "name":     "Curly Brace",
       "nameAlt":  "カーリーブレイス",
       "tags":     ["star"],
@@ -2804,7 +2934,7 @@
       "tags":     ["star"],
       "media":    "My Little Pony: Friendship is Magic",
       "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
-      "image":    "",
+      "image":    "rainbowdash.png",
       "initials": "RD",
       "extra":    ""
     },
@@ -2884,7 +3014,7 @@
       "tags":     ["star"],
       "media":    "My Little Pony: Friendship is Magic",
       "mediaAlt": "🇧🇷 My Little Pony: A Amizade é Mágica",
-      "image":    "",
+      "image":    "vinyl.png",
       "initials": "VS",
       "extra":    ""
     },
@@ -3336,6 +3466,146 @@
       "mediaAlt": "",
       "image":    "jot.png",
       "initials": "J",
+      "extra":    ""
+    },
+  {
+      "name":     "Petasi",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "THE DOG Island",
+      "mediaAlt": "",
+      "image":    "petasi.png",
+      "initials": "P",
+      "extra":    ""
+    },
+    {
+      "name":     "Chloe Park",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "We Bare Bears",
+      "mediaAlt": "🇧🇷 Ursos Sem Curso",
+      "image":    "chloe.png",
+      "initials": "CH",
+      "extra":    ""
+    },
+    {
+      "name":     "Sid Chang",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "The Loud House",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "SC",
+      "extra":    ""
+    },
+    {
+      "name":     "BMO",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Adventure Time",
+      "mediaAlt": "🇧🇷 Hora de Aventura",
+      "image":    "",
+      "initials": "BMO",
+      "extra":    ""
+    },
+    {
+      "name":     "Huntress Wizard",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Adventure Time",
+      "mediaAlt": "🇧🇷 Hora de Aventura",
+      "image":    "huntress.png",
+      "initials": "HW",
+      "extra":    ""
+    },
+    {
+      "name":     "Jinx",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Teen Titans",
+      "mediaAlt": "🇧🇷 Os Jovens Titãs",
+      "image":    "jinx.png",
+      "initials": "JX",
+      "extra":    ""
+    },
+    {
+      "name":     "Sakamoto",
+      "nameAlt":  "阪本",
+      "tags":     ["star"],
+      "media":    "Nichijou - My Ordinary Life",
+      "mediaAlt": "日常",
+      "image":    "sakamoto.png",
+      "initials": "SK",
+      "extra":    ""
+    },
+  {
+      "name":     "Milli",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Scratch",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "M",
+      "extra":    ""
+    },
+  {
+      "name":     "Gomamon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Digimon",
+      "mediaAlt": "デジモン",
+      "image":    "",
+      "initials": "GM",
+      "extra":    ""
+    },
+  {
+      "name":     "Calumon",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Digimon",
+      "mediaAlt": "デジモン",
+      "image":    "",
+      "initials": "CM",
+      "extra":    ""
+    },
+    {
+      "name":     "Ruby",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Jewelpet",
+      "mediaAlt": "",
+      "image":    "rubyjp.png",
+      "initials": "RG",
+      "extra":    ""
+    },
+    {
+      "name":     "Vivi Celege",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "AVID Wiki Mascot",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "VC",
+      "extra":    ""
+    },
+    {
+      "name":     "Ruby Gillman",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "Ruby Gillman: Teenage Kraken",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "RG",
+      "extra":    ""
+    },
+    {
+      "name":     "Flounder",
+      "nameAlt":  "",
+      "tags":     ["star"],
+      "media":    "The Little Mermaid",
+      "mediaAlt": "",
+      "image":    "",
+      "initials": "FL",
       "extra":    ""
     },
     {

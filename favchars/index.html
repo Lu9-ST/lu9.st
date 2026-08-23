@@ -43,10 +43,22 @@
     color: var(--text);
     font-family: IBM Plex Sans, "TwemojiColor", Roboto, sans-serif;
     min-height: 100vh;
-    background-blend-mode: multiply;
-    background-color: rgba(15,14,13,0.88);
-    background-image: url("_bg.png");
   }
+
+  /* ── BG LAYERS ── */
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-color: rgba(15,14,13,0.88);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+  }
+
+  .bg-layer.active { opacity: 1; }
 
   /* ── HEADER ── */
   header {
@@ -119,6 +131,39 @@
   #search:focus {
     border-color: var(--gold-dim);
     box-shadow: 0 0 0 3px var(--gold-glow);
+  }
+
+  /* ── SORT ── */
+  .sort-wrap {
+    flex: 0 0 auto;
+  }
+
+  #sort {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 40px;
+    padding: 9px 30px 9px 16px;
+    color: var(--text);
+    font-family: IBM Plex Sans, "TwemojiColor", Roboto, sans-serif;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23ba84a4' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+  }
+
+  #sort:focus {
+    border-color: var(--gold-dim);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+  }
+
+  #sort option {
+    background: var(--surface);
+    color: var(--text);
   }
 
   /* ── TABS ── */
@@ -256,6 +301,13 @@
     padding: 3px 8px;
     border-radius: 3px;
     border: 1px solid;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.15s;
+  }
+
+  .tag:hover {
+    filter: brightness(1.3);
+    transform: translateY(-1px);
   }
 
   .tag-heart      { color: var(--accent-blue);   border-color: var(--accent-blue);   background: rgba(76,126,201,0.08); }
@@ -358,6 +410,9 @@
 </head>
 <body>
 
+<div class="bg-layer" id="bg-layer-1"></div>
+<div class="bg-layer" id="bg-layer-2"></div>
+
 <header>
   <div class="header-top">
     <div class="site-title">
@@ -369,6 +424,15 @@
         <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
       </svg>
       <input type="text" id="search" placeholder="Search" autocomplete="off" spellcheck="false">
+    </div>
+    <div class="sort-wrap">
+      <select id="sort">
+        <option value="default">Default sort</option>
+        <option value="name-asc">Char Name (A–Z)</option>
+        <option value="name-desc">Char Name (Z–A)</option>
+        <option value="media-asc">Media Name (A–Z)</option>
+        <option value="media-desc">Media Name (Z–A)</option>
+      </select>
     </div>
   </div>
   <nav class="tabs" id="tabs"></nav>
@@ -389,11 +453,13 @@
 //  CONFIG
 // ─────────────────────────────────────────────
 const DATA_URL = "chars.json";
+const DEFAULT_BG = "mero_bg.png";
 
 let CHARACTERS = [];
 let TAG_CONFIG  = {};
 let activeTag   = "heart";
 let searchQuery = "";
+let sortMode    = "default"; // default | name-asc | name-desc | media-asc | media-desc
 
 // ─────────────────────────────────────────────
 //  LOAD DATA
@@ -410,12 +476,57 @@ async function loadData() {
 
     statusEl.style.display = "none";
     buildTabs();
+    setBackground(backgroundForTag(activeTag), true);
     render();
   } catch (err) {
     statusEl.className = "error";
-    statusEl.textContent = `Could not load characters.json — ${err.message}`;
+    statusEl.textContent = `Could not load chars.json — ${err.message}`;
     console.error(err);
   }
+}
+
+// ─────────────────────────────────────────────
+//  BG FADE
+// ─────────────────────────────────────────────
+let currentBgLayer = 1;
+
+function backgroundForTag(tag) {
+  return TAG_CONFIG[tag]?.background || DEFAULT_BG;
+}
+
+function setBackground(url, isInitial = false) {
+  const activeEl = document.getElementById(`bg-layer-${currentBgLayer}`);
+  const nextNum  = currentBgLayer === 1 ? 2 : 1;
+  const nextEl   = document.getElementById(`bg-layer-${nextNum}`);
+
+  const activeUrl = activeEl.style.backgroundImage;
+  if (activeUrl === `url("${url}")`) return; // already showing this background
+
+  nextEl.style.backgroundImage = `url("${url}")`;
+
+  if (isInitial) {
+    // just show immediately
+    nextEl.classList.add("active");
+    activeEl.classList.remove("active");
+  } else {
+    requestAnimationFrame(() => {
+      nextEl.classList.add("active");
+      activeEl.classList.remove("active");
+    });
+  }
+
+  currentBgLayer = nextNum;
+}
+
+// ─────────────────────────────────────────────
+//  TAG / TAB SELECTION
+// ─────────────────────────────────────────────
+function selectTag(tag) {
+  activeTag = tag;
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t.dataset.tag === tag));
+  setBackground(backgroundForTag(tag));
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  render();
 }
 
 // ─────────────────────────────────────────────
@@ -425,7 +536,7 @@ function buildTabs() {
   const tabsEl = document.getElementById("tabs");
   tabsEl.innerHTML = "";
 
-  // Collect unique tags in the order they appear in the data
+  // collect tags in the order they appear
   const tagSet = new Set();
   CHARACTERS.forEach(c => c.tags.forEach(t => tagSet.add(t)));
   const allTags = [...tagSet,"all"];
@@ -440,17 +551,28 @@ function buildTabs() {
       : (TAG_CONFIG[tag]?.label || tag);
 
     const btn = document.createElement("button");
-    btn.className = "tab" + (tag === "heart" ? " active" : "");
+    btn.className = "tab" + (tag === activeTag ? " active" : "");
     btn.dataset.tag = tag;
     btn.innerHTML = `${label} <span class="count">${count}</span>`;
-    btn.addEventListener("click", () => {
-      activeTag = tag;
-      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-      btn.classList.add("active");
-      render();
-    });
+    btn.addEventListener("click", () => selectTag(tag));
     tabsEl.appendChild(btn);
   });
+}
+
+// ─────────────────────────────────────────────
+//  SORT
+// ─────────────────────────────────────────────
+function applySort(list) {
+  if (sortMode === "default") return list;
+
+  const [field, dir] = sortMode.split("-"); // "name"|"media", "asc"|"desc"
+  const sorted = [...list].sort((a, b) => {
+    const av = (field === "name" ? a.name : a.media) || "";
+    const bv = (field === "name" ? b.name : b.media) || "";
+    const cmp = av.localeCompare(bv, undefined, { sensitivity: "base" });
+    return dir === "desc" ? -cmp : cmp;
+  });
+  return sorted;
 }
 
 // ─────────────────────────────────────────────
@@ -459,7 +581,7 @@ function buildTabs() {
 function render() {
   const q = searchQuery.toLowerCase().trim();
 
-  const filtered = CHARACTERS.filter(c => {
+  let filtered = CHARACTERS.filter(c => {
     const tagMatch = activeTag === "all" || c.tags.includes(activeTag);
     if (!tagMatch) return false;
     if (!q) return true;
@@ -471,6 +593,8 @@ function render() {
       c.tags.some(t => t.includes(q))
     );
   });
+
+  filtered = applySort(filtered);
 
   const gallery = document.getElementById("gallery");
   const empty   = document.getElementById("empty");
@@ -500,11 +624,11 @@ function render() {
       imgHtml = `<div class="card-img-placeholder">${c.initials || c.name[0]}</div>`;
     }
 
-    // ── tags ──
+    // ── tags (clickable — jumps to that tag's tab) ──
     const tagsHtml = c.tags.map(t => {
       const cls   = TAG_CONFIG[t]?.class || "tag-other";
       const label = TAG_CONFIG[t]?.label || t;
-      return `<span class="tag ${cls}">${label}</span>`;
+      return `<span class="tag ${cls}" data-tag="${t}">${label}</span>`;
     }).join("");
 
     // ── extra HTML ──
@@ -527,10 +651,28 @@ function render() {
 }
 
 // ─────────────────────────────────────────────
+//  TAG CLICK
+// ─────────────────────────────────────────────
+document.getElementById("gallery").addEventListener("click", e => {
+  const tagEl = e.target.closest(".tag");
+  if (tagEl && tagEl.dataset.tag) {
+    selectTag(tagEl.dataset.tag);
+  }
+});
+
+// ─────────────────────────────────────────────
 //  SEARCH
 // ─────────────────────────────────────────────
 document.getElementById("search").addEventListener("input", e => {
   searchQuery = e.target.value;
+  render();
+});
+
+// ─────────────────────────────────────────────
+//  SORT CONTROL
+// ─────────────────────────────────────────────
+document.getElementById("sort").addEventListener("change", e => {
+  sortMode = e.target.value;
   render();
 });
 
